@@ -6,8 +6,7 @@
 
 %
 \begin{document}
-\markboth{\LaTeXe{} Class for Lecture Notes in Computer
-Science}{\LaTeXe{} Class for Lecture Notes in Computer Science}
+
 \thispagestyle{empty}
 \begin{flushleft}
 \LARGE\bfseries Instructions for dsfsfsf\\
@@ -26,16 +25,6 @@ in Computer Science\\[6pt]
 \end{flushright}
 \rule{\textwidth}{1pt}
 \vfill
-%\begin{flushleft}
-%\large\itshape
-%\begin{tabular}{@{}l}
-%{\Large\upshape\bfseries Springer}\\[8pt]
-%Berlin\enspace Heidelberg\enspace New\kern0.1em York\\[5pt]
-%Barcelona\enspace Budapest\enspace Hong\kern0.2em Kong\\[5pt]
-%London\enspace Milan\enspace Paris\enspace\\[5pt]
-%Santa\kern0.2em Clara\enspace Singapore\enspace Tokyo
-%\end{tabular}
-%\end{flushleft}
 \newpage
 %
 \section*{For further information please contact us:}
@@ -74,7 +63,7 @@ $\bullet$&\multicolumn{3}{@{}l}{\bfseries We are also reachable through the worl
 %
 \section{Motivaci\'on}
 En este art\'iculo se pretende dar a conocer la computaci\'on voluntaria y
-el sistema software de c\'odigo abierto llamado ``Splash Volunteer" \cite{splash},
+el framework de c\'odigo abierto llamado ``NodIO" \cite{nodio},
 desarrollado por Juan Juli\'an Merelo Guerv\'os (profesor de la Universidad de
 Granada) mediante el cual se pueden lanzar experimentos y ser ejecutados
 por los usuarios desde un navegador web.
@@ -129,6 +118,62 @@ problemas que pueden aparecer en cuanto a la fiabilidad o correcci\'on de los da
 (aunque se pueden establecer mecanismos como la computaci\'on redundante
 para asegurar la correcci\'on o la firma de c\'odigo para prevenir modificaciones maliciosas
 del software), hacen que el m\'etodo no sea ideal.
+
+\section{NodIO}
+\subsection{¿Qu\'e es NodIO?}
+NodIO \cite{nodio} es un software desarrollado para ser desplegado en un
+Plataforma como Servicio (Platform A a Service), que, a su vez, se basa en un
+framework llamado NodEO, pensado para el desarrollo de algoritmos gen\'eticos,
+desarrollado en NodeJS.
+
+Gracias a esta implementaci\'on, se pueden lanzar experimentos y ejecutarlos a
+trav\'es de un navegador (utilizando el lenguaje Javascript) por cada uno de los
+usuarios que accedan al servidor.
+
+
+
+\subsection{Funcionamiento}
+\subsubsection{Arquitectura}
+Este sistema cloud sigue un paradigma cliente - servidor:
+\begin{itemize}
+  \item Servidor: realiza la coordinación de los clientes. Permite acceder a
+  la informaci\'on y el envío de la misma a trav\'es de una interfaz REST.
+  \item Cliente: procede con el c\'omputo. Hace peticiones as\'incronas al servidor.
+\end{itemize}
+
+
+\subsubsection{Env\'io de mensajes y coordinaci\'on}
+Como se ha mencionado anteriormente, el NodIO se basa en NodEO, que permite la
+ejecuci\'on de algoritmos gen\'eticos escritos en Javascript. El sistema procede
+de la siguiente forma:
+\begin{enumerate}
+  \item El servidor es iniciado. Se inicializa un conjunto aleatorio de chromosomas,
+  que llamaremos ``poblaci\'on compartida"
+  \item Cada cliente se conecta al servidor y se le envía la web y los scripts asociados
+  \item Se asigna a cada cliente un UUID
+  \item Cada cliente recibe un chromosoma aleatorio
+  \item Se comienza con los c\'alculos
+  y ejecuta N generaciones
+  \item Actualizaci\'on de las gr\'aficas de la web
+  \item Cada cliente envía el mejor individuo al servidor, que guarda en la poblaci\'on compartida
+  \begin{enumerate}
+    \item Si el chromosoma enviado no es el mejor global:
+      \begin{enumerate}
+        \item Se recibe un individuo de la poblaci\'on compartida
+        \item Vuelta al quinto paso
+      \end{enumerate}
+    \item Si el chromosoma es el mejor global:
+      \begin{enumerate}
+        \item Incremento del n\'umero de secuencia en el servidor
+        \item Reseteo de la población compartida
+        \item Se inicia un nuevo experimento
+        \item Reseteo del UUID
+        \item Vuelta al cuarto paso
+      \end{enumerate}
+  \end{enumerate}
+\end{enumerate}
+
+
 
 
 \bibauthoryear
