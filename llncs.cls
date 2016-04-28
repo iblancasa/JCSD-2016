@@ -41,8 +41,7 @@
 
 % languages
 \let\switcht@@therlang\relax
-\def\ds@deutsch{\def\switcht@@therlang{\switcht@deutsch}}
-\def\ds@francais{\def\switcht@@therlang{\switcht@francais}}
+
 
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
 
@@ -77,122 +76,43 @@
   \fi}
 %
 \def\switcht@albion{%
-\def\abstractname{Abstract.}%
-\def\ackname{Acknowledgement.}%
-\def\andname{and}%
-\def\lastandname{\unskip, and}%
-\def\appendixname{Appendix}%
-\def\chaptername{Chapter}%
-\def\claimname{Claim}%
-\def\conjecturename{Conjecture}%
-\def\contentsname{Table of Contents}%
-\def\corollaryname{Corollary}%
-\def\definitionname{Definition}%
-\def\examplename{Example}%
-\def\exercisename{Exercise}%
+\def\abstractname{Resumen.}%
+\def\ackname{Reconocimiento.}%
+\def\andname{y}%
+\def\lastandname{\unskip, y}%
+\def\appendixname{Ap\'endice}%
+\def\chaptername{Cap\'itulo}%
+\def\claimname{Reclamo}%
+\def\conjecturename{Conjetura}%
+\def\contentsname{Tabla de contenidos}%
+\def\corollaryname{Corolario}%
+\def\definitionname{Definici\'on}%
+\def\examplename{Ejemplo}%
+\def\exercisename{Ejercicio}%
 \def\figurename{Fig.}%
-\def\keywordname{{\bf Keywords:}}%
-\def\indexname{Index}%
-\def\lemmaname{Lemma}%
-\def\contriblistname{List of Contributors}%
-\def\listfigurename{List of Figures}%
-\def\listtablename{List of Tables}%
-\def\mailname{{\it Correspondence to\/}:}%
-\def\noteaddname{Note added in proof}%
-\def\notename{Note}%
-\def\partname{Part}%
-\def\problemname{Problem}%
-\def\proofname{Proof}%
-\def\propertyname{Property}%
-\def\propositionname{Proposition}%
-\def\questionname{Question}%
-\def\remarkname{Remark}%
-\def\seename{see}%
-\def\solutionname{Solution}%
-\def\subclassname{{\it Subject Classifications\/}:}%
-\def\tablename{Table}%
-\def\theoremname{Theorem}}
+\def\keywordname{{\bf Palabras clave:}}%
+\def\indexname{\'Indice}%
+\def\lemmaname{Lema}%
+\def\contriblistname{Lista de Contribuidores}%
+\def\listfigurename{Lista de Figuras}%
+\def\listtablename{Lista de Tablas}%
+\def\mailname{{\it Enviar a\/}:}%
+\def\noteaddname{Nota añadida}%
+\def\notename{Nota}%
+\def\partname{Parte}%
+\def\problemname{Problema}%
+\def\proofname{Prueba}%
+\def\propertyname{Propiedad}%
+\def\propositionname{Proposici\'on}%
+\def\questionname{Pregunta}%
+\def\remarkname{Observaci\'on}%
+\def\seename{ver}%
+\def\solutionname{Soluci\'on}%
+\def\subclassname{{\it Temas\/}:}%
+\def\tablename{Tabla}%
+\def\theoremname{Teorema}}
 \switcht@albion
-% Names of theorem like environments are already defined
-% but must be translated if another language is chosen
-%
-% French section
-\def\switcht@francais{%\typeout{On parle francais.}%
- \def\abstractname{R\'esum\'e.}%
- \def\ackname{Remerciements.}%
- \def\andname{et}%
- \def\lastandname{ et}%
- \def\appendixname{Appendice}%
- \def\chaptername{Chapitre}%
- \def\claimname{Pr\'etention}%
- \def\conjecturename{Hypoth\`ese}%
- \def\contentsname{Table des mati\`eres}%
- \def\corollaryname{Corollaire}%
- \def\definitionname{D\'efinition}%
- \def\examplename{Exemple}%
- \def\exercisename{Exercice}%
- \def\figurename{Fig.}%
- \def\keywordname{{\bf Mots-cl\'e:}}%
- \def\indexname{Index}%
- \def\lemmaname{Lemme}%
- \def\contriblistname{Liste des contributeurs}%
- \def\listfigurename{Liste des figures}%
- \def\listtablename{Liste des tables}%
- \def\mailname{{\it Correspondence to\/}:}%
- \def\noteaddname{Note ajout\'ee \`a l'\'epreuve}%
- \def\notename{Remarque}%
- \def\partname{Partie}%
- \def\problemname{Probl\`eme}%
- \def\proofname{Preuve}%
- \def\propertyname{Caract\'eristique}%
-%\def\propositionname{Proposition}%
- \def\questionname{Question}%
- \def\remarkname{Remarque}%
- \def\seename{voir}%
- \def\solutionname{Solution}%
- \def\subclassname{{\it Subject Classifications\/}:}%
- \def\tablename{Tableau}%
- \def\theoremname{Th\'eor\`eme}%
-}
-%
-% German section
-\def\switcht@deutsch{%\typeout{Man spricht deutsch.}%
- \def\abstractname{Zusammenfassung.}%
- \def\ackname{Danksagung.}%
- \def\andname{und}%
- \def\lastandname{ und}%
- \def\appendixname{Anhang}%
- \def\chaptername{Kapitel}%
- \def\claimname{Behauptung}%
- \def\conjecturename{Hypothese}%
- \def\contentsname{Inhaltsverzeichnis}%
- \def\corollaryname{Korollar}%
-%\def\definitionname{Definition}%
- \def\examplename{Beispiel}%
- \def\exercisename{\"Ubung}%
- \def\figurename{Abb.}%
- \def\keywordname{{\bf Schl\"usselw\"orter:}}%
- \def\indexname{Index}%
-%\def\lemmaname{Lemma}%
- \def\contriblistname{Mitarbeiter}%
- \def\listfigurename{Abbildungsverzeichnis}%
- \def\listtablename{Tabellenverzeichnis}%
- \def\mailname{{\it Correspondence to\/}:}%
- \def\noteaddname{Nachtrag}%
- \def\notename{Anmerkung}%
- \def\partname{Teil}%
-%\def\problemname{Problem}%
- \def\proofname{Beweis}%
- \def\propertyname{Eigenschaft}%
-%\def\propositionname{Proposition}%
- \def\questionname{Frage}%
- \def\remarkname{Anmerkung}%
- \def\seename{siehe}%
- \def\solutionname{L\"osung}%
- \def\subclassname{{\it Subject Classifications\/}:}%
- \def\tablename{Tabelle}%
-%\def\theoremname{Theorem}%
-}
+
 
 % Ragged bottom for the actual page
 \def\thisbottomragged{\def\@textbottom{\vskip\z@ plus.0001fil
