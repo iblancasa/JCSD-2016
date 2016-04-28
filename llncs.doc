@@ -72,6 +72,14 @@ $\bullet$&\multicolumn{3}{@{}l}{\bfseries We are also reachable through the worl
 \tableofcontents
 \newpage
 %
+\section{Motivaci\'on}
+En este art\'iculo se pretende dar a conocer la computaci\'on voluntaria y
+el sistema software de c\'odigo abierto llamado ``Splash Volunteer" \cite{splash},
+desarrollado por Juan Juli\'an Merelo Guerv\'os (profesor de la Universidad de
+Granada) mediante el cual se pueden lanzar experimentos y ser ejecutados
+por los usuarios desde un navegador web.
+
+
 \section{Introducci\'on}
 %
 Diversos son los m\'etodos utilizados por los llamados cient\'ificos
