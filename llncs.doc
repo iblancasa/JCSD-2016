@@ -199,6 +199,31 @@ la revisi\'on de otros archivos para ajustar aquellos par\'ametros que se deseen
 Esto no es problema al contar NodIO con una licencia libre.
 
 
+\subsection{Trabajos futuros}
+Muchas son las ideas que se pueden desarrollar utilizando esta herramienta (o a
+partir de la misma). Aqu\'i se destacar\'an:
+\begin{itemize}
+  \item Realizaci\'on de nuevos experimentos: por ejemplo, lanzando un experimento
+  de f\'acil soluci\'on sobre un n\'umero controlado de dispositivos con caracter\'isticas
+  similares, midiendo el tiempo que se tarda en llegar a la soluci\'on para distintos navegadores.
+  \item Facilitar la creación de nuevos experimentos: actualmente, tener que cambiar
+  varios ficheros puede ser una tarea engorrosa y sería una tarea interesante
+  la de unificar la forma de crear nuevos experimentos. También sería útil, para
+  aquellos usuarios que no se encuentren familizarizados con Javascript, la
+  integración de forma sencilla de conversores de código (como es el caso de ScalaJS,
+  que permite ``traducir" c\'odigo escrito en lenguaje Scala a Javascript).
+  \item Aplicar t\'ecnicas de ``gamificaci\'on": probablemente podamos sacar
+  provecho a la ludificaci\'on para atraer a m\'as usuarios (y durante m\'as tiempo)
+  para que participen en los experimentos. Un ranking por puntos o alg\'un tipo de
+  bonificaci\'on podr\'ian hacer que los resultados (y sobre todo los tiempos de
+  ejecuci\'on) mejorasen notablemente.
+  \item Soporte a m\'ultiples idiomas: actualmente la p\'agina donde se realizan los
+  experimentos est\'a en ingl\'es. Si se proporcina soporte a distintos idiomas,
+  ser\'a m\'as sencillo captar nuevos usuarios (m\'as teniendo en cuenta que,
+  cuando se lanza el experimento, la difusi\'on de la web se realiza mediante
+  redes sociales en perfiles de habla hispana).
+\end{itemize}
+
 \bibauthoryear
 
 \end{document}
