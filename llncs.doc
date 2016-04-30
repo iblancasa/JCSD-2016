@@ -140,6 +140,7 @@ Este sistema cloud sigue un paradigma cliente - servidor:
   la informaci\'on y el envío de la misma a trav\'es de una interfaz REST.
   \item Cliente: procede con el c\'omputo. Hace peticiones as\'incronas al servidor.
 \end{itemize}
+Las peticiones y respuestas se hacen a trav\'es del protocolo HTTP.
 
 
 \subsubsection{Env\'io de mensajes y coordinaci\'on}
@@ -173,7 +174,29 @@ de la siguiente forma:
   \end{enumerate}
 \end{enumerate}
 
+\subsubsection{Crear un nuevo experimento}
+La creación de un nuevo exprimento se basa en la modificación de algunos archivos.
+Principalmente:
+\begin{itemize}
+  \item \textbf{is\_solution.js}: este fichero, que se ejecuta en el servidor,
+  decide si la soluci\'on enviada por el cliente es v\'alida, es decir,
+  comprueba que se haya alcanzado la soluci\'on y, en caso afirmativo, se
+  aumenta el n\'umero de secuencia y se comienza de nuevo. Cuando se desee
+  crear un nuevo experimento, será necesario reescribir esta funci\'on y
+  adecuarlo a las caracter\'isticas de la nueva.
+  \item \textbf{trap.standalone.js}: este archivo se ejecuta en el cliente.
+  Sirve como base a un nuevo desarrollo. Contiene las funciones necesarias para
+  el dibujado de las gr\'aficas y la evaluaci\'on y generaci\'on de los individuos.
+  Aqu\'i es donde crearemos una funci\'on que eval\'ue el fitness de cada uno de
+  los chromosomas generados. No olvidemos que NodIO hace uso de la biblioteca
+  NodEO \cite{nodeo}, lo que quiere decir que algunas de las funciones que vemos en
+  \textit{trap.standalone.js} est\'an definidas en NodEO (aunque podr\'iamos prescindir
+  de este framework e implementar las nuestras propias).
+\end{itemize}
 
+Dependiendo de las necesidades que tenga el experimento deseado, ser\'a necesaria
+la revisi\'on de otros archivos para ajustar aquellos par\'ametros que se deseen.
+Esto no es problema al contar NodIO con una licencia libre.
 
 
 \bibauthoryear
