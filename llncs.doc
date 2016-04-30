@@ -63,31 +63,34 @@ $\bullet$&\multicolumn{3}{@{}l}{\bfseries We are also reachable through the worl
 %
 \section{Motivaci\'on}
 En este art\'iculo se pretende dar a conocer la computaci\'on voluntaria y
-el framework de c\'odigo abierto llamado ``NodIO" \cite{nodio},
-desarrollado por Juan Juli\'an Merelo Guerv\'os (profesor de la Universidad de
-Granada) mediante el cual se pueden lanzar experimentos y ser ejecutados
-por los usuarios desde un navegador web.
+el framework de c\'odigo abierto llamado ``NodIO" \cite{nodio}, mediante el cual
+se pueden lanzar experimentos de computaci\'on voluntaria
+que permitan ejecutar algoritmos gen\'eticos (utilizando el framework NodEO \cite{nodeo}),
+y ser ejecutados por los usuarios desde un navegador web.
 
 
 \section{Introducci\'on}
 %
 Diversos son los m\'etodos utilizados por los llamados cient\'ificos
 de datos para el procesamiento de largos conjuntos de resultados obtenidos
-a trav\'es de la realizaci\'on de experimentos o, en su defecto, la propia
+a trav\'es de la elaboraci\'on de experimentos o, en su defecto, la propia
 realizaci\'on de los experimentos: uso de un único supercomputador para
 todo el procesamiento; creaci\'on de un cl\'uster de m\'aquinas en un centro
 de procesamiento (o cloud); o, como en el caso que nos ocupa, la computaci\'on voluntaria.
 
+\subsection{Computaci\'on voluntaria}
 La computaci\'on voluntaria es un m\'etodo de c\'omputo mediante el cual se
 permite a distintos usuarios colaborar en un proyecto cient\'ifico,
 en muchas ocasiones, aprovechando el tiempo ocioso de sus m\'aquinas. Esta colaboraci\'on
 se produce entre computadores independientes, interconectados a trav\'es de una o varias redes
-para comunicar informaci\'on y coordinar sus tareas. Gracias a este
-trabajo conjunto de los usuarios, se pueden construir redes con potencias
-equivalentes a la de los supercomputadores.
+para comunicar informaci\'on y coordinar sus tareas construyendo redes con potencias
+equivalentes a la de los supercomputadores o, incluso, superiores.
 
-Un ejemplo de ello es \cite{seti} o \cite{climate}, sistemas creados por
-departamentos de universidades para la realizaci\'on de m\'ultiples estudios.
+Ejemplos de ello son \cite{seti} o \cite{climate}, sistemas creados por
+departamentos de universidades para la realizaci\'on de m\'ultiples estudios
+(cabe destacar que este tipo de iniciativas suelen estar impulsadas por
+instituciones acad\'emicas), aunque el primero fue ``Great Internet Mersenne Prime Search" en 1996,
+un sistema para buscar n\'umeros primos de Mersenne \cite{gimps}.
 
 En estos sistemas se desean las siguientes caracter\'isticas:
 \begin{itemize}
@@ -95,20 +98,26 @@ En estos sistemas se desean las siguientes caracter\'isticas:
   conveniente que se ese c\'omputo sea realizado por otro usuario
   \item Seguridad: para evitar que un usuario nocivo (o varios) puedan causar alg\'un da\~no
   al resto
-  \item Ejecución en múltiples máquinas (incluso máquinas de distinta naturaleza):
+  \item Ejecuci\'on en m\'ultiples m\'aquinas (incluso m\'aquinas de distinta naturaleza):
   si el experimento o la transformaci\'on de los datos no se realiza en un n\'umero suficiente
   de m\'aquinas, no se tendr\'a potencia de c\'alculo para obtener resultados fruct\'iferos
   \item Compatibilidad entre los dispositivos conectados: es necesario que
   las distintas m\'aquinas puedan entenderse entre ellas, de forma que el resultado
   de una pueda ser interpretado por otra
   \item Escalable: que el sistema sea escalable es un punto muy importante, ya que
-  cuanto mayor sea la escalabilidad, mayor ser\'a la potencia
+  cuanto mayor sea la escalabilidad, mayor ser\'a la potencia de c\'omputo. Adem\'as,
+  se debe garantizar que el sistema no tenga fallos debido al aumento del n\'umero de
+  usuarios conectados
 \end{itemize}
 
-La potencia variar\'a del n\'umero de usuarios que decidan colaborar, as\'i
-como de la propia potencia de sus m\'aquinas y la capacidad del nodo ``coordinador"
-sistema para repartir el trabajo
+La potencia computacional total del sistema variar\'a en funci\'on del n\'umero de
+usuarios que decidan colaborar, as\'i como de la propia potencia de sus m\'aquinas
+y la capacidad del nodo ``coordinador" sistema para repartir el trabajo
 y recoger los resultados.
+
+La computaci\'on voluntaria es importante, entre otras de las cuestiones ya expuestas,
+porque permite que ciudadanos fuera del \'ambito de la investigaci\'on, puedan
+tomar parte de la misma.
 
 Adem\'as, gracias a que son los usuarios quienes ``prestan" sus m\'aquinas, el sistema
 es m\'as barato que la contrataci\'on de c\'omputo o la compra de material dedicado.
@@ -119,6 +128,15 @@ problemas que pueden aparecer en cuanto a la fiabilidad o correcci\'on de los da
 para asegurar la correcci\'on o la firma de c\'odigo para prevenir modificaciones maliciosas
 del software), hacen que el m\'etodo no sea ideal.
 
+En estos sistemas, los usuarios depositan su confianza en el proyecto, suponiendo que:
+\begin{itemize}
+  \item El software que est\'an ejecutando no da\~na sus dispositivos
+  \item El c\'omputo que se est\'a realizando servir\'a para la cuesti\'on que se
+  ha anunciado y c\'omo se tratar\'a la propiedad intelectual de los resultados
+  \item El sistema est\'a blindado contra usuarios maliciosos, evitando que
+  se convierta en un canal para llevar a cabo actividades il\'icitas
+\end{itemize}
+
 \section{NodIO}
 \subsection{¿Qu\'e es NodIO?}
 NodIO \cite{nodio} es un software desarrollado para ser desplegado en un
@@ -127,20 +145,27 @@ framework llamado NodEO, pensado para el desarrollo de algoritmos gen\'eticos,
 desarrollado en NodeJS.
 
 Gracias a esta implementaci\'on, se pueden lanzar experimentos y ejecutarlos a
-trav\'es de un navegador (utilizando el lenguaje Javascript) por cada uno de los
-usuarios que accedan al servidor.
-
+trav\'es de un navegador (o cualquier sistema que ejecute el lenguaje Javascript
+y que disponga de conexi\'on a Internet)
+por cada uno de los usuarios que accedan al servidor.
 
 
 \subsection{Funcionamiento}
 \subsubsection{Arquitectura}
 Este sistema cloud sigue un paradigma cliente - servidor:
 \begin{itemize}
-  \item Servidor: realiza la coordinación de los clientes. Permite acceder a
-  la informaci\'on y el envío de la misma a trav\'es de una interfaz REST.
+  \item Servidor: realiza la coordinación de los clientes, almacena los distintos chromosomas y
+  el estado de los experimentos y reinicia el experimento cuando se ha encontrado la soluci\'on.
+  El acceso y env\'io de los distintos chromosomas se hace a trav'es de una interfaz API/REST.
+  Las peticiones (que siguen el ciclo ``CRUD") utilizan el formato JSON. Est\'a escrito en NodeJS.
   \item Cliente: procede con el c\'omputo. Hace peticiones as\'incronas al servidor.
+  En aquellos navegadores en los que est\'e permitido, se ejecuta utilizando ``Web Workers"
+  (en caso contrario, se ejecuta una versi\'on preparada para ello). Est\'a escrito
+  en Javascript, ya que se dise\~n\'o pensando en que fuese ejecutado en navegadores aunque
+  (gracias a que el servidor utiliza una API/REST), se podr\'ia escribir en cualquier otro
+  lenguaje, siendo totalmente compatible con el actual servidor.
 \end{itemize}
-Las peticiones y respuestas se hacen a trav\'es del protocolo HTTP.
+
 
 
 \subsubsection{Env\'io de mensajes y coordinaci\'on}
