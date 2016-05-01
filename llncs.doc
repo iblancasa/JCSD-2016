@@ -2,8 +2,10 @@
 % the LaTeX2e class from Springer-Verlag
 % for Lecture Notes in Computer Science, version 2.4
 \documentclass{llncs}
+\usepackage{graphicx}
 \usepackage{llncsdoc}
 
+\graphicspath{ {img/}}
 %
 \begin{document}
 
@@ -223,14 +225,67 @@ Dependiendo de las necesidades que tenga el experimento deseado, ser\'a necesari
 la revisi\'on de otros archivos para ajustar aquellos par\'ametros que se deseen.
 Esto no es problema al contar NodIO con una licencia libre.
 
+\subsection{Experimentos}
+
+\subsubsection{Comprobando la reducci\'on de tiempo a mayor n\'umero de dispositivos}.
+Como se dec\'ia cuando se introduc\'ia a la computaci\'on voluntaria,
+el uso de muchos dispositivos, convierte el sistema en una gran red computacional.
+Esto nos permite resolver problemas que ser\'ian demasiado costosos para una sola
+m\'aquina mucho m\'as r\'apido. Por este motivo, utilizando el experimento
+en el que se resuelve la ``funci\'on trap", se desea
+demostrar, a muy pequeña escala, c\'omo de beneficiosa puede llegar a ser la computaci\'on
+voluntaria para obtener resultados.
+
+Las variables pasan a tomar los siguientes valores:
+\begin{itemize}
+  \item traps: 24
+  \item longitud trap: 4
+  \item b: 2
+  \item cach\'e: 32
+  \item tama\~no problaci\'on: 128
+\end{itemize}
+
+Estos valores son los mismos que los vistos en el anterior experimento, excepto
+el n\'umero de traps, que se ha reducido para obtener un problema suficientemente
+complejo para realizar algo de c\'omputo pero no demasiado lento para poder hacer
+muchas mediciones (el valor se ha obtenido de forma emp\'irica).
+
+Tras esto, se ha procedido a poner en marcha el servidor y ejecutar los algoritmos
+variando el n\'umero de pesta\~nas abiertas en el navegador. Los resultados
+se pueden observar en la figura \ref{tiempo-pestanas}.
+
+\begin{figure}[]
+\includegraphics[scale=0.7]{tiempo-pestanas}
+\centering
+\caption{Resultados obtenidos al medir el tiempo que se tarda en alcanzar una
+soluci\'on en un mismo ordenador en funci\'on del n\'umero de pesta\~nas abierto}
+\label{tiempo-pestanas}
+\end{figure}
+
+Estas pruebas se han hecho en un sistema operativo GNU/Linux (distribuci\'on ArchLinux con
+kernel 4.5.1) con un procesador i5-2410M CPU @ 2.30GHz. El navegador utilizado ha sido la
+versi\'on 50 de Chromium.
+
+Como podemos observar, cuando solo tenemos una pesta\~na abierta, el tiempo se
+dispara (en torno a unos 3 minutos). En el caso de dos pesta\~nas, el tiempo descenci\'o hasta
+un tiempo estimado a los 53.22 segundos. En el resto de los casos, aunque sigue habiendo
+diferencias de tiempo (unos 14.56, 10.11 y 7.46 segundos respectivamente), no es
+tan notable como en los otros dos casos. Esto tiene varias explicaciones: por un
+lado al aumentar el n\'umero de pesta\~nas, el poder computacional desciende (el
+sistema operativo se ve con una carga de trabajo con la que tiene que lidiar).
+Por otro, llegar\'a un momento en el que no se podr\'a reducir m\'as el tiempo
+de ejecuci\'on por la propia naturaleza del problema.
+
 
 \subsection{Trabajos futuros}
 Muchas son las ideas que se pueden desarrollar utilizando esta herramienta (o a
 partir de la misma). Aqu\'i se destacar\'an:
 \begin{itemize}
-  \item Realizaci\'on de nuevos experimentos: por ejemplo, lanzando un experimento
-  de f\'acil soluci\'on sobre un n\'umero controlado de dispositivos con caracter\'isticas
-  similares, midiendo el tiempo que se tarda en llegar a la soluci\'on para distintos navegadores.
+  \item Realizaci\'on de nuevos experimentos: teniendo en cuenta los experimentos
+  que ya se realizaron en \cite{nodio} o el que se presenta en las anteriores l\'ineas,
+  un experimento interesante puede ser medir la rapidez con la que se encuentra
+  la soluci\'on para un mismo problema en dispositivos de distinta potencia (utilizando
+  el mismo navegador) y variando su n\'umero.
   \item Facilitar la creación de nuevos experimentos: actualmente, tener que cambiar
   varios ficheros puede ser una tarea engorrosa y sería una tarea interesante
   la de unificar la forma de crear nuevos experimentos. También sería útil, para
