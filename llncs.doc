@@ -227,7 +227,7 @@ Esto no es problema al contar NodIO con una licencia libre.
 
 \subsection{Experimentos}
 
-\subsubsection{Comprobando la reducci\'on de tiempo a mayor n\'umero de dispositivos}.
+\subsubsection{Comprobando la reducci\'on de tiempo a mayor n\'umero de pesta\~nas}.
 Como se dec\'ia cuando se introduc\'ia a la computaci\'on voluntaria,
 el uso de muchos dispositivos, convierte el sistema en una gran red computacional.
 Esto nos permite resolver problemas que ser\'ian demasiado costosos para una sola
@@ -255,7 +255,7 @@ variando el n\'umero de pesta\~nas abiertas en el navegador. Los resultados
 se pueden observar en la figura \ref{tiempo-pestanas}.
 
 \begin{figure}[]
-\includegraphics[scale=0.7]{tiempo-pestanas}
+\includegraphics[scale=0.6]{tiempo-pestanas}
 \centering
 \caption{Resultados obtenidos al medir el tiempo que se tarda en alcanzar una
 soluci\'on en un mismo ordenador en funci\'on del n\'umero de pesta\~nas abierto}
@@ -270,11 +270,37 @@ Como podemos observar, cuando solo tenemos una pesta\~na abierta, el tiempo se
 dispara (en torno a unos 3 minutos). En el caso de dos pesta\~nas, el tiempo descenci\'o hasta
 un tiempo estimado a los 53.22 segundos. En el resto de los casos, aunque sigue habiendo
 diferencias de tiempo (unos 14.56, 10.11 y 7.46 segundos respectivamente), no es
-tan notable como en los otros dos casos. Esto tiene varias explicaciones: por un
+tan notable como en los otros dos casos. Esto puede tener varias explicaciones: por un
 lado al aumentar el n\'umero de pesta\~nas, el poder computacional desciende (el
 sistema operativo se ve con una carga de trabajo con la que tiene que lidiar).
 Por otro, llegar\'a un momento en el que no se podr\'a reducir m\'as el tiempo
 de ejecuci\'on por la propia naturaleza del problema.
+
+
+\subsubsection{Comprobando la reducci\'on de tiempo utilizando varios dispositivos del mismo modelo.}
+
+En esta ocasi\'on, utilizando exactamente la misma versi\'on del software que en
+el experimento anterior (el mismo cliente y el mismo servidor utilizando los mismos valores),
+se ha procedido a medir los tiempos ejecuci\'on en varios dispositivos (siendo el mismo
+modelo hardware -tel\'efonos m\'oviles LG Bello II, con procesador quad-core
+Cortex-A7 1.3GHz-, navegador -Chrome- y la misma versi\'on Android -5.0.2-).
+
+En la figura \ref{tiempo-dispositivos} podemos ver los resultados.  Si comparamos con
+la figura \ref{tiempo-pestanas}, es sencillo ver que existe una simetr\'ia, aunque
+en este nuevo caso los tiempos son algo mayores (que podemos achacar a un menor rendimiento
+por parte del procesador del dispositivo m\'ovil y a la existencia de una red entre
+el servidor y los dispositivos, cuando antes se ejecutaba todo dentro de la misma
+m\'aquina).
+
+\begin{figure}[]
+\includegraphics[scale=0.6]{tiempo-dispositivos}
+\centering
+\caption{Resultados obtenidos al medir el tiempo que se tarda en alcanzar una
+soluci\'on utilizando varios dispositivos con la misma configuraci\'on hardware y software}
+\label{tiempo-dispositivos}
+\end{figure}
+
+
 
 
 \subsection{Trabajos futuros}
