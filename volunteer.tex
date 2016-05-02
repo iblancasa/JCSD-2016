@@ -1,68 +1,62 @@
-% This is LLNCS.DOC the documentation file of
-% the LaTeX2e class from Springer-Verlag
-% for Lecture Notes in Computer Science, version 2.4
-\documentclass{llncs}
-\usepackage{graphicx}
-\usepackage{llncsdoc}
 
-\graphicspath{ {img/}}
+%%%%%%%%%%%%%%%%%%%%%%% file typeinst.tex %%%%%%%%%%%%%%%%%%%%%%%%%
 %
+% This is the LaTeX source for the instructions to authors using
+% the LaTeX document class 'llncs.cls' for contributions to
+% the Lecture Notes in Computer Sciences series.
+% http://www.springer.com/lncs       Springer Heidelberg 2006/05/04
+%
+% It may be used as a template for your own input - copy it
+% to a new file with a new name and use it as the basis
+% for your article.
+%
+% NB: the document class 'llncs' has its own and detailed documentation, see
+% ftp://ftp.springer.de/data/pubftp/pub/tex/latex/llncs/latex2e/llncsdoc.pdf
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[runningheads,a4paper]{llncs}
+
+\usepackage[latin1]{inputenc}
+\usepackage{amssymb}
+\setcounter{tocdepth}{3}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{url}
+\newcommand{\keywords}[1]{\par\addvspace\baselineskip
+\noindent\keywordname\enspace\ignorespaces#1}
+
 \begin{document}
 
-\thispagestyle{empty}
-\begin{flushleft}
-\LARGE\bfseries Instructions for dsfsfsf\\
-Coding with \LaTeX\\[2cm]
-\end{flushleft}
-\rule{\textwidth}{1pt}
-\vspace{2pt}
-\begin{flushright}
-\Huge
-\begin{tabular}{@{}l}
-\LaTeXe{} Class\\
-for Lecture Notes\\
-in Computer Science\\[6pt]
-{\Large Version 2.4}
-\end{tabular}
-\end{flushright}
-\rule{\textwidth}{1pt}
-\vfill
-\newpage
+\mainmatter  % start of an individual contribution
+
+% first the title is needed
+\title{Computaci\'on voluntaria}
+
+% a short form should be given in case it is too long for the running head
+%\titlerunning{Lecture Notes in Computer Science: Authors' Instructions}
+
+% the name(s) of the author(s) follow(s) next
 %
-\section*{For further information please contact us:}
+\author{Israel Blancas \inst{1}}
 %
-\begin{flushleft}
-\begin{tabular}{l@{\quad}l@{\hspace{3mm}}l@{\qquad}l}
-$\bullet$&\multicolumn{3}{@{}l}{\bfseries LNCS Editorial Office}\\[1mm]
-&\multicolumn{3}{@{}l}{Springer-Verlag}\\
-&\multicolumn{3}{@{}l}{Computer Science Editorial}\\
-&\multicolumn{3}{@{}l}{Tiergartenstra�e 17}\\
-&\multicolumn{3}{@{}l}{69121 Heidelberg}\\
-&\multicolumn{3}{@{}l}{Germany}\\[0.5mm]
- & Tel:       & +49-6221-487-8706\\
- & Fax:       & +49-6221-487-8588\\
- & e-mail:    & \tt lncs@springer.com    & for editorial questions\\
- &            & \tt texhelp@springer.de & for \TeX{} problems\\[2mm]
-\noalign{\rule{\textwidth}{1pt}}
-\noalign{\vskip2mm}
-%
-%{\tt svserv@vax.ntp.springer.de}\hfil first try the \verb|help|
-%command.
-%
-$\bullet$&\multicolumn{3}{@{}l}{\bfseries We are also reachable through the world wide web:}\\[1mm]
-         &\multicolumn{2}{@{}l}{\texttt{http://www.springer.com}}&Springer Global Website\\
-         &\multicolumn{2}{@{}l}{\texttt{http://www.springer.com/lncs}}&LNCS home page\\
-         &\multicolumn{2}{@{}l}{\texttt{http://www.springerlink.com}}&data repository\\
-         &\multicolumn{2}{@{}l}{\texttt{ftp://ftp.springer.de}}&FTP server
-\end{tabular}
-\end{flushleft}
+\authorrunning{La importancia de la computaci\'on voluntaria y un ejemplo}
+% (feature abused for this document to repeat the title also on left hand pages)
+
+% the affiliations are given next; don't give your e-mail address
+% unless you accept that it will be published
+\institute{Dept. of Computer Architecture and Technology, University
+of Granada, Spain}
+
+\maketitle
 
 
-%
-\newpage
-\tableofcontents
-\newpage
-%
+\begin{abstract}
+
+\end{abstract}
+
+
 \section{Motivaci\'on}
 En este art\'iculo se pretende dar a conocer la computaci\'on voluntaria y
 el framework de c\'odigo abierto llamado ``NodIO" \cite{nodio}, mediante el cual
@@ -156,7 +150,7 @@ por cada uno de los usuarios que accedan al servidor.
 \subsubsection{Arquitectura}
 Este sistema cloud sigue un paradigma cliente - servidor:
 \begin{itemize}
-  \item Servidor: realiza la coordinación de los clientes, almacena los distintos chromosomas y
+  \item Servidor: realiza la coordinaci\'on de los clientes, almacena los distintos chromosomas y
   el estado de los experimentos y reinicia el experimento cuando se ha encontrado la soluci\'on.
   El acceso y env\'io de los distintos chromosomas se hace a trav'es de una interfaz API/REST.
   Las peticiones (que siguen el ciclo ``CRUD") utilizan el formato JSON. Est\'a escrito en NodeJS.
@@ -193,7 +187,7 @@ de la siguiente forma:
     \item Si el chromosoma es el mejor global:
       \begin{enumerate}
         \item Incremento del n\'umero de secuencia en el servidor
-        \item Reseteo de la población compartida
+        \item Reseteo de la poblaci\'on compartida
         \item Se inicia un nuevo experimento
         \item Reseteo del UUID
         \item Vuelta al cuarto paso
@@ -202,7 +196,7 @@ de la siguiente forma:
 \end{enumerate}
 
 \subsubsection{Crear un nuevo experimento}
-La creación de un nuevo exprimento se basa en la modificación de algunos archivos.
+La creaci\'on de un nuevo exprimento se basa en la modificaci\'on de algunos archivos.
 Principalmente:
 \begin{itemize}
   \item \textbf{is\_solution.js}: este fichero, que se ejecuta en el servidor,
@@ -233,7 +227,7 @@ el uso de muchos dispositivos, convierte el sistema en una gran red computaciona
 Esto nos permite resolver problemas que ser\'ian demasiado costosos para una sola
 m\'aquina mucho m\'as r\'apido. Por este motivo, utilizando el experimento
 en el que se resuelve la ``funci\'on trap", se desea
-demostrar, a muy pequeña escala, c\'omo de beneficiosa puede llegar a ser la computaci\'on
+demostrar, a muy peque\~na escala, c\'omo de beneficiosa puede llegar a ser la computaci\'on
 voluntaria para obtener resultados.
 
 Las variables pasan a tomar los siguientes valores:
@@ -254,8 +248,8 @@ Tras esto, se ha procedido a poner en marcha el servidor y ejecutar los algoritm
 variando el n\'umero de pesta\~nas abiertas en el navegador. Los resultados
 se pueden observar en la figura \ref{tiempo-pestanas}.
 
-\begin{figure}[]
-\includegraphics[scale=0.6]{tiempo-pestanas}
+\begin{figure}[htbp]
+\includegraphics[scale=0.6]{img/tiempo-pestanas}
 \centering
 \caption{Resultados obtenidos al medir el tiempo que se tarda en alcanzar una
 soluci\'on en un mismo ordenador en funci\'on del n\'umero de pesta\~nas abierto}
@@ -292,8 +286,8 @@ por parte del procesador del dispositivo m\'ovil y a la existencia de una red en
 el servidor y los dispositivos, cuando antes se ejecutaba todo dentro de la misma
 m\'aquina).
 
-\begin{figure}[]
-\includegraphics[scale=0.6]{tiempo-dispositivos}
+\begin{figure}[htbp]
+\includegraphics[scale=0.6]{img/tiempo-dispositivos}
 \centering
 \caption{Resultados obtenidos al medir el tiempo que se tarda en alcanzar una
 soluci\'on utilizando varios dispositivos con la misma configuraci\'on hardware y software}
@@ -312,11 +306,11 @@ partir de la misma). Aqu\'i se destacar\'an:
   un experimento interesante puede ser medir la rapidez con la que se encuentra
   la soluci\'on para un mismo problema en dispositivos de distinta potencia (utilizando
   el mismo navegador) y variando su n\'umero.
-  \item Facilitar la creación de nuevos experimentos: actualmente, tener que cambiar
+  \item Facilitar la creaci\'on de nuevos experimentos: actualmente, tener que cambiar
   varios ficheros puede ser una tarea engorrosa y sería una tarea interesante
   la de unificar la forma de crear nuevos experimentos. También sería útil, para
   aquellos usuarios que no se encuentren familizarizados con Javascript, la
-  integración de forma sencilla de conversores de código (como es el caso de ScalaJS,
+  integraci\'on de forma sencilla de conversores de c\'odigo (como es el caso de ScalaJS,
   que permite ``traducir" c\'odigo escrito en lenguaje Scala a Javascript).
   \item Aplicar t\'ecnicas de ``gamificaci\'on": probablemente podamos sacar
   provecho a la ludificaci\'on para atraer a m\'as usuarios (y durante m\'as tiempo)
@@ -330,6 +324,9 @@ partir de la misma). Aqu\'i se destacar\'an:
   redes sociales en perfiles de habla hispana).
 \end{itemize}
 
-\bibauthoryear
+
+
+\bibliographystyle{splncs}
+\bibliography{volunteer}
 
 \end{document}
