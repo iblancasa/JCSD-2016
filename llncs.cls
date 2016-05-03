@@ -77,7 +77,7 @@
   \fi}
 %
 \def\switcht@albion{%
-\def\abstractname{Abstract.}
+\def\abstractname{Resumen.}
 \def\ackname{Acknowledgement.}
 \def\andname{and}
 \def\lastandname{\unskip, and}

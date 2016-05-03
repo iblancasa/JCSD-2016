@@ -46,8 +46,8 @@
 
 % the affiliations are given next; don't give your e-mail address
 % unless you accept that it will be published
-\institute{Dept. of Computer Architecture and Technology, University
-of Granada, Spain}
+\institute{Departamento de Arquitectura y Tecnolog\'ia de Computadores,
+Universidad de Granada, Espa\~na}
 
 \maketitle
 
@@ -70,7 +70,7 @@ y ser ejecutados por los usuarios desde un navegador web.
 Diversos son los m\'etodos utilizados por los llamados cient\'ificos
 de datos para el procesamiento de largos conjuntos de resultados obtenidos
 a trav\'es de la elaboraci\'on de experimentos o, en su defecto, la propia
-realizaci\'on de los experimentos: uso de un único supercomputador para
+realizaci\'on de los experimentos: uso de un \'unico supercomputador para
 todo el procesamiento; creaci\'on de un cl\'uster de m\'aquinas en un centro
 de procesamiento (o cloud); o, como en el caso que nos ocupa, la computaci\'on voluntaria.
 
@@ -82,7 +82,7 @@ se produce entre computadores independientes, interconectados a trav\'es de una 
 para comunicar informaci\'on y coordinar sus tareas construyendo redes con potencias
 equivalentes a la de los supercomputadores o, incluso, superiores.
 
-Ejemplos de ello son \cite{seti} o \cite{climate}, sistemas creados por
+Ejemplos de ello son los descritos en \cite{seti} o \cite{climate}, sistemas creados por
 departamentos de universidades para la realizaci\'on de m\'ultiples estudios
 (cabe destacar que este tipo de iniciativas suelen estar impulsadas por
 instituciones acad\'emicas), aunque el primero fue ``Great Internet Mersenne Prime Search" en 1996,
@@ -134,7 +134,7 @@ En estos sistemas, los usuarios depositan su confianza en el proyecto, suponiend
 \end{itemize}
 
 \section{NodIO}
-\subsection{¿Qu\'e es NodIO?}
+\subsection{\textquestiondown	Qu\'e es NodIO?}
 NodIO \cite{nodio} es un software desarrollado para ser desplegado en un
 Plataforma como Servicio (Platform A a Service), que, a su vez, se basa en un
 framework llamado NodEO, pensado para el desarrollo de algoritmos gen\'eticos,
@@ -165,19 +165,19 @@ Este sistema cloud sigue un paradigma cliente - servidor:
 
 
 \subsubsection{Env\'io de mensajes y coordinaci\'on}
-Como se ha mencionado anteriormente, el NodIO se basa en NodEO, que permite la
+Como se ha mencionado anteriormente, el sistema NodIO se basa en NodEO, que permite la
 ejecuci\'on de algoritmos gen\'eticos escritos en Javascript. El sistema procede
 de la siguiente forma:
 \begin{enumerate}
   \item El servidor es iniciado. Se inicializa un conjunto aleatorio de chromosomas,
   que llamaremos ``poblaci\'on compartida"
-  \item Cada cliente se conecta al servidor y se le envía la web y los scripts asociados
+  \item Cada cliente se conecta al servidor y se le env\'ia la web y los scripts asociados
   \item Se asigna a cada cliente un UUID
   \item Cada cliente recibe un chromosoma aleatorio
   \item Se comienza con los c\'alculos
   y ejecuta N generaciones
   \item Actualizaci\'on de las gr\'aficas de la web
-  \item Cada cliente envía el mejor individuo al servidor, que guarda en la poblaci\'on compartida
+  \item Cada cliente env\'ia el mejor individuo al servidor, que guarda en la poblaci\'on compartida
   \begin{enumerate}
     \item Si el chromosoma enviado no es el mejor global:
       \begin{enumerate}
@@ -203,9 +203,9 @@ Principalmente:
   decide si la soluci\'on enviada por el cliente es v\'alida, es decir,
   comprueba que se haya alcanzado la soluci\'on y, en caso afirmativo, se
   aumenta el n\'umero de secuencia y se comienza de nuevo. Cuando se desee
-  crear un nuevo experimento, será necesario reescribir esta funci\'on y
+  crear un nuevo experimento, ser\'a necesario reescribir esta funci\'on y
   adecuarlo a las caracter\'isticas de la nueva.
-  \item \textbf{trap.standalone.js}: este archivo se ejecuta en el cliente.
+  \item \textbf{trap.standalone.js}: este archivo se encuentra y ejecuta en el cliente.
   Sirve como base a un nuevo desarrollo. Contiene las funciones necesarias para
   el dibujado de las gr\'aficas y la evaluaci\'on y generaci\'on de los individuos.
   Aqu\'i es donde crearemos una funci\'on que eval\'ue el fitness de cada uno de
@@ -302,14 +302,15 @@ Muchas son las ideas que se pueden desarrollar utilizando esta herramienta (o a
 partir de la misma). Aqu\'i se destacar\'an:
 \begin{itemize}
   \item Realizaci\'on de nuevos experimentos: teniendo en cuenta los experimentos
-  que ya se realizaron en \cite{nodio} o el que se presenta en las anteriores l\'ineas,
-  un experimento interesante puede ser medir la rapidez con la que se encuentra
-  la soluci\'on para un mismo problema en dispositivos de distinta potencia (utilizando
-  el mismo navegador) y variando su n\'umero.
+  que ya se realizaron en \cite{nodio} o los que se presentan en las anteriores l\'ineas,
+  un experimento interesante podr\'ia ser medir la velocidad de ejecuci\'on del
+  mismo software utilizando dispositivos de distinta potencia (para comprobar
+  si esto afecta mucho o no a la ejecuci\'on del c\'odigo Javascript).
   \item Facilitar la creaci\'on de nuevos experimentos: actualmente, tener que cambiar
-  varios ficheros puede ser una tarea engorrosa y sería una tarea interesante
-  la de unificar la forma de crear nuevos experimentos. También sería útil, para
-  aquellos usuarios que no se encuentren familizarizados con Javascript, la
+  varios ficheros puede ser una tarea engorrosa y ser\'ia un cometido a tener en cuenta el
+  facilitaci\'on de la misma. Adem\'as ser\'ia \'util (para
+  aquellos usuarios que no se encuentren familizarizados con Javascript o simplemente
+  no quieran reescribir su c\'odigo), la
   integraci\'on de forma sencilla de conversores de c\'odigo (como es el caso de ScalaJS,
   que permite ``traducir" c\'odigo escrito en lenguaje Scala a Javascript).
   \item Aplicar t\'ecnicas de ``gamificaci\'on": probablemente podamos sacar
