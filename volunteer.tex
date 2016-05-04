@@ -38,11 +38,7 @@
 
 % the name(s) of the author(s) follow(s) next
 %
-<<<<<<< HEAD
-\author{Israel Blancas \inst{1}\email{iblancasa@ugr.es}}
-=======
 \author{Israel Blancas \inst{1} \and J. J. Merelo \inst{1}}
->>>>>>> a9309e3fc72f6342b56bde5dbe4a00c2caa1bbdc
 %
 \authorrunning{La importancia de la computaci\'on voluntaria y un ejemplo}
 % (feature abused for this document to repeat the title also on left hand pages)
@@ -53,11 +49,11 @@
 \institute{Departamento de Arquitectura y Tecnolog\'ia de Computadores,
 Universidad de Granada, Espa\~na}
 
-
 \maketitle
 
 
 \begin{abstract}
+% Tienes que adaptar el resumen al título - JJ 
 La computaci\'on voluntaria es una metodolog\'ia para realizar c\'alculos o procesamiento
 de datos basado en la interconexi\'on de m\'ultiples clientes (que realizan el c\'omputo)
 un servidor (que almacena los resultados y coordina los servidores). Frente a otros m\'etodos
@@ -74,28 +70,19 @@ en los distintos experimentos.
 
 
 \begin{keywords}
-  computaci\'on voluntaria, nodeo, nodio, algoritmos evolutivos, computaci\'on distribuida,
-  computaci\'on internet, evaluaci\'on de rendimiento
+  Computaci\'on voluntaria,  algoritmos evolutivos, computaci\'on distribuida,
+  computaci\'on en internet, computación nube, evaluaci\'on de rendimiento
 \end{keywords}
 
-\section{Motivaci\'on}
-En este art\'iculo se pretende dar a conocer la computaci\'on voluntaria y
-el framework de c\'odigo abierto llamado ``NodIO" \cite{nodio}, mediante el cual
-se pueden lanzar experimentos de computaci\'on voluntaria
-que permitan ejecutar algoritmos gen\'eticos (utilizando el framework NodEO \cite{nodeo}),
-y ser ejecutados por los usuarios desde un navegador web.
+\section{Introducción}}
+% Tienes que explicar por qué hace falta computación voluntaria en computación evolutiva - JJ
 
-
-\section{Introducci\'on}
-%
 Diversos son los m\'etodos utilizados por los llamados cient\'ificos
 de datos para el procesamiento de largos conjuntos de resultados obtenidos
 a trav\'es de la elaboraci\'on de experimentos o, en su defecto, la propia
 realizaci\'on de los experimentos: uso de un \'unico supercomputador para
 todo el procesamiento; creaci\'on de un cl\'uster de m\'aquinas en un centro
 de procesamiento (o cloud); o, como en el caso que nos ocupa, la computaci\'on voluntaria.
-
-\subsection{Computaci\'on voluntaria}
 
 La computación voluntaria es un m\'etodo de c\'omputo mediante el cual se
 permite a distintos usuarios colaborar en un proyecto cient\'ifico,
@@ -155,7 +142,16 @@ En estos sistemas, los usuarios depositan su confianza en el proyecto, suponiend
   se convierta en un canal para llevar a cabo actividades il\'icitas
 \end{itemize}
 
+% Enlazar cada sección con la siguiente. Al final de la intro lo que se mete es "El resto del trabajo se organiza de la forma siguiente..." 
+
+\section{Estado del arte}
+
+%Contar qué otros sistemas similares hay en el mercado y qué desventajas pueden tener...
+
 \section{NodIO}
+
+% Nunca cabeceras de secciones vacías. Se hace un pequeño resumen y se introducen las subsecciones
+
 \subsection{\textquestiondown	Qu\'e es NodIO?}
 NodIO \cite{nodio} es un software desarrollado para ser desplegado en un
 Plataforma como Servicio (Platform A a Service), que, a su vez, se basa en un
@@ -169,6 +165,9 @@ por cada uno de los usuarios que accedan al servidor.
 
 
 \subsection{Funcionamiento}
+
+% Igual que antes. Aunque lo mejor es no usar sub-subsecciones en un trabajo para conferencia - JJ
+
 \subsubsection{Arquitectura}
 Este sistema cloud sigue un paradigma cliente - servidor:
 \begin{itemize}
@@ -190,6 +189,7 @@ Este sistema cloud sigue un paradigma cliente - servidor:
 Como se ha mencionado anteriormente, el sistema NodIO se basa en NodEO, que permite la
 ejecuci\'on de algoritmos gen\'eticos escritos en Javascript. El sistema procede
 de la siguiente forma:
+% Usa entorno "algorithmic" - JJ
 \begin{enumerate}
   \item El servidor es iniciado. Se inicializa un conjunto aleatorio de chromosomas,
   que llamaremos ``poblaci\'on compartida"
@@ -275,6 +275,7 @@ se pueden observar en la figura \ref{tiempo-pestanas}.
 \centering
 \caption{Resultados obtenidos al medir el tiempo que se tarda en alcanzar una
 soluci\'on en un mismo ordenador en funci\'on del n\'umero de pesta\~nas abierto}
+% Dónde están los datos y el script en R que lo ha generado - JJ
 \label{tiempo-pestanas}
 \end{figure}
 
@@ -319,7 +320,10 @@ soluci\'on utilizando varios dispositivos con la misma configuraci\'on hardware 
 
 
 
-\subsection{Trabajos futuros}
+\section{Conclusiones y trabajo futuro}
+
+% ¿Qué conclusiones se obtienen de los experimentos anteriores?
+
 Muchas son las ideas que se pueden desarrollar utilizando esta herramienta (o a
 partir de la misma). Aqu\'i se destacar\'an:
 \begin{itemize}
