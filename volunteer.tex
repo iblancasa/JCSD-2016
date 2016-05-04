@@ -222,6 +222,15 @@ dentro del algoritmo \ref{algoritmo}.
   \end{algorithmic}
 \end{algorithm}
 
+Para que al lector le sea más sencillo comprender el algoritmo y el paso de mensajes que 
+se produce entre cliente y servidor, puede ver la figura \ref{visual}.
+
+\begin{figure}[h]
+\includegraphics[scale=0.65]{img/algoritmo}
+\caption{Algoritmo \ref{algoritmo} explicado de forma visual}
+\centering
+\label{visual}
+\end{figure}
 
 Para la creación de un nuevo exprimento necesitaremos modificar, al menos, dos ficheros: ``is\_solution.js'' 
 -que se ejecuta en el servidor, decide si el choromosoma enviado por el cliente es una solución aceptable- y 
@@ -269,6 +278,7 @@ de ejecución por la propia naturaleza del problema.
 Para el segundo experimento, se ha medido el tiempo que tarda en alcanzarse una solución
 utilizando como clientes hasta tres dispositivos con la misma configuración hardware -teléfonos
 móviles LG Bello II con procesador quad-core Cortex-A7 1.3GHz con Android versión 5.0.2 y navegador Chrome-.
+También se han ejecutado de forma síncrona en los tres teléfonos.
 
 En la figura \ref{tiempo-dispositivos} podemos ver los resultados.  Si comparamos con
 la figura \ref{tiempo-pestanas}, es sencillo ver que existe simetría, aunque
@@ -288,6 +298,18 @@ solución utilizando varios dispositivos con la misma configuración hardware y so
 
 
 \section{Conclusiones y trabajo futuro}
+Mediante los experimentos que se realizaron en \cite{nodio}, el lector puede comprobar que 
+Javascript es un lenguaje suficientemente rápido como para realizar este tipo de experimentos.
+En este artículo, a través de los experimentos realizados en la sección previa, podemos comprobar
+a muy pequeña escala, los beneficios de la computación voluntaria en lo que a mejora de prestaciones
+se refiere. Hay que recordar que este tipo de sistemas se encuentran diseñados para
+ser utilizados por una gran cantidad de clientes y que esto es solo un experimento en un
+entorno controlado. El primer experimento, aunque la utilización de la misma máquina
+como servidor y cliente hace que no se pueda mostrar toda la potencia que tiene el sistema, nos 
+permite ya ver una gran mejora. En el caso del segundo, vemos como, aunque utilicemos dispositivos
+que no tienen tanta potencia de procesamiento como un computador convencional, también tienen un
+gran poder de cómputo, reduciendo notablemente el tiempo en alcanzar una solución conforme 
+aumenta el número de dispositivos.
 
 En cuanto a trabajos futuros, muchas son las ideas que se pueden desarrollar utilizando esta 
 herramienta (o a partir de la misma). La idea más directa de todas es la realización de nuevos
@@ -308,5 +330,6 @@ líneas se tenga lo necesario para lanzar el experimento-.
 
 \bibliographystyle{splncs}
 \bibliography{volunteer}
+\nocite{*}
 
 \end{document}

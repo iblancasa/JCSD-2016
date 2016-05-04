@@ -2,16 +2,51 @@
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\urlprefix}{URL }
 
+\bibitem{alexandrov1997superweb}
+Alexandrov, A.D., Ibel, M., Schauser, K.E., Scheiman, C.J.: Superweb: research
+  issues in java-based global computing. Concurrency - Practice and Experience
+  9(6),  535--553 (1997)
+
 \bibitem{seti}
 Anderson, D.P., Cobb, J., Korpela, E., Lebofsky, M., Werthimer, D.: Seti@ home:
   an experiment in public-resource computing. Communications of the ACM
   45(11),  56--61 (2002)
+
+\bibitem{anderson2006computational}
+Anderson, D.P., Fedak, G.: The computational and storage potential of volunteer
+  computing. In: Cluster Computing and the Grid, 2006. CCGRID 06. Sixth IEEE
+  International Symposium on. vol.~1, pp. 73--80. IEEE (2006)
+
+\bibitem{Baldeschwieler:1996:TIG:504450.504482}
+Baldeschwieler, J.E., Blumofe, R.D., Brewer, E.A.: Atlas: An infrastructure for
+  global computing. In: Proceedings of the 7th Workshop on ACM SIGOPS European
+  Workshop: Systems Support for Worldwide Applications. pp. 165--172. EW 7,
+  ACM, New York, NY, USA (1996), \url{http://doi.acm.org/10.1145/504450.504482}
+
+\bibitem{baratloo1996charlotte}
+Baratloo, A., Karaul, M., Kedem, Z., Wyckoff, P.: Charlotte: Metacomputing on
+  the web. In: Proceedings of the 9th Conference on Parallel and Distributed
+  Computing Systems. Citeseer (1996)
+
+\bibitem{baratloo1999charlotte}
+Baratloo, A., Karaul, M., Kedem, Z.M., Wijckoff, P.: Charlotte: Metacomputing
+  on the web. Future Generation Computer Systems  15(5),  559--570 (1999)
+
+\bibitem{chandy1996world}
+Chandy, E.M., Rifkin, A., Sivilotti, P.A., Mandelson, J., Richardson, M.,
+  Tanaka, W., Weisman, L.: A world-wide distributed system using {J}ava and the
+  {I}nternet. In: High Performance Distributed Computing, 1996., Proceedings of
+  5th IEEE International Symposium on. pp. 11--18. IEEE (1996)
 
 \bibitem{cole2010evolutionary}
 Cole, N., Desell, T., Gonz{\'a}lez, D.L., de~Vega, F.F., Magdon-Ismail, M.,
   Newberg, H., Szymanski, B., Varela, C.: Evolutionary algorithms on volunteer
   computing platforms: The milkyway@ home project. In: Parallel and distributed
   computational intelligence, pp. 63--90. Springer (2010)
+
+\bibitem{durrani2014volunteer}
+Durrani, M.N., Shamsi, J.A.: Volunteer computing: requirements, challenges, and
+  solutions. Journal of Network and Computer Applications  39,  369--380 (2014)
 
 \bibitem{ibmwcg}
 IBM: {IBM World Community Grid}. \url{http://www.worldcommunitygrid.org/}
@@ -28,14 +63,31 @@ Merelo, J.J., Castillo, P., Mora, A., Esparcia-Alc{\'a}zar, A., Rivas-Santos,
   javascript. In: Proceedings of the 2014 conference companion on Genetic and
   evolutionary computation companion. pp. 1155--1162. ACM (2014)
 
+\bibitem{merelo2015modeling}
+Merelo-Guerv{\'o}s, J.J., Garc{\'\i}a-S{\'a}nchez, P.: Modeling browser-based
+  distributed evolutionary computation systems. arXiv preprint arXiv:1503.06424
+   (2015)
+
 \bibitem{ries2012berkeley}
 Ries, C.B.: Berkeley open infrastructure for network computing. In: BOINC, pp.
   27--33. Springer (2012)
+
+\bibitem{sanz2010ibercivis}
+Sanz, F.S.: Ibercivis: la ciencia en casa: la computaci{\'o}n voluntaria.
+  Alkaid: revista multitem{\'a}tica  1(9),  12--17 (2010)
 
 \bibitem{sarmenta1998bayaniha}
 Sarmenta, L.F.: Bayanihan: Web-based volunteer computing using java. In:
   Worldwide Computing and Its Applications-WWCA'98, pp. 444--461. Springer
   (1998)
+
+\bibitem{sarmenta2001volunteer}
+Sarmenta, L.F.: Volunteer computing. Ph.D. thesis, Massachusetts Institute of
+  Technology (2001)
+
+\bibitem{sarmenta2002sabotage}
+Sarmenta, L.F.: Sabotage-tolerance mechanisms for volunteer computing systems.
+  Future Generation Computer Systems  18(4),  561--572 (2002)
 
 \bibitem{climate}
 Stainforth, D., Allen, M., Collins, M., Murphy, J.: Distributed computing for
