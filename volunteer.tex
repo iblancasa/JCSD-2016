@@ -128,59 +128,75 @@ de hoy día es bastante grande.
 
 El resto del trabajo se organiza de la forma siguiente \ldots
 
-% Enlazar cada sección con la siguiente. Al final de la intro lo que se mete es "El resto del trabajo se organiza de la forma siguiente..." 
 
 \section{Estado del arte}
-Ejemplos de ello son los descritos en \cite{seti} o \cite{climate}, sistemas creados por
-departamentos de universidades para la realizaci\'on de m\'ultiples estudios
-(cabe destacar que este tipo de iniciativas suelen estar impulsadas por
-instituciones acad\'emicas), aunque el primero fue ``Great Internet Mersenne Prime Search" en 1996,
-un sistema para buscar n\'umeros primos de Mersenne \cite{gimps}.
-%Contar qué otros sistemas similares hay en el mercado y qué desventajas pueden tener...
+Muchos son los proyectos que utilizan computación voluntaria 
+para realizar sus cálculos. El primero de ellos fue ``Great Internet Mersenne Primer Search'' \cite{gimps},
+en el año 1996, un sistema para calcular primos de Mersenne. Aunque el código de fuente es de dominio
+público, no se considera software libre ya que los usuarios deben aceptar unas condiciones sobre la propiedad
+intelectual de los resultados obtenidos, por lo que más tarde nacieron algunas versiones que son totalmente.
+
+IBM cuenta con un programa de computación voluntaria con el que trata de alcanzar soluciones 
+a enfermedades como el cáncer \cite{ibmwcg} y que cuenta con miles de voluntarios.
+
+Especialmente conocido es el proyecto SETI@home, descrito en \cite{seti}, el cual funciona en la 
+plataforma informática  ``Berkeley Open Infrastructure for Network Computing'' \cite{ries2012berkeley}. Este
+sistema analiza señales de radio buscando vida extraterrestre. Dentro de la misma plataforma, podemos encontrar
+otros muchos proyectos, como \cite{climate} mediante el cual se trata de predecir el clima. Esta plataforma es
+libre y permite crear proyectos propios aunque tiene un gran problema: para que los usuarios participen,
+es necesario que instalen un software (que se encargará de aprovechar el procesador de los voluntarios en 
+aquellos momentos en los que no estén haciendo nada).
+
+Existen algunos otros desarrollos como el que encontramos en \cite{sarmenta1998bayaniha} o \cite{jadif}.
+Estos dos frameworks nos permiten crear nuestros experimentos de computación voluntaria utilizando el lenguaje
+de programación Java. Al igual que en los casos anteriores, necesitaremos que los voluntarios descarguen e instalen
+un programa (además de las propias dependencias de Java), lo que puede provocar que muchos usuarios no se sientan
+atraídos a colaborar.
+
+En cuanto a frameworks orientados a computación voluntaria con algoritmos evolutivos, ya en \cite{cole2010evolutionary}
+podemos ver un análisis de algunas plataformas y comparaciones de rendimiento entre ellas. Sin embargo, NodIO añade
+va más allá: permite ejecutar el cómputo desde el navegador al estar escrito el cliente en Javascript. Esto facilita
+la participación en el experimento ya que cualquier dispositivo que sea capaz de ejecutar un navegador web va a poder 
+ejecutarlo. Deriva de aquí otra ventaja: al solo necesitarse un navegador web, no es necesario que el usuario
+se preocupe de instalar ningún software adicional en su máquina.
+
 
 \section{NodIO}
 
-% Nunca cabeceras de secciones vacías. Se hace un pequeño resumen y se introducen las subsecciones
-
-\subsection{\textquestiondown	Qu\'e es NodIO?}
-NodIO \cite{nodio} es un software desarrollado para ser desplegado en un
-Plataforma como Servicio (Platform A a Service), que, a su vez, se basa en un
-framework llamado NodEO, pensado para el desarrollo de algoritmos gen\'eticos,
+NodIO \cite{nodio}, como se ha mencionado, es un marco de desarrollo crear experimentos de
+computación voluntaria utilizando algoritmos evolutivos. En este caso, está pensado para ser desplegado en un
+Plataforma como Servicio (Platform A a Service). Para el desarrollo de
+los algoritmos se basa en un framework llamado NodEO \cite{nodeo},
 desarrollado en NodeJS.
 
-Gracias a esta implementaci\'on, se pueden lanzar experimentos y ejecutarlos a
-trav\'es de un navegador (o cualquier sistema que ejecute el lenguaje Javascript
-y que disponga de conexi\'on a Internet)
-por cada uno de los usuarios que accedan al servidor.
+Gracias a esta implementación del lado cliente, se pueden lanzar experimentos y que los voluntarios los ejecuten
+a través de un navegador (o cualquier sistema que ejecute el lenguaje Javascript
+y que disponga de conexión a Internet).
 
 
 \subsection{Funcionamiento}
+A continuación se va a hablar del funcionamiento de NodIO, así como de sus distintas partes.
 
-% Igual que antes. Aunque lo mejor es no usar sub-subsecciones en un trabajo para conferencia - JJ
-
-\subsubsection{Arquitectura}
 Este sistema cloud sigue un paradigma cliente - servidor:
 \begin{itemize}
-  \item Servidor: realiza la coordinaci\'on de los clientes, almacena los distintos chromosomas y
-  el estado de los experimentos y reinicia el experimento cuando se ha encontrado la soluci\'on.
-  El acceso y env\'io de los distintos chromosomas se hace a trav'es de una interfaz API/REST.
-  Las peticiones (que siguen el ciclo ``CRUD") utilizan el formato JSON. Est\'a escrito en NodeJS.
-  \item Cliente: procede con el c\'omputo. Hace peticiones as\'incronas al servidor.
-  En aquellos navegadores en los que est\'e permitido, se ejecuta utilizando ``Web Workers"
-  (en caso contrario, se ejecuta una versi\'on preparada para ello). Est\'a escrito
-  en Javascript, ya que se dise\~n\'o pensando en que fuese ejecutado en navegadores aunque
-  (gracias a que el servidor utiliza una API/REST), se podr\'ia escribir en cualquier otro
+  \item Servidor: realiza la coordinación de los clientes, almacena los distintos chromosomas y
+  el estado de los experimentos y reinicia el experimento cuando se ha encontrado la solución.
+  El acceso y envío de los distintos chromosomas se hace a través de una interfaz API/REST.
+  Las peticiones (que siguen el ciclo ``CRUD") utilizan el formato JSON. Está escrito en NodeJS.
+  \item Cliente: procede con el cómputo. Hace peticiones asíncronas al servidor.
+  En aquellos navegadores en los que esté permitido, se ejecuta utilizando ``Web Workers"
+  (en caso contrario, se ejecuta una versión preparada para ello). Está escrito
+  en Javascript, ya que se diseño pensando en que fuese ejecutado en navegadores aunque
+  (gracias a que el servidor utiliza una API/REST), se podría escribir en cualquier otro
   lenguaje, siendo totalmente compatible con el actual servidor.
 \end{itemize}
 
-
-
-\subsubsection{Env\'io de mensajes y coordinaci\'on}
-Como se ha mencionado anteriormente, el sistema NodIO se basa en NodEO, que permite la
-ejecuci\'on de algoritmos gen\'eticos escritos en Javascript. El sistema procede
-de la siguiente forma:
+Teniendo clara esta separación, es hora de ver el papel que juegan cada uno de los elementos
+dentro del algoritmo \ref{algoritmo}.
 
 \begin{algorithm}[H]
+  \caption{Algoritmo utilizado en NodIO para la realización de experimentos}
+  \label{algoritmo}
   \begin{algorithmic}
     \State Inicio del $servidor$
     \State $numero\_secuencia \gets 0$
@@ -215,103 +231,65 @@ de la siguiente forma:
 \end{algorithm}
 
 
-\subsubsection{Crear un nuevo experimento}
-La creaci\'on de un nuevo exprimento se basa en la modificaci\'on de algunos archivos.
-Principalmente:
-\begin{itemize}
-  \item \textbf{is\_solution.js}: este fichero, que se ejecuta en el servidor,
-  decide si la soluci\'on enviada por el cliente es v\'alida, es decir,
-  comprueba que se haya alcanzado la soluci\'on y, en caso afirmativo, se
-  aumenta el n\'umero de secuencia y se comienza de nuevo. Cuando se desee
-  crear un nuevo experimento, ser\'a necesario reescribir esta funci\'on y
-  adecuarlo a las caracter\'isticas de la nueva.
-  \item \textbf{trap.standalone.js}: este archivo se encuentra y ejecuta en el cliente.
-  Sirve como base a un nuevo desarrollo. Contiene las funciones necesarias para
-  el dibujado de las gr\'aficas y la evaluaci\'on y generaci\'on de los individuos.
-  Aqu\'i es donde crearemos una funci\'on que eval\'ue el fitness de cada uno de
-  los chromosomas generados. No olvidemos que NodIO hace uso de la biblioteca
-  NodEO \cite{nodeo}, lo que quiere decir que algunas de las funciones que vemos en
-  \textit{trap.standalone.js} est\'an definidas en NodEO (aunque podr\'iamos prescindir
-  de este framework e implementar las nuestras propias).
-\end{itemize}
-
-Dependiendo de las necesidades que tenga el experimento deseado, ser\'a necesaria
-la revisi\'on de otros archivos para ajustar aquellos par\'ametros que se deseen.
-Esto no es problema al contar NodIO con una licencia libre.
+Para la creación de un nuevo exprimento necesitaremos modificar, al menos, dos ficheros: ``is\_solution.js'' 
+-que se ejecuta en el servidor, decide si el choromosoma enviado por el cliente es una solución aceptable- y 
+``trap.standalone.js'' -se ejecuta en el cliente y es donde se ejecutan los algoritmos evolutivos-. Dependiendo de 
+las necesidades que tenga el experimento deseado, habrá que revisar
+otros archivos para ajustar aquellos parámetros que se deseen -como NodIO cuenta con una licencia libre,
+esto no es problema-. 
 
 \subsection{Experimentos}
+Algunos experimentos ya fueron hechos en \cite{nodio} para mostrar la velocidad de ejecución de los distintos
+cómputos en Javascript frente a otros lenguajes. En este trabajo se ha procedido a realizar algunos experimentos
+para mostrar, a pequeña escala, el beneficio que nos aporta la computación voluntaria en cuanto a rendimiento.
 
-\subsubsection{Comprobando la reducci\'on de tiempo a mayor n\'umero de pesta\~nas}.
-Como se dec\'ia cuando se introduc\'ia a la computaci\'on voluntaria,
-el uso de muchos dispositivos, convierte el sistema en una gran red computacional.
-Esto nos permite resolver problemas que ser\'ian demasiado costosos para una sola
-m\'aquina mucho m\'as r\'apido. Por este motivo, utilizando el experimento
-en el que se resuelve la ``funci\'on trap", se desea
-demostrar, a muy peque\~na escala, c\'omo de beneficiosa puede llegar a ser la computaci\'on
-voluntaria para obtener resultados.
-
-Las variables pasan a tomar los siguientes valores:
-\begin{itemize}
-  \item traps: 24
-  \item longitud trap: 4
-  \item b: 2
-  \item cach\'e: 32
-  \item tama\~no problaci\'on: 128
-\end{itemize}
-
-Estos valores son los mismos que los vistos en el anterior experimento, excepto
-el n\'umero de traps, que se ha reducido para obtener un problema suficientemente
-complejo para realizar algo de c\'omputo pero no demasiado lento para poder hacer
-muchas mediciones (el valor se ha obtenido de forma emp\'irica).
-
-Tras esto, se ha procedido a poner en marcha el servidor y ejecutar los algoritmos
-variando el n\'umero de pesta\~nas abiertas en el navegador. Los resultados
-se pueden observar en la figura \ref{tiempo-pestanas}.
+En un primer experimento, se ha comprobado el tiempo de ejecución en función del número de pestañas
+que están ejecutando el cliente. La máquina que hace de servidor hace también las veces de cliente,
+comenzando la ejecución de los clientes de forma síncrona. Como problema a resolver,
+se ha utilizado el de resolver la función ``trap'', con unos valores de: número de traps, 24;
+longitud del trap, 4; b, 2; caché, 32; y, tamaño de población, de 128. Se han escogido estos valores
+para conseguir un experimento que sea relativamente sencillo, de forma que se pudiera medir
+fácilmente el tiempo que tarda en resolverlo un solo voluntario. Estas pruebas se han hecho en un 
+sistema operativo GNU/Linux (distribución ArchLinux con kernel 4.5.1) con un procesador i5-2410M CPU @ 
+2.30GHz. El navegador utilizado ha sido la versión 50 de Chromium.
 
 \begin{figure}[htbp]
 \includegraphics[scale=0.6]{img/tiempo-pestanas}
 \centering
 \caption{Resultados obtenidos al medir el tiempo que se tarda en alcanzar una
-soluci\'on en un mismo ordenador en funci\'on del n\'umero de pesta\~nas abierto}
-% Dónde están los datos y el script en R que lo ha generado - JJ
+solución en un mismo ordenador en función del número de pestañas abierto}
 \label{tiempo-pestanas}
 \end{figure}
 
-Estas pruebas se han hecho en un sistema operativo GNU/Linux (distribuci\'on ArchLinux con
-kernel 4.5.1) con un procesador i5-2410M CPU @ 2.30GHz. El navegador utilizado ha sido la
-versi\'on 50 de Chromium.
-
-Como podemos observar, cuando solo tenemos una pesta\~na abierta, el tiempo se
-dispara (en torno a unos 3 minutos). En el caso de dos pesta\~nas, el tiempo descenci\'o hasta
-un tiempo estimado a los 53.22 segundos. En el resto de los casos, aunque sigue habiendo
+En el experimento se han ido variando el número de pestañas abiertas y se ha ejecutado el experimento
+varias veces -calculando una media ponderada para representar en \ref{tiempo-pestanas}-. 
+Como podemos observar, cuando solo tenemos una pestaña abierta, el tiempo se
+dispara (en torno a unos 3 minutos). En el caso de dos pestañas, el tiempo descenció hasta
+un tiempo estimado de 53.22 segundos. En el resto de los casos, aunque sigue habiendo
 diferencias de tiempo (unos 14.56, 10.11 y 7.46 segundos respectivamente), no es
 tan notable como en los otros dos casos. Esto puede tener varias explicaciones: por un
-lado al aumentar el n\'umero de pesta\~nas, el poder computacional desciende (el
+lado al aumentar el número de pestañas, el poder computacional desciende (el
 sistema operativo se ve con una carga de trabajo con la que tiene que lidiar).
-Por otro, llegar\'a un momento en el que no se podr\'a reducir m\'as el tiempo
-de ejecuci\'on por la propia naturaleza del problema.
+Por otro, llegará un momento en el que no se podrá reducir más el tiempo
+de ejecución por la propia naturaleza del problema.
 
 
-\subsubsection{Comprobando la reducci\'on de tiempo utilizando varios dispositivos del mismo modelo.}
-
-En esta ocasi\'on, utilizando exactamente la misma versi\'on del software que en
-el experimento anterior (el mismo cliente y el mismo servidor utilizando los mismos valores),
-se ha procedido a medir los tiempos ejecuci\'on en varios dispositivos (siendo el mismo
-modelo hardware -tel\'efonos m\'oviles LG Bello II, con procesador quad-core
-Cortex-A7 1.3GHz-, navegador -Chrome- y la misma versi\'on Android -5.0.2-).
+Para el segundo experimento, se ha medido el tiempo que tarda en alcanzarse una solución
+utilizando como clientes hasta tres dispositivos con la misma configuración hardware -teléfonos
+móviles LG Bello II con procesador quad-core Cortex-A7 1.3GHz con Android versión 5.0.2 y navegador Chrome-.
 
 En la figura \ref{tiempo-dispositivos} podemos ver los resultados.  Si comparamos con
-la figura \ref{tiempo-pestanas}, es sencillo ver que existe una simetr\'ia, aunque
-en este nuevo caso los tiempos son algo mayores (que podemos achacar a un menor rendimiento
-por parte del procesador del dispositivo m\'ovil y a la existencia de una red entre
+la figura \ref{tiempo-pestanas}, es sencillo ver que existe simetría, aunque
+en este nuevo caso los tiempos son algo mayores -que podemos achacar a un menor rendimiento
+por parte del procesador del dispositivo móvil y a la existencia de una red entre
 el servidor y los dispositivos, cuando antes se ejecutaba todo dentro de la misma
-m\'aquina).
+máquina-.
 
 \begin{figure}[htbp]
 \includegraphics[scale=0.6]{img/tiempo-dispositivos}
 \centering
 \caption{Resultados obtenidos al medir el tiempo que se tarda en alcanzar una
-soluci\'on utilizando varios dispositivos con la misma configuraci\'on hardware y software}
+solución utilizando varios dispositivos con la misma configuración hardware y software}
 \label{tiempo-dispositivos}
 \end{figure}
 
@@ -320,35 +298,21 @@ soluci\'on utilizando varios dispositivos con la misma configuraci\'on hardware 
 
 \section{Conclusiones y trabajo futuro}
 
-% ¿Qué conclusiones se obtienen de los experimentos anteriores?
 
-Muchas son las ideas que se pueden desarrollar utilizando esta herramienta (o a
-partir de la misma). Aqu\'i se destacar\'an:
-\begin{itemize}
-  \item Realizaci\'on de nuevos experimentos: teniendo en cuenta los experimentos
-  que ya se realizaron en \cite{nodio} o los que se presentan en las anteriores l\'ineas,
-  un experimento interesante podr\'ia ser medir la velocidad de ejecuci\'on del
-  mismo software utilizando dispositivos de distinta potencia (para comprobar
-  si esto afecta mucho o no a la ejecuci\'on del c\'odigo Javascript).
-  \item Facilitar la creaci\'on de nuevos experimentos: actualmente, tener que cambiar
-  varios ficheros puede ser una tarea engorrosa y ser\'ia un cometido a tener en cuenta el
-  facilitaci\'on de la misma. Adem\'as ser\'ia \'util (para
-  aquellos usuarios que no se encuentren familizarizados con Javascript o simplemente
-  no quieran reescribir su c\'odigo), la
-  integraci\'on de forma sencilla de conversores de c\'odigo (como es el caso de ScalaJS,
-  que permite ``traducir" c\'odigo escrito en lenguaje Scala a Javascript).
-  \item Aplicar t\'ecnicas de ``gamificaci\'on": probablemente podamos sacar
-  provecho a la ludificaci\'on para atraer a m\'as usuarios (y durante m\'as tiempo)
-  para que participen en los experimentos. Un ranking por puntos o alg\'un tipo de
-  bonificaci\'on podr\'ian hacer que los resultados (y sobre todo los tiempos de
-  ejecuci\'on) mejorasen notablemente.
-  \item Soporte a m\'ultiples idiomas: actualmente la p\'agina donde se realizan los
-  experimentos est\'a en ingl\'es. Si se proporcina soporte a distintos idiomas,
-  ser\'a m\'as sencillo captar nuevos usuarios (m\'as teniendo en cuenta que,
-  cuando se lanza el experimento, la difusi\'on de la web se realiza mediante
-  redes sociales en perfiles de habla hispana).
-\end{itemize}
-
+En cuanto a trabajos futuros, muchas son las ideas que se pueden desarrollar utilizando esta 
+herramienta (o a partir de la misma). La idea más directa de todas es la realización de nuevos
+experimentos, no tanto sobre la velocidad para alcanzar la solución a un problema dado como
+para investigar sobre el comportamiento de los usuarios, es decir, una vez lanzado un experimento
+tratar de conocer si los usuarios se sienten atraidos por la idea de participar en un
+experimento -difundiendo un enlace al mismo a través de redes sociales- y, una vez que han iniciado
+el experimento, cuánto tiempo participan. Dentro de esta línea, la idea de incluir técnicas 
+relacionadas con ``ludificación'' -para atraer a los usuarios y hacer que estos se queden más tiempo
+ejecutando los distintos experimentos- sería otra cuestión a resolver, junto con la internacionalización
+de la aplicación -actualmente solo se encuentra disponible en inglés, por lo que al extenderlo
+a otros idiomas, como el castellano, se llegaría a más gente-.Conseguir una mayor automatización en la creación
+de los experimentos es un camino a tener en cuenta, facilitando que cualquiera pueda implementar
+más sencillamente lo que necesite -proporcionando solo algunas plantillas donde rellenando unas pocas
+líneas se tenga lo necesario para lanzar el experimento-. 
 
 
 \bibliographystyle{splncs}

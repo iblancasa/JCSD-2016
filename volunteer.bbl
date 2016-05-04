@@ -7,20 +7,14 @@ Anderson, D.P., Cobb, J., Korpela, E., Lebofsky, M., Werthimer, D.: Seti@ home:
   an experiment in public-resource computing. Communications of the ACM
   45(11),  56--61 (2002)
 
-\bibitem{anderson2006computational}
-Anderson, D.P., Fedak, G.: The computational and storage potential of volunteer
-  computing. In: Cluster Computing and the Grid, 2006. CCGRID 06. Sixth IEEE
-  International Symposium on. vol.~1, pp. 73--80. IEEE (2006)
-
 \bibitem{cole2010evolutionary}
 Cole, N., Desell, T., Gonz{\'a}lez, D.L., de~Vega, F.F., Magdon-Ismail, M.,
   Newberg, H., Szymanski, B., Varela, C.: Evolutionary algorithms on volunteer
   computing platforms: The milkyway@ home project. In: Parallel and distributed
   computational intelligence, pp. 63--90. Springer (2010)
 
-\bibitem{durrani2014volunteer}
-Durrani, M.N., Shamsi, J.A.: Volunteer computing: requirements, challenges, and
-  solutions. Journal of Network and Computer Applications  39,  369--380 (2014)
+\bibitem{ibmwcg}
+IBM: {IBM World Community Grid}. \url{http://www.worldcommunitygrid.org/}
 
 \bibitem{nodio}
 Merelo, J.J., Garc{\'\i}a-Valdez, M., Castillo, P.A., Garc{\'\i}a-S{\'a}nchez,
@@ -34,32 +28,22 @@ Merelo, J.J., Castillo, P., Mora, A., Esparcia-Alc{\'a}zar, A., Rivas-Santos,
   javascript. In: Proceedings of the 2014 conference companion on Genetic and
   evolutionary computation companion. pp. 1155--1162. ACM (2014)
 
-\bibitem{merelo2015modeling}
-Merelo-Guerv{\'o}s, J.J., Garc{\'\i}a-S{\'a}nchez, P.: Modeling browser-based
-  distributed evolutionary computation systems. arXiv preprint arXiv:1503.06424
-   (2015)
+\bibitem{ries2012berkeley}
+Ries, C.B.: Berkeley open infrastructure for network computing. In: BOINC, pp.
+  27--33. Springer (2012)
 
-\bibitem{sanz2010ibercivis}
-Sanz, F.S.: Ibercivis: la ciencia en casa: la computaci{\'o}n voluntaria.
-  Alkaid: revista multitem{\'a}tica  1(9),  12--17 (2010)
-
-\bibitem{sarmenta1998bayanihan}
+\bibitem{sarmenta1998bayaniha}
 Sarmenta, L.F.: Bayanihan: Web-based volunteer computing using java. In:
   Worldwide Computing and Its Applications-WWCA'98, pp. 444--461. Springer
   (1998)
-
-\bibitem{sarmenta2001volunteer}
-Sarmenta, L.F.: Volunteer computing. Ph.D. thesis, Massachusetts Institute of
-  Technology (2001)
-
-\bibitem{sarmenta2002sabotage}
-Sarmenta, L.F.: Sabotage-tolerance mechanisms for volunteer computing systems.
-  Future Generation Computer Systems  18(4),  561--572 (2002)
 
 \bibitem{climate}
 Stainforth, D., Allen, M., Collins, M., Murphy, J.: Distributed computing for
   public-interest climate modeling research. Computing in Science \&
   Engineering  4(3),  82--89 (2002)
+
+\bibitem{jadif}
+Team, J.: {Jadif}. \url{http://jadif.sourceforge.net/}
 
 \bibitem{gimps}
 Woltman, G., et~al.: Gimps. The Great Internet Mersenne Prime Search  (2008)
