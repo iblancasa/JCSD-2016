@@ -75,43 +75,28 @@ tener un navegador web o un intérprete.
 \section{Introducción}
 % Tienes que explicar por qué hace falta computación voluntaria en computación evolutiva - JJ
 
-Diversos son los m\'etodos utilizados por los llamados cient\'ificos
-de datos para el procesamiento de largos conjuntos de resultados obtenidos
-a trav\'es de la elaboraci\'on de experimentos o, en su defecto, la propia
-realizaci\'on de los experimentos: uso de un \'unico supercomputador para
-todo el procesamiento; creaci\'on de un cl\'uster de m\'aquinas en un centro
-de procesamiento (o cloud); o, como en el caso que nos ocupa, la computaci\'on voluntaria.
+Diversos son los métodos utilizados por los científicos
+para el procesamiento de largos conjuntos de resultados obtenidos
+a través de la elaboración de experimentos o, en su defecto, la propia
+realización de los experimentos: uso de un único supercomputador para
+todo el procesamiento; creación de un clúster de máquinas en un centro
+de procesamiento (o cloud); o, como en el caso que nos ocupa, la computación voluntaria.
 
-La computación voluntaria es un m\'etodo de c\'omputo mediante el cual se
-permite a distintos usuarios colaborar en un proyecto cient\'ifico,
-en muchas ocasiones, aprovechando el tiempo ocioso de sus m\'aquinas. Esta colaboraci\'on
-se produce entre computadores independientes, interconectados a trav\'es de una o varias redes
-para comunicar informaci\'on y coordinar sus tareas construyendo redes con potencias
+La computación voluntaria es un método de cómputo mediante el cual se
+permite a distintos usuarios colaborar en un proyecto científico,
+en muchas ocasiones, aprovechando el tiempo ocioso de sus máquinas. Esta colaboración
+se produce entre computadores independientes, interconectados a través de una o varias redes
+para comunicar información y coordinar sus tareas construyendo redes con potencias
 equivalentes a la de los supercomputadores o, incluso, superiores.
 
-Ejemplos de ello son los descritos en \cite{seti} o \cite{climate}, sistemas creados por
-departamentos de universidades para la realizaci\'on de m\'ultiples estudios
-(cabe destacar que este tipo de iniciativas suelen estar impulsadas por
-instituciones acad\'emicas), aunque el primero fue ``Great Internet Mersenne Prime Search" en 1996,
-un sistema para buscar n\'umeros primos de Mersenne \cite{gimps}.
-
-En estos sistemas se desean las siguientes caracter\'isticas:
-\begin{itemize}
-  \item Tolerancia a fallos: en caso que una de las m\'aquinas deje de hacer un trabajo, es
-  conveniente que se ese c\'omputo sea realizado por otro usuario
-  \item Seguridad: para evitar que un usuario nocivo (o varios) puedan causar alg\'un da\~no
-  al resto
-  \item Ejecuci\'on en m\'ultiples m\'aquinas (incluso m\'aquinas de distinta naturaleza):
-  si el experimento o la transformaci\'on de los datos no se realiza en un n\'umero suficiente
-  de m\'aquinas, no se tendr\'a potencia de c\'alculo para obtener resultados fruct\'iferos
-  \item Compatibilidad entre los dispositivos conectados: es necesario que
-  las distintas m\'aquinas puedan entenderse entre ellas, de forma que el resultado
-  de una pueda ser interpretado por otra
-  \item Escalable: que el sistema sea escalable es un punto muy importante, ya que
-  cuanto mayor sea la escalabilidad, mayor ser\'a la potencia de c\'omputo. Adem\'as,
-  se debe garantizar que el sistema no tenga fallos debido al aumento del n\'umero de
-  usuarios conectados
-\end{itemize}
+En estos sistemas se desean características como: tolerancia a fallos -en caso que una de las
+máquinas deje de hacer un trabajo, es conveniente que ese cómputo sea realizado por otro usuario-;
+ejecución en múltiples máquinas -para obtener la potencia de cálculo necesaria-;
+compatibilidad entre los dispositivos conectados -es necesario que la información
+transmitida por los distintos dispositivos pueda entenderse por otros dispositivos del sistema-;
+seguro -evitando que uno o más usuarios con malintencionados traten de realizar algún tipo de actividad 
+nociva para el resto-; y, por último, escalabilidad -ya que lo que se busca es la participación 
+del mayor número de usuarios posible, es necesario que el sistema sea escalable-.
 
 La potencia computacional total del sistema variar\'a en funci\'on del n\'umero de
 usuarios que decidan colaborar, as\'i como de la propia potencia de sus m\'aquinas
@@ -131,19 +116,26 @@ problemas que pueden aparecer en cuanto a la fiabilidad o correcci\'on de los da
 para asegurar la correcci\'on o la firma de c\'odigo para prevenir modificaciones maliciosas
 del software), hacen que el m\'etodo no sea ideal.
 
-En estos sistemas, los usuarios depositan su confianza en el proyecto, suponiendo que:
-\begin{itemize}
-  \item El software que est\'an ejecutando no da\~na sus dispositivos
-  \item El c\'omputo que se est\'a realizando servir\'a para la cuesti\'on que se
-  ha anunciado y c\'omo se tratar\'a la propiedad intelectual de los resultados
-  \item El sistema est\'a blindado contra usuarios maliciosos, evitando que
-  se convierta en un canal para llevar a cabo actividades il\'icitas
-\end{itemize}
+En estos sistemas, los usuarios depositan su confianza en el proyecto, suponiendo que el software
+que están ejecutando no daña sus dispositivos, el cómputo que se está realizando
+servirá para cubrir la necesidad que se ha anunciado y que el sistema está blindado para 
+que ningún usuario malintencionado lleve a cabo ningún tipo de actividad ilícita.
+
+Sabiendo que la computación de algoritmos genéticos puede ser bastante lenta,
+la computación voluntaria es un complemento a la computación de escritorio a la hora de obtener
+más resultados, no teniendo por qué ser algo exclusivo, ya que la potencia de los procesadores
+de hoy día es bastante grande.
+
+El resto del trabajo se organiza de la forma siguiente \ldots
 
 % Enlazar cada sección con la siguiente. Al final de la intro lo que se mete es "El resto del trabajo se organiza de la forma siguiente..." 
 
 \section{Estado del arte}
-
+Ejemplos de ello son los descritos en \cite{seti} o \cite{climate}, sistemas creados por
+departamentos de universidades para la realizaci\'on de m\'ultiples estudios
+(cabe destacar que este tipo de iniciativas suelen estar impulsadas por
+instituciones acad\'emicas), aunque el primero fue ``Great Internet Mersenne Prime Search" en 1996,
+un sistema para buscar n\'umeros primos de Mersenne \cite{gimps}.
 %Contar qué otros sistemas similares hay en el mercado y qué desventajas pueden tener...
 
 \section{NodIO}
