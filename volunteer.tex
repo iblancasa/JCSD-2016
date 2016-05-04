@@ -1,3 +1,4 @@
+
 %%%%%%%%%%%%%%%%%%%%%%% file typeinst.tex %%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % This is the LaTeX source for the instructions to authors using
@@ -42,9 +43,6 @@
 %
 \author{Israel Blancas \inst{1} \and J. J. Merelo \inst{1}}
 %
-%\authorrunning{La importancia de la computaci\'on voluntaria y un ejempl}
-% (feature abused for this document to repeat the title also on left hand pages)
-
 % the affiliations are given next; don't give your e-mail address
 % unless you accept that it will be published
 
@@ -53,13 +51,11 @@ Universidad de Granada, Espa\~na}
 
 \maketitle
 
-
 \begin{abstract}
-% Tienes que adaptar el resumen al título - JJ 
 La computación evolutiva es un tipo de computación distribuida que permite
 realizar experimentos utilizando la potencia de cálculo proporcionada
 por las máquinas de usuarios que deciden colaborar libremente en la investigación.
-NodIO es un marco de desarrollo de aplicaciones para la creación de este
+NodIO \cite{nodio} es un marco de desarrollo de aplicaciones para la creación de este
 tipo de experimentos. A diferencia de otros frameworks que realizan las mismas
 tareas, NodIO no necesita instalar nada en el lado del cliente, ya que se 
 encuentra escrito en Javascript, por lo que solo será necesario
@@ -73,10 +69,7 @@ tener un navegador web o un intérprete.
 \end{keywords}
 
 \section{Introducción}
-% Tienes que explicar por qué hace falta computación voluntaria en computación evolutiva - JJ
-
-Diversos son los métodos utilizados por los científicos
-para el procesamiento de largos conjuntos de resultados obtenidos
+Diversos son los métodos utilizados para el procesamiento de largos conjuntos de resultados obtenidos
 a través de la elaboración de experimentos o, en su defecto, la propia
 realización de los experimentos: uso de un único supercomputador para
 todo el procesamiento; creación de un clúster de máquinas en un centro
@@ -107,13 +100,13 @@ La computaci\'on voluntaria es importante, entre otras de las cuestiones ya expu
 porque permite que ciudadanos fuera del \'ambito de la investigaci\'on, puedan
 tomar parte de la misma.
 
-Adem\'as, gracias a que son los usuarios quienes ``prestan" sus m\'aquinas, el sistema
-es m\'as barato que la contrataci\'on de c\'omputo o la compra de material dedicado.
+Además, gracias a que son los usuarios quienes ``prestan" sus máquinas, el sistema
+es más barato que la contratación de cómputo o la compra de material dedicado.
 
-Por su contra, la dificultad para llegar a un n\'umero importante de gente y los posibles
-problemas que pueden aparecer en cuanto a la fiabilidad o correcci\'on de los datos
-(aunque se pueden establecer mecanismos como la computaci\'on redundante
-para asegurar la correcci\'on o la firma de c\'odigo para prevenir modificaciones maliciosas
+Por su contra, la dificultad para llegar a un número importante de gente y los posibles
+problemas que pueden aparecer en cuanto a la fiabilidad o corrección de los datos
+(aunque se pueden establecer mecanismos como la computación redundante
+para asegurar la correcci\'on o la firma de código para prevenir modificaciones maliciosas
 del software), hacen que el m\'etodo no sea ideal.
 
 En estos sistemas, los usuarios depositan su confianza en el proyecto, suponiendo que el software
@@ -159,7 +152,6 @@ va más allá: permite ejecutar el cómputo desde el navegador al estar escrito el 
 la participación en el experimento ya que cualquier dispositivo que sea capaz de ejecutar un navegador web va a poder 
 ejecutarlo. Deriva de aquí otra ventaja: al solo necesitarse un navegador web, no es necesario que el usuario
 se preocupe de instalar ningún software adicional en su máquina.
-
 
 \section{NodIO}
 
@@ -214,7 +206,7 @@ dentro del algoritmo \ref{algoritmo}.
                \State $generarPoblacion()$
             \EndWhile
             \State El $chromosoma$ con mejor $fitness$ es enviado al $servidor$
-            \If $Not mejor\_global(chromosoma)$
+            \If{$Not\ mejor\_global(chromosoma)$}
                 \State $servidor$ envía un $chromosoma$ aleatorio de $poblacion\_compartida$
                 \State $servidor$ envía el número actual de generación y el mejor $chromosoma$
                 \State $cliente$ actualiza los gráficos
@@ -222,7 +214,7 @@ dentro del algoritmo \ref{algoritmo}.
          \Until{mejor-global(chromosoma)}
          \State $cliente$ actualiza los gráficos
          \State El experimento acaba
-         \State El $numero\_secuencia \gets numero\_secuencia+1$ 
+         \State El $numero\_secuencia \gets numero\_secuencia+1$
          \State $poblacion\_compartida \gets random[]$
          \EndLoop
       \EndFor
@@ -295,9 +287,7 @@ solución utilizando varios dispositivos con la misma configuración hardware y so
 
 
 
-
 \section{Conclusiones y trabajo futuro}
-
 
 En cuanto a trabajos futuros, muchas son las ideas que se pueden desarrollar utilizando esta 
 herramienta (o a partir de la misma). La idea más directa de todas es la realización de nuevos
@@ -313,6 +303,7 @@ a otros idiomas, como el castellano, se llegaría a más gente-.Conseguir una mayo
 de los experimentos es un camino a tener en cuenta, facilitando que cualquiera pueda implementar
 más sencillamente lo que necesite -proporcionando solo algunas plantillas donde rellenando unas pocas
 líneas se tenga lo necesario para lanzar el experimento-. 
+
 
 
 \bibliographystyle{splncs}
