@@ -42,7 +42,7 @@
 %
 \author{Israel Blancas \inst{1} \and J. J. Merelo \inst{1}}
 %
-\authorrunning{La importancia de la computaci\'on voluntaria y un ejemplo}
+%\authorrunning{La importancia de la computaci\'on voluntaria y un ejempl}
 % (feature abused for this document to repeat the title also on left hand pages)
 
 % the affiliations are given next; don't give your e-mail address
@@ -56,24 +56,20 @@ Universidad de Granada, Espa\~na}
 
 \begin{abstract}
 % Tienes que adaptar el resumen al título - JJ 
-La computaci\'on voluntaria es una metodolog\'ia para realizar c\'alculos o procesamiento
-de datos basado en la interconexi\'on de m\'ultiples clientes (que realizan el c\'omputo)
-un servidor (que almacena los resultados y coordina los servidores). Frente a otros m\'etodos
-de computaci\'on, la computaci\'on voluntaria brinda la oportunidad a los ciudadanos
-de participar en experimentos cient\'ificos, aportando la potencia de sus m\'aquinas
-para el tratamiento de los datos. Un ejemplo de ello es NodIO, un framework
-que permite lanzar experimentos de computaci\'on voluntaria utilizando algoritmos
-evolutivos. Este es desplegado sobre un PaaS (Platform as a Service -Plataforma como Servicio-)
-y su principal ventaja radica en que est\'a escrito en Javascript, lo que permite
-que una gran cantidad de dispositivos, sin depender de su arquitectura o de la
-instalaci\'on de m\'as software que un navegador, pueda ejecutarlo y participar
-en los distintos experimentos.
+La computación evolutiva es un tipo de computación distribuida que permite
+realizar experimentos utilizando la potencia de cálculo proporcionada
+por las máquinas de usuarios que deciden colaborar libremente en la investigación.
+NodIO es un marco de desarrollo de aplicaciones para la creación de este
+tipo de experimentos. A diferencia de otros frameworks que realizan las mismas
+tareas, NodIO no necesita instalar nada en el lado del cliente, ya que se 
+encuentra escrito en Javascript, por lo que solo será necesario
+tener un navegador web o un intérprete. 
 \end{abstract}
 
 
 \begin{keywords}
-  Computaci\'on voluntaria,  algoritmos evolutivos, computaci\'on distribuida,
-  computaci\'on en internet, computación nube, evaluaci\'on de rendimiento
+  Computación voluntaria,  algoritmos evolutivos, computación distribuida,
+  computación en internet, computación nube, evaluación de rendimiento
 \end{keywords}
 
 \section{Introducción}
@@ -195,31 +191,31 @@ de la siguiente forma:
 \begin{algorithm}[H]
   \begin{algorithmic}
     \State Inicio del $servidor$
-    \State $numero-secuencia \gets 0$
-    \State $poblacion-compartida \gets random[]$
+    \State $numero\_secuencia \gets 0$
+    \State $poblacion\_compartida \gets random[]$
     \State Se crea el archivo de log
     \ForAll{$clientes$}
        \State $cliente$ accede al link
        \State $servidor$ envía la página y los scripts a ejecutar
        \State $cliente$ renderiza la página
        \Loop
-         \State $UUID \gets new-UUID$
+         \State $UUID \gets new\_UUID$
          \State $poblacion \gets generarPoblacion()$
          \Repeat
-            \While{$poblaciones-generadas\leq n$}
+            \While{$poblaciones\_generadas\leq n$}
                \State $generarPoblacion()$
             \EndWhile
             \State El $chromosoma$ con mejor $fitness$ es enviado al $servidor$
-            \If $Not mejor-global(chromosoma)$
-                \State $servidor$ envía un $chromosoma$ aleatorio de $poblacion-compartida$
+            \If $Not mejor\_global(chromosoma)$
+                \State $servidor$ envía un $chromosoma$ aleatorio de $poblacion\_compartida$
                 \State $servidor$ envía el número actual de generación y el mejor $chromosoma$
                 \State $cliente$ actualiza los gráficos
             \EndIf
          \Until{mejor-global(chromosoma)}
          \State $cliente$ actualiza los gráficos
          \State El experimento acaba
-         \State El $numero-secuencia \gets numero-secuencia+1$ 
-         \State $poblacion-compartida \gets random[]$
+         \State El $numero\_secuencia \gets numero\_secuencia+1$ 
+         \State $poblacion\_compartida \gets random[]$
          \EndLoop
       \EndFor
 
