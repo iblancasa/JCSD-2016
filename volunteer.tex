@@ -21,6 +21,8 @@
 \usepackage{amssymb}
 \setcounter{tocdepth}{3}
 \usepackage{graphicx}
+\usepackage{algorithm}% http://ctan.org/pkg/algorithms
+\usepackage{algpseudocode}% http://ctan.org/pkg/algorithmicx
 \usepackage{amsmath}
 \usepackage{url}
 \newcommand{\keywords}[1]{\par\addvspace\baselineskip
@@ -74,7 +76,7 @@ en los distintos experimentos.
   computaci\'on en internet, computación nube, evaluaci\'on de rendimiento
 \end{keywords}
 
-\section{Introducción}}
+\section{Introducción}
 % Tienes que explicar por qué hace falta computación voluntaria en computación evolutiva - JJ
 
 Diversos son los m\'etodos utilizados por los llamados cient\'ificos
@@ -189,33 +191,41 @@ Este sistema cloud sigue un paradigma cliente - servidor:
 Como se ha mencionado anteriormente, el sistema NodIO se basa en NodEO, que permite la
 ejecuci\'on de algoritmos gen\'eticos escritos en Javascript. El sistema procede
 de la siguiente forma:
-% Usa entorno "algorithmic" - JJ
-\begin{enumerate}
-  \item El servidor es iniciado. Se inicializa un conjunto aleatorio de chromosomas,
-  que llamaremos ``poblaci\'on compartida"
-  \item Cada cliente se conecta al servidor y se le env\'ia la web y los scripts asociados
-  \item Se asigna a cada cliente un UUID
-  \item Cada cliente recibe un chromosoma aleatorio
-  \item Se comienza con los c\'alculos
-  y ejecuta N generaciones
-  \item Actualizaci\'on de las gr\'aficas de la web
-  \item Cada cliente env\'ia el mejor individuo al servidor, que guarda en la poblaci\'on compartida
-  \begin{enumerate}
-    \item Si el chromosoma enviado no es el mejor global:
-      \begin{enumerate}
-        \item Se recibe un individuo de la poblaci\'on compartida
-        \item Vuelta al quinto paso
-      \end{enumerate}
-    \item Si el chromosoma es el mejor global:
-      \begin{enumerate}
-        \item Incremento del n\'umero de secuencia en el servidor
-        \item Reseteo de la poblaci\'on compartida
-        \item Se inicia un nuevo experimento
-        \item Reseteo del UUID
-        \item Vuelta al cuarto paso
-      \end{enumerate}
-  \end{enumerate}
-\end{enumerate}
+
+\begin{algorithm}[H]
+  \begin{algorithmic}
+    \State Inicio del $servidor$
+    \State $numero-secuencia \gets 0$
+    \State $poblacion-compartida \gets random[]$
+    \State Se crea el archivo de log
+    \ForAll{$clientes$}
+       \State $cliente$ accede al link
+       \State $servidor$ envía la página y los scripts a ejecutar
+       \State $cliente$ renderiza la página
+       \Loop
+         \State $UUID \gets new-UUID$
+         \State $poblacion \gets generarPoblacion()$
+         \Repeat
+            \While{$poblaciones-generadas\leq n$}
+               \State $generarPoblacion()$
+            \EndWhile
+            \State El $chromosoma$ con mejor $fitness$ es enviado al $servidor$
+            \If $Not mejor-global(chromosoma)$
+                \State $servidor$ envía un $chromosoma$ aleatorio de $poblacion-compartida$
+                \State $servidor$ envía el número actual de generación y el mejor $chromosoma$
+                \State $cliente$ actualiza los gráficos
+            \EndIf
+         \Until{mejor-global(chromosoma)}
+         \State $cliente$ actualiza los gráficos
+         \State El experimento acaba
+         \State El $numero-secuencia \gets numero-secuencia+1$ 
+         \State $poblacion-compartida \gets random[]$
+         \EndLoop
+      \EndFor
+
+  \end{algorithmic}
+\end{algorithm}
+
 
 \subsubsection{Crear un nuevo experimento}
 La creaci\'on de un nuevo exprimento se basa en la modificaci\'on de algunos archivos.
