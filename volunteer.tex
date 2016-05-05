@@ -73,24 +73,42 @@ tener un navegador web o un intérprete.
 \end{keywords}
 
 \section{Introducción}
-Diversos son los métodos utilizados para el procesamiento de largos conjuntos de resultados obtenidos
-a través de la elaboración de experimentos o, en su defecto, la propia
-realización de los experimentos: uso de un único supercomputador para
-todo el procesamiento; creación de un clúster de máquinas en un centro
-de procesamiento (o \textit{cloud}); o, como en el caso que nos ocupa, la computación voluntaria.
 
-En este artículo se desean demostrar las bondades de la computación voluntaria en algoritmos evolutivos,
+Diversos son los métodos utilizados para el procesamiento de grandes
+conjuntos de resultados obtenidos 
+a través de la elaboración de experimentos o, en su defecto, la propia
+realización de los experimentos; entre ellos está el uso de un único supercomputador para
+todo el procesamiento, la creación de un clúster de máquinas en un centro
+de procesamiento (o \textit{cloud}) o el uso de un grid o de recursos
+en la nube. Sin embargo, por cuestiones presupuestarias, algunas veces
+la única opción viable es recurrir a la computación voluntaria. % Y la
+                                % computación voluntaria es... - JJ
+
+% Y nos interesa la computación evolutiva porque... - JJ
+En este artículo se desean demostrar las bondades de la computación
+voluntaria en algoritmos evolutivos, % ¿En serio? Simplemente lo que
+                                % tratas es de presentar un marco para
+                                % trabajar con ella en computación
+                                % evolutiva - JJ
 así como las mejoras de tiempo producidas al utilizar este tipo de computación. Por otra parte, se
 introducirá a \texttt{NodIO}, un framework de desarrollo de experimentos
-de computación evolutiva en nube, que frente a los \textit{frameworks} actuales,
+de computación evolutiva en nube, que frente a los \textit{frameworks}
+actuales, % en el título he usado marco, quizás en un congreso español
+          % sea más correcto que framework. - JJ
 no precisa de instalación de ningún software por parte del usuario voluntario, salvo un navegador
 web.
 
+%Estás definiendo la computación evolutiva después de
+%introducirla. Primero define, luego usa. Y no me gustan los guiones,
+%rara vez se usan en un paper - JJ
 Los algoritmos genéticos hacen evolucionar una población de individuos -que 
 pueden encontrarse codificados de muchas formas- sometiéndolos a 
 modifiaciones aleatorias, de forma similar a como ocurre en la evolución biológica
 (existiendo operaciones de selección, cruce y mutación entre otras).
 
+% ¿Ahora? ¿En serio? Una intro es un argumento que tienes que exponer,
+% no una serie de slides de powerpoint sin relación o ir definiendo
+% las cosas según te acuerdas - JJ
 La computación voluntaria es un método de cómputo mediante el cual se
 permite a distintos usuarios colaborar en un proyecto científico,
 en muchas ocasiones, aprovechando el tiempo ocioso de sus máquinas. Esta colaboración
@@ -98,8 +116,10 @@ se produce entre computadores independientes, interconectados a través de una o 
 para comunicar información y coordinar sus tareas construyendo redes con potencias
 equivalentes a la de los supercomputadores o, incluso, superiores.
 
-En estos sistemas se desean características como: tolerancia a fallos -en caso que una o varias de las
-máquinas deje de hacer un trabajo, es conveniente que ese cómputo sea realizado por otro usuario y la pérdida 
+En estos sistemas se desean características como %según dijo... JJ
+ tolerancia a fallos -en caso que una o varias de las
+máquinas deje de hacer un trabajo, es conveniente que ese cómputo sea
+realizado por otro usuario y la pérdida  
 de datos sea mínima-; ejecución en múltiples máquinas -para obtener la potencia de cálculo necesaria-;
 compatibilidad entre los dispositivos conectados -es necesario que la información
 transmitida por los distintos dispositivos pueda entenderse por otros dispositivos del sistema-;
@@ -110,14 +130,15 @@ del mayor número de usuarios posible, es necesario que el sistema sea escalable-
 La potencia computacional total del sistema variará en función del número de
 usuarios que decidan colaborar, así como de la propia potencia de sus máquinas
 y la capacidad del nodo ``coordinador" sistema para repartir el trabajo
-y recoger los resultados.
+y recoger los resultados. %estos párrafos parecen traducidos... - JJ
 
 La computación voluntaria es importante, entre otras de las cuestiones ya expuestas,
 porque permite que ciudadanos fuera del ámbito de la investigación, puedan
 tomar parte de la misma.
 
 Además, gracias a que son los usuarios quienes ``prestan" sus máquinas, el sistema
-es más barato que la contratación de cómputo o la compra de material dedicado.
+es más barato que la contratación de cómputo o la compra de material
+dedicado. % Si el servidor está en un PaaS, es gratis. 
 
 Por su contra, la dificultad para llegar a un número importante de gente y los posibles
 problemas que pueden aparecer en cuanto a la fiabilidad o corrección de los datos
@@ -137,6 +158,7 @@ escritorio a la hora de obtener más resultados, no teniendo por qué ser algo exc
 ya que la potencia de los procesadores de hoy día es bastante grande.
 
 El resto del trabajo se organiza de la forma siguiente \ldots
+%Esto ya lo sabes, mételo ya - JJ 
 
 
 \section{Estado del arte}
