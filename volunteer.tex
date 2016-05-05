@@ -151,11 +151,22 @@ servirá para cubrir la necesidad que se ha anunciado y que el sistema está blind
 que ningún usuario malintencionado lleve a cabo ningún tipo de actividad ilícita.
 
 
-El resto del trabajo se organiza de la forma siguiente \ldots
-%Esto ya lo sabes, mételo ya - JJ 
+El resto del trabajo se organiza de la forma siguiente: la Sección \ref{sec:arte} 
+dará al lector encontrará algunos ejemplos de sistemas de computación voluntaria,
+además de algunos marcos de desarrollo de aplicaciones de este estilo. La siguiente
+Sección, la \ref{sec:nodio}, detalla el funcionamiento y arquitectura que compone
+a \texttt{NodIO}, comentando el algoritmo que se sigue y el intercambio de mensajes
+entre clientes y servidor. En la Sección \ref{sec:experimentos} se mencionan los experimentos 
+realizados en anteriores publicaciones y la información que aportaron. 
+Además, se detallará cómo se han realizado otros dos nuevos,
+que harán claro para el lector las ventajas de la computación voluntaria (en especial las
+del marco \texttt{NodIO}). Finalmente,en la Sección \ref{sec:conclusiones} se recojen 
+las conclusiones extraídas tras los experimentos y se proponen algunos trabajos futuros para,
+principalmente, fomentar la participación de nuevos voluntarios.
 
 
 \section{Estado del arte}
+\label{sec:arte}
 Muchos son los proyectos que utilizan computación voluntaria 
 para realizar sus cálculos. El primero de ellos fue ``Great Internet Mersenne Primer Search'' \cite{gimps},
 en el año 1996, un sistema para calcular primos de Mersenne. Aunque el código de fuente es de dominio
@@ -188,7 +199,7 @@ se preocupe de instalar ningún software adicional en su máquina.
 
 
 \section{NodIO, un marco para algoritmos evolutivos distribuidos}
-
+\label{sec:nodio}
 Los algoritmos evolutivos \cite{hispalinux2002,araujo2009algoritmos}
 son métodos bioinspirados de búsqueda y optimización que trabajan
 sobre una población de posibles soluciones, haciéndolas evolucionar
@@ -290,7 +301,7 @@ esto no es problema.
 \end{figure}
 
 \section{Experimentos}
-
+\label{sec:experimentos}
 Algunos experimentos ya fueron hechos en \cite{nodio} para mostrar la velocidad de ejecución de los distintos
 cómputos en \textit {JavaScript} frente a otros lenguajes. En este trabajo se ha procedido a realizar algunos experimentos
 para mostrar, a pequeña escala, el beneficio que nos aporta la
@@ -375,7 +386,7 @@ solución utilizando varios dispositivos con la misma configuración hardware y so
 
 
 \section{Conclusiones y trabajo futuro}
-
+\label{sec:conclusiones}
 Mediante los experimentos que se realizaron en \cite{nodio}, el lector
 ha podido comprobar que  
 \texttt{JavaScript} es un lenguaje suficientemente rápido como para realizar
