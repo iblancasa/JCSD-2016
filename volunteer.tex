@@ -52,7 +52,7 @@ Universidad de Granada, Espa\~na}
 \maketitle
 
 \begin{abstract}
-La computación evolutiva es un tipo de computación distribuida que permite
+La computación voluntaria es un tipo de computación distribuida que permite
 realizar experimentos utilizando la potencia de cálculo proporcionada
 por las máquinas de usuarios que deciden colaborar libremente en la investigación.
 NodIO \cite{nodio} es un marco de desarrollo de aplicaciones para la creación de este
@@ -83,6 +83,11 @@ de computación evolutiva en nube, que frente a los frameworks actuales,
 no precisa de instalación de ningún software por parte del usuario voluntario, salvo un navegador
 web.
 
+Los algoritmos genéticos hacen evolucionar una población de individuos -que 
+pueden encontrarse codificados de muchas formas- sometiéndolos a 
+modifiaciones aleatorias, de forma similar a como ocurre en la evolución biológica
+(existiendo operaciones de selección, cruce y mutación entre otras).
+
 La computación voluntaria es un método de cómputo mediante el cual se
 permite a distintos usuarios colaborar en un proyecto científico,
 en muchas ocasiones, aprovechando el tiempo ocioso de sus máquinas. Esta colaboración
@@ -100,11 +105,11 @@ nociva para el resto-; y, por último, escalabilidad -ya que lo que se busca es l
 del mayor número de usuarios posible, es necesario que el sistema sea escalable-.
 
 La potencia computacional total del sistema variará en función del número de
-usuarios que decidan colaborar, as\'i como de la propia potencia de sus máquinas
+usuarios que decidan colaborar, así como de la propia potencia de sus máquinas
 y la capacidad del nodo ``coordinador" sistema para repartir el trabajo
 y recoger los resultados.
 
-La computaci\'on voluntaria es importante, entre otras de las cuestiones ya expuestas,
+La computación voluntaria es importante, entre otras de las cuestiones ya expuestas,
 porque permite que ciudadanos fuera del ámbito de la investigación, puedan
 tomar parte de la misma.
 
@@ -114,8 +119,8 @@ es más barato que la contratación de cómputo o la compra de material dedicado.
 Por su contra, la dificultad para llegar a un número importante de gente y los posibles
 problemas que pueden aparecer en cuanto a la fiabilidad o corrección de los datos
 (aunque se pueden establecer mecanismos como la computación redundante
-para asegurar la correcci\'on o la firma de código para prevenir modificaciones maliciosas
-del software), hacen que el m\'etodo no sea ideal.
+para asegurar la corrección o la firma de código para prevenir modificaciones maliciosas
+del software), hacen que el método no sea ideal.
 
 En estos sistemas, los usuarios depositan su confianza en el proyecto, suponiendo que el software
 que están ejecutando no daña sus dispositivos, el cómputo que se está realizando
@@ -275,7 +280,10 @@ esto no es problema.
 Algunos experimentos ya fueron hechos en \cite{nodio} para mostrar la velocidad de ejecución de los distintos
 cómputos en JavaScript frente a otros lenguajes. En este trabajo se ha procedido a realizar algunos experimentos
 para mostrar, a pequeña escala, el beneficio que nos aporta la
-computación voluntaria en cuanto a rendimiento. %% preguntas
+computación voluntaria en cuanto a rendimiento. Mientras anteriormente se comparaba el mismo algoritmo 
+escrito en distintos lenguajes siendo ejecutados por una sola máquina, ahora se procede a comprobar cómo 
+influye en la rapidez para alcanzar una
+solución ejecutar los algoritmos escritos en Javascript en más de una máquina.
 
 En un primer experimento, se ha comprobado el tiempo de ejecución en
 función del número de pestañas 
@@ -314,7 +322,7 @@ solución en un mismo ordenador en función del número de pestañas abierto}
 \end{figure}
 
 En el experimento se han ido variando el número de pestañas abiertas y se ha ejecutado el experimento
-varias veces -calculando una media ponderada para representar en \ref{tiempo-pestanas}-. 
+varias veces -calculando una media ponderada para representar la gráfica de la figura \ref{tiempo-pestanas}-. 
 Como podemos observar, cuando solo tenemos una pestaña abierta, el tiempo se
 dispara (en torno a unos 3 minutos). En el caso de dos pestañas, el tiempo descendió hasta
 un tiempo estimado de 53.22 segundos. En el resto de los casos, aunque sigue habiendo
