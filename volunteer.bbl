@@ -35,7 +35,7 @@ Arenas, M., Castillo, P., Romero, G., Merelo-Guerv\'os, J.J.: Distribuci\'on de
 \bibitem{LNCS2439:ID197:pp665}
 Arenas, M., Collet, P., Eiben, A., Jelasity, M., Merelo, J., Paechter, B.,
   Preu\ss, M., Schoenauer, M.: A framework for distributed evolutionary
-  algorithms. In: Guerv\'os et~al.  \cite{ppsn2002}, keywords:
+  algorithms. In: Merelo-Guerv\'os et~al.  \cite{ppsn2002}, keywords:
   Implementation::Parallel EAs, Related::Simulated Adaptive Behavior,
   Technique::Advanced techniques - miscellaneous, Technique::Evolutionary
   computing - general, Technique::Evolutionary computing - miscellaneous,
@@ -68,18 +68,12 @@ Chandy, E.M., Rifkin, A., Sivilotti, P.A., Mandelson, J., Richardson, M.,
 \bibitem{cole2010evolutionary}
 Cole, N., Desell, T., Gonz{\'a}lez, D.L., de~Vega, F.F., Magdon-Ismail, M.,
   Newberg, H., Szymanski, B., Varela, C.: Evolutionary algorithms on volunteer
-  computing platforms: The milkyway@ home project. In: Parallel and distributed
-  computational intelligence, pp. 63--90. Springer (2010)
+  computing platforms: The {MilKyway}@home project. In: Parallel and
+  distributed computational intelligence, pp. 63--90. Springer (2010)
 
 \bibitem{durrani2014volunteer}
 Durrani, M.N., Shamsi, J.A.: Volunteer computing: requirements, challenges, and
   solutions. Journal of Network and Computer Applications  39,  369--380 (2014)
-
-\bibitem{ppsn2002}
-Guerv\'os, J.J.M., Adamidis, P., Beyer, H.G., nas, J.L.F.V., Schwefel, H.P.
-  (eds.): Parallel Problem Solving from Nature - PPSN VII, 7th International
-  Conference, Granada, Spain, September 7-11, 2002. Proceedings. No. 2439 in
-  Lecture Notes in Computer Science,LNCS, Springer-Verlag (September 2002)
 
 \bibitem{ibmwcg}
 IBM: {IBM World Community Grid}. \url{http://www.worldcommunitygrid.org/}
@@ -106,6 +100,13 @@ Merelo, J.J.: Algoritmos evolutivos en {P}erl. Ponencia presentada en el V
 Merelo, J.J., García, A.M., Lupi\'on, J.: Escalado de computaci\'on
   distribuida sobre raíles. In: Almeida-Rodríguez et~al.  \cite{maeb:2007},
   pp. 143--150
+
+\bibitem{ppsn2002}
+Merelo-Guerv\'os, J.J., Adamidis, P., Beyer, H.G., nas, J.L.F.V., Schwefel,
+  H.P. (eds.): Parallel Problem Solving from Nature - PPSN VII, 7th
+  International Conference, Granada, Spain, September 7-11, 2002. Proceedings.
+  No. 2439 in Lecture Notes in Computer Science,LNCS, Springer-Verlag
+  (September 2002)
 
 \bibitem{merelo2015modeling}
 Merelo-Guerv{\'o}s, J.J., Garc{\'\i}a-S{\'a}nchez, P.: Modeling browser-based
