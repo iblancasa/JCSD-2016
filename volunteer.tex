@@ -99,13 +99,13 @@ seguro -evitando que uno o más usuarios con malintencionados traten de realizar 
 nociva para el resto-; y, por último, escalabilidad -ya que lo que se busca es la participación 
 del mayor número de usuarios posible, es necesario que el sistema sea escalable-.
 
-La potencia computacional total del sistema variar\'a en funci\'on del n\'umero de
-usuarios que decidan colaborar, as\'i como de la propia potencia de sus m\'aquinas
+La potencia computacional total del sistema variará en función del número de
+usuarios que decidan colaborar, as\'i como de la propia potencia de sus máquinas
 y la capacidad del nodo ``coordinador" sistema para repartir el trabajo
 y recoger los resultados.
 
 La computaci\'on voluntaria es importante, entre otras de las cuestiones ya expuestas,
-porque permite que ciudadanos fuera del \'ambito de la investigaci\'on, puedan
+porque permite que ciudadanos fuera del ámbito de la investigación, puedan
 tomar parte de la misma.
 
 Además, gracias a que son los usuarios quienes ``prestan" sus máquinas, el sistema
@@ -225,10 +225,10 @@ dentro del algoritmo \ref{algoritmo}.
        \State $cliente$ renderiza la página
        \Loop
          \State $UUID \gets new\_UUID$
-         \State $poblacion \gets generarPoblacion()$
+         \State $poblacion \gets generarPoblacionInicial()$
          \Repeat
             \While{$poblaciones\_generadas\leq n$}
-               \State $generarPoblacion()$
+               \State $poblacion \gets generarPoblacion(poblacion)$
             \EndWhile
             \State El $cromosoma$ con mejor $fitness$ es enviado al $servidor$
             \If{$Not\ mejor\_global(cromosoma)$}
@@ -275,19 +275,31 @@ esto no es problema.
 Algunos experimentos ya fueron hechos en \cite{nodio} para mostrar la velocidad de ejecución de los distintos
 cómputos en JavaScript frente a otros lenguajes. En este trabajo se ha procedido a realizar algunos experimentos
 para mostrar, a pequeña escala, el beneficio que nos aporta la
-computación voluntaria en cuanto a rendimiento. % ¿Por qué? ¿Qué
-                                % quieres medir? ¿En qué completa esto
-                                % el resto de los experimentos? 
+computación voluntaria en cuanto a rendimiento. %% preguntas
 
 En un primer experimento, se ha comprobado el tiempo de ejecución en
 función del número de pestañas 
 que están ejecutando el cliente. La máquina que hace de servidor hace
 también las veces de cliente, 
 comenzando la ejecución de los clientes de forma síncrona. Como problema a resolver,
-se ha utilizado el de resolver la función ``trap'', con unos valores
-de: % Esto pásalo a una tabla
- número de traps, 24;
-longitud del trap, 4; b, 2; caché, 32; y, tamaño de población, de 128. Se han escogido estos valores
+se ha utilizado el de resolver la función ``trap'', con los valores descritos en la 
+tabla \ref{var-table}.
+\begin{table}[hbpt]
+\label{var-table}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Variable}      & \textbf{Valor} \\ \hline
+Número de traps        & 24             \\ \hline
+Longitud del trap      & 4              \\ \hline
+b                      & 2              \\ \hline
+Caché                  & 32             \\ \hline
+Tamaño de la población & 128            \\ \hline
+\end{tabular}
+\centering
+\caption{Valores de las variables utilizados para el experimento}
+\end{table}
+
+Se han escogido estos valores
 para conseguir un experimento que sea relativamente sencillo, de forma que se pudiera medir
 fácilmente el tiempo que tarda en resolverlo un solo voluntario. Estas pruebas se han hecho en un 
 sistema operativo GNU/Linux (distribución ArchLinux con kernel 4.5.1) con un procesador i5-2410M CPU @ 
