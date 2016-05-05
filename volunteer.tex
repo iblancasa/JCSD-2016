@@ -190,22 +190,22 @@ aceptables. Por eso se han desarrollado e implementado diferentes
 sitemas de tal tipo, incluso basados en web \cite{LNCS2439:ID197:pp665,maeb2007:dcor} y
 destinados a computación voluntaria. 
 
-NodIO \cite{nodio}, como se ha mencionado, es un marco de desarrollo crear experimentos de
+\texttt{NodIO} \cite{nodio}, como se ha mencionado, es un marco de desarrollo crear experimentos de
 computación voluntaria utilizando algoritmos evolutivos. En este caso, está pensado para ser desplegado en un
-Plataforma como Servicio (Platform as a Service). Para el desarrollo de
-los algoritmos se basa en un framework llamado NodEO \cite{nodeo},
-desarrollado en NodeJS.
+``Plataforma como Servicio''. Para el desarrollo de
+los algoritmos se basa en un \textit{framework} llamado \texttt{NodEO} \cite{nodeo},
+desarrollado en \texttt{NodeJS}.
 
 Gracias a esta implementación del lado cliente, se pueden lanzar experimentos y que los voluntarios los ejecuten
-a través de un navegador (o cualquier sistema que ejecute el lenguaje JavaScript
+a través de un navegador (o cualquier sistema que ejecute el lenguaje \texttt{JavaScript}
 y que disponga de conexión a Internet).
 
-NodIO funciona según un paradigma cliente-servidor. El servidor realiza la coordinación de los clientes, 
+\texttt{NodIO} funciona según un paradigma cliente-servidor. El servidor realiza la coordinación de los clientes, 
 almacena los distintos cromosomas y el estado de los experimentos y reinicia el experimento
 cuando se ha encontrado la solución. El acceso y envío de los distintos cromosomas se hace a través de 
-una interfaz API/REST. Las peticiones (que siguen el ciclo ``CRUD") utilizan el formato JSON. El cliente es 
+una interfaz \texttt{API/REST}. Las peticiones -que siguen el ciclo \texttt{``CRUD"}- utilizan el formato \texttt{JSON}. El cliente es 
 quien procede con el cómputo y, para obtener y enviar datos, hace peticiones asíncronas al servidor utilizando
-la antes mencionada API/REST. En aquellos navegadores en los que esté permitido, se ejecuta utilizando ``Web Workers"
+la antes mencionada \texttt{API/REST}. En aquellos navegadores en los que esté permitido, se ejecuta utilizando \texttt{``Web Workers"}
 (en caso contrario, se ejecuta una versión preparada para ello).
 
 Teniendo clara esta separación, es hora de ver el papel que juegan cada uno de los elementos
@@ -215,16 +215,16 @@ Para que al lector le sea más sencillo comprender el algoritmo y el paso de mens
 se produce entre cliente y servidor, puede ver la figura \ref{visual}.
 
 Para la creación de un nuevo experimento necesitaremos modificar, al
-menos, dos ficheros: ``is\_solution.js'', 
+menos, dos ficheros: ``\texttt{is\_solution.js}'', 
 que se ejecuta en el servidor y decide si el cromosoma enviado por el
 cliente es una solución aceptable, y 
-``trap.standalone.js'', que se ejecuta en el cliente y es la que
-incluye la función de fitness a optimizar y el resto del algoritmo
+``\texttt{trap.standalone.js}'', que se ejecuta en el cliente y es la que
+incluye la función de \textit{fitness} a optimizar y el resto del algoritmo
 evolutivo. Dependiendo de  
 las necesidades que tenga el experimento deseado, especialmente de
 otros operadores genéticos o facilidades en el servidor habrá que revisar 
 otros archivos para ajustar aquellos parámetros que se deseen; como
-NodIO cuenta con una licencia libre, 
+\texttt{NodIO} cuenta con una licencia libre, 
 esto no es problema. 
 
 \begin{algorithm}[H]
@@ -273,26 +273,26 @@ esto no es problema.
 \section{Experimentos}
 
 Algunos experimentos ya fueron hechos en \cite{nodio} para mostrar la velocidad de ejecución de los distintos
-cómputos en JavaScript frente a otros lenguajes. En este trabajo se ha procedido a realizar algunos experimentos
+cómputos en \textit {JavaScript} frente a otros lenguajes. En este trabajo se ha procedido a realizar algunos experimentos
 para mostrar, a pequeña escala, el beneficio que nos aporta la
 computación voluntaria en cuanto a rendimiento. Mientras anteriormente se comparaba el mismo algoritmo 
 escrito en distintos lenguajes siendo ejecutados por una sola máquina, ahora se procede a comprobar cómo 
 influye en la rapidez para alcanzar una
-solución ejecutar los algoritmos escritos en Javascript en más de una máquina.
+solución ejecutar los algoritmos escritos en \texttt{Javascript} en más de una máquina.
 
 En un primer experimento, se ha comprobado el tiempo de ejecución en
 función del número de pestañas 
 que están ejecutando el cliente. La máquina que hace de servidor hace
 también las veces de cliente, 
 comenzando la ejecución de los clientes de forma síncrona. Como problema a resolver,
-se ha utilizado el de resolver la función ``trap'', con los valores descritos en la 
+se ha utilizado el de resolver la función ``\texttt{trap}'', con los valores descritos en la 
 tabla \ref{var-table}.
 
 Se han escogido estos valores
 para conseguir un experimento que sea relativamente sencillo, de forma que se pudiera medir
 fácilmente el tiempo que tarda en resolverlo un solo voluntario. Estas pruebas se han hecho en un 
-sistema operativo GNU/Linux (distribución ArchLinux con kernel 4.5.1) con un procesador i5-2410M CPU @ 
-2.30GHz. El navegador utilizado ha sido la versión 50 de Chromium.
+sistema operativo \texttt{GNU/Linux} (distribución \texttt{ArchLinux} con \texttt{kernel} 4.5.1) con un procesador \texttt{i5-2410M CPU @ 
+  2.30GHz}. El navegador utilizado ha sido la versión 50 de \texttt{Chromium}.
 
 En el experimento se han ido variando el número de pestañas abiertas y se ha ejecutado el experimento
 varias veces -calculando una media ponderada para representar la gráfica de la figura \ref{tiempo-pestanas}-. 
@@ -311,8 +311,8 @@ Para el segundo experimento, se ha medido el tiempo que tarda en
 alcanzarse una solución 
 utilizando como clientes hasta tres dispositivos con la misma
 configuración hardware -teléfonos 
-móviles LG Bello II con procesador quad-core Cortex-A7 1.3GHz con
-Android versión 5.0.2 y navegador Chrome-. 
+móviles \texttt{LG Bello II} con procesador \texttt{quad-core Cortex-A7 1.3GHz} con
+\texttt{Android} versión 5.0.2 y navegador \texttt{Chrome}-. 
 También se han ejecutado de forma síncrona en los tres teléfonos.
 
 En la figura \ref{tiempo-dispositivos} podemos ver los resultados.  Si comparamos con
@@ -359,7 +359,7 @@ solución utilizando varios dispositivos con la misma configuración hardware y so
 
 Mediante los experimentos que se realizaron en \cite{nodio}, el lector
 ha podido comprobar que  
-JavaScript es un lenguaje suficientemente rápido como para realizar
+\texttt{JavaScript} es un lenguaje suficientemente rápido como para realizar
 este tipo de experimentos, y en todo caso es la única opción para que
 los voluntarios participen en experimentos distribuidos usando el
 navegador. 
