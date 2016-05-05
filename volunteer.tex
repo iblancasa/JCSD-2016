@@ -34,7 +34,7 @@
 \mainmatter  % start of an individual contribution
 
 % first the title is needed
-\title{Marco de aplicaciones para computación evolutiva voluntaria}
+\title{NodIO: Marco de aplicaciones para computación evolutiva voluntaria}
 
 % a short form should be given in case it is too long for the running head
 %\titlerunning{Lecture Notes in Computer Science: Authors' Instructions}
@@ -57,8 +57,9 @@ realizar experimentos utilizando la potencia de cálculo proporcionada
 por las máquinas de usuarios que deciden colaborar libremente en la investigación.
 NodIO \cite{nodio} es un marco de desarrollo de aplicaciones para la creación de este
 tipo de experimentos. A diferencia de otros frameworks que realizan las mismas
-tareas, NodIO no necesita instalar nada en el lado del cliente, ya que se 
-encuentra escrito en Javascript, por lo que solo será necesario
+tareas, NodIO no necesita instalar ninguna aplicación ni bibliteca en
+el lado del cliente, ya que se  
+encuentra escrito en JavaScript, por lo que solo será necesario
 tener un navegador web o un intérprete. 
 \end{abstract}
 
@@ -155,7 +156,7 @@ atraídos a colaborar.
 
 En cuanto a frameworks orientados a computación voluntaria con algoritmos evolutivos, ya en \cite{cole2010evolutionary}
 podemos ver un análisis de algunas plataformas y comparaciones de rendimiento entre ellas. Sin embargo, NodIO añade
-va más allá: permite ejecutar el cómputo desde el navegador al estar escrito el cliente en Javascript. Esto facilita
+va más allá: permite ejecutar el cómputo desde el navegador al estar escrito el cliente en JavaScript. Esto facilita
 la participación en el experimento ya que cualquier dispositivo que sea capaz de ejecutar un navegador web va a poder 
 ejecutarlo. Deriva de aquí otra ventaja: al solo necesitarse un navegador web, no es necesario que el usuario
 se preocupe de instalar ningún software adicional en su máquina.
@@ -169,7 +170,7 @@ los algoritmos se basa en un framework llamado NodEO \cite{nodeo},
 desarrollado en NodeJS.
 
 Gracias a esta implementación del lado cliente, se pueden lanzar experimentos y que los voluntarios los ejecuten
-a través de un navegador (o cualquier sistema que ejecute el lenguaje Javascript
+a través de un navegador (o cualquier sistema que ejecute el lenguaje JavaScript
 y que disponga de conexión a Internet).
 
 
@@ -185,7 +186,7 @@ Este sistema cloud sigue un paradigma cliente - servidor:
   \item Cliente: procede con el cómputo. Hace peticiones asíncronas al servidor.
   En aquellos navegadores en los que esté permitido, se ejecuta utilizando ``Web Workers"
   (en caso contrario, se ejecuta una versión preparada para ello). Está escrito
-  en Javascript, ya que se diseño pensando en que fuese ejecutado en navegadores aunque
+  en JavaScript, ya que se diseño pensando en que fuese ejecutado en navegadores aunque
   (gracias a que el servidor utiliza una API/REST), se podría escribir en cualquier otro
   lenguaje, siendo totalmente compatible con el actual servidor.
 \end{itemize}
@@ -239,22 +240,36 @@ se produce entre cliente y servidor, puede ver la figura \ref{visual}.
 \label{visual}
 \end{figure}
 
-Para la creación de un nuevo experimento necesitaremos modificar, al menos, dos ficheros: ``is\_solution.js'' 
--que se ejecuta en el servidor, decide si el cromosoma enviado por el cliente es una solución aceptable- y 
-``trap.standalone.js'' -se ejecuta en el cliente y es donde se ejecutan los algoritmos evolutivos-. Dependiendo de 
-las necesidades que tenga el experimento deseado, habrá que revisar
-otros archivos para ajustar aquellos parámetros que se deseen -como NodIO cuenta con una licencia libre,
-esto no es problema-. 
+Para la creación de un nuevo experimento necesitaremos modificar, al
+menos, dos ficheros: ``is\_solution.js'', 
+que se ejecuta en el servidor y decide si el cromosoma enviado por el
+cliente es una solución aceptable, y 
+``trap.standalone.js'', que se ejecuta en el cliente y es la que
+incluye la función de fitness a optimizar y el resto del algoritmo
+evolutivo. Dependiendo de  
+las necesidades que tenga el experimento deseado, especialmente de
+otros operadores genéticos o facilidades en el servidor habrá que revisar 
+otros archivos para ajustar aquellos parámetros que se deseen; como
+NodIO cuenta con una licencia libre, 
+esto no es problema. 
 
 \subsection{Experimentos}
-Algunos experimentos ya fueron hechos en \cite{nodio} para mostrar la velocidad de ejecución de los distintos
-cómputos en Javascript frente a otros lenguajes. En este trabajo se ha procedido a realizar algunos experimentos
-para mostrar, a pequeña escala, el beneficio que nos aporta la computación voluntaria en cuanto a rendimiento.
 
-En un primer experimento, se ha comprobado el tiempo de ejecución en función del número de pestañas
-que están ejecutando el cliente. La máquina que hace de servidor hace también las veces de cliente,
+Algunos experimentos ya fueron hechos en \cite{nodio} para mostrar la velocidad de ejecución de los distintos
+cómputos en JavaScript frente a otros lenguajes. En este trabajo se ha procedido a realizar algunos experimentos
+para mostrar, a pequeña escala, el beneficio que nos aporta la
+computación voluntaria en cuanto a rendimiento. % ¿Por qué? ¿Qué
+                                % quieres medir? ¿En qué completa esto
+                                % el resto de los experimentos? 
+
+En un primer experimento, se ha comprobado el tiempo de ejecución en
+función del número de pestañas 
+que están ejecutando el cliente. La máquina que hace de servidor hace
+también las veces de cliente, 
 comenzando la ejecución de los clientes de forma síncrona. Como problema a resolver,
-se ha utilizado el de resolver la función ``trap'', con unos valores de: número de traps, 24;
+se ha utilizado el de resolver la función ``trap'', con unos valores
+de: % Esto pásalo a una tabla
+ número de traps, 24;
 longitud del trap, 4; b, 2; caché, 32; y, tamaño de población, de 128. Se han escogido estos valores
 para conseguir un experimento que sea relativamente sencillo, de forma que se pudiera medir
 fácilmente el tiempo que tarda en resolverlo un solo voluntario. Estas pruebas se han hecho en un 
@@ -282,9 +297,12 @@ Por otro, llegará un momento en el que no se podrá reducir más el tiempo
 de ejecución por la propia naturaleza del problema.
 
 
-Para el segundo experimento, se ha medido el tiempo que tarda en alcanzarse una solución
-utilizando como clientes hasta tres dispositivos con la misma configuración hardware -teléfonos
-móviles LG Bello II con procesador quad-core Cortex-A7 1.3GHz con Android versión 5.0.2 y navegador Chrome-.
+Para el segundo experimento, se ha medido el tiempo que tarda en
+alcanzarse una solución 
+utilizando como clientes hasta tres dispositivos con la misma
+configuración hardware -teléfonos 
+móviles LG Bello II con procesador quad-core Cortex-A7 1.3GHz con
+Android versión 5.0.2 y navegador Chrome-. 
 También se han ejecutado de forma síncrona en los tres teléfonos.
 
 En la figura \ref{tiempo-dispositivos} podemos ver los resultados.  Si comparamos con
@@ -305,8 +323,13 @@ solución utilizando varios dispositivos con la misma configuración hardware y so
 
 
 \section{Conclusiones y trabajo futuro}
-Mediante los experimentos que se realizaron en \cite{nodio}, el lector puede comprobar que 
-Javascript es un lenguaje suficientemente rápido como para realizar este tipo de experimentos.
+
+Mediante los experimentos que se realizaron en \cite{nodio}, el lector
+ha podido comprobar que  
+JavaScript es un lenguaje suficientemente rápido como para realizar
+este tipo de experimentos, y en todo caso es la única opción para que
+los voluntarios participen en experimentos distribuidos usando el
+navegador. 
 En este artículo, a través de los experimentos realizados en la sección previa, podemos comprobar
 a muy pequeña escala, los beneficios de la computación voluntaria en lo que a mejora de prestaciones
 se refiere. Hay que recordar que este tipo de sistemas se encuentran diseñados para
