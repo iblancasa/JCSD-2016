@@ -178,9 +178,9 @@ A continuación se va a hablar del funcionamiento de NodIO, así como de sus disti
 
 Este sistema cloud sigue un paradigma cliente - servidor:
 \begin{itemize}
-  \item Servidor: realiza la coordinación de los clientes, almacena los distintos chromosomas y
+  \item Servidor: realiza la coordinación de los clientes, almacena los distintos cromosomas y
   el estado de los experimentos y reinicia el experimento cuando se ha encontrado la solución.
-  El acceso y envío de los distintos chromosomas se hace a través de una interfaz API/REST.
+  El acceso y envío de los distintos cromosomas se hace a través de una interfaz API/REST.
   Las peticiones (que siguen el ciclo ``CRUD") utilizan el formato JSON. Está escrito en NodeJS.
   \item Cliente: procede con el cómputo. Hace peticiones asíncronas al servidor.
   En aquellos navegadores en los que esté permitido, se ejecuta utilizando ``Web Workers"
@@ -212,13 +212,13 @@ dentro del algoritmo \ref{algoritmo}.
             \While{$poblaciones\_generadas\leq n$}
                \State $generarPoblacion()$
             \EndWhile
-            \State El $chromosoma$ con mejor $fitness$ es enviado al $servidor$
-            \If{$Not\ mejor\_global(chromosoma)$}
-                \State $servidor$ envía un $chromosoma$ aleatorio de $poblacion\_compartida$
-                \State $servidor$ envía el número actual de generación y el mejor $chromosoma$
+            \State El $cromosoma$ con mejor $fitness$ es enviado al $servidor$
+            \If{$Not\ mejor\_global(cromosoma)$}
+                \State $servidor$ envía un $cromosoma$ aleatorio de $poblacion\_compartida$
+                \State $servidor$ envía el número actual de generación y el mejor $cromosoma$
                 \State $cliente$ actualiza los gráficos
             \EndIf
-         \Until{mejor-global(chromosoma)}
+         \Until{mejor-global(cromosoma)}
          \State $cliente$ actualiza los gráficos
          \State El experimento acaba
          \State El $numero\_secuencia \gets numero\_secuencia+1$
@@ -239,8 +239,8 @@ se produce entre cliente y servidor, puede ver la figura \ref{visual}.
 \label{visual}
 \end{figure}
 
-Para la creación de un nuevo exprimento necesitaremos modificar, al menos, dos ficheros: ``is\_solution.js'' 
--que se ejecuta en el servidor, decide si el choromosoma enviado por el cliente es una solución aceptable- y 
+Para la creación de un nuevo experimento necesitaremos modificar, al menos, dos ficheros: ``is\_solution.js'' 
+-que se ejecuta en el servidor, decide si el cromosoma enviado por el cliente es una solución aceptable- y 
 ``trap.standalone.js'' -se ejecuta en el cliente y es donde se ejecutan los algoritmos evolutivos-. Dependiendo de 
 las necesidades que tenga el experimento deseado, habrá que revisar
 otros archivos para ajustar aquellos parámetros que se deseen -como NodIO cuenta con una licencia libre,
@@ -272,7 +272,7 @@ solución en un mismo ordenador en función del número de pestañas abierto}
 En el experimento se han ido variando el número de pestañas abiertas y se ha ejecutado el experimento
 varias veces -calculando una media ponderada para representar en \ref{tiempo-pestanas}-. 
 Como podemos observar, cuando solo tenemos una pestaña abierta, el tiempo se
-dispara (en torno a unos 3 minutos). En el caso de dos pestañas, el tiempo descenció hasta
+dispara (en torno a unos 3 minutos). En el caso de dos pestañas, el tiempo descendió hasta
 un tiempo estimado de 53.22 segundos. En el resto de los casos, aunque sigue habiendo
 diferencias de tiempo (unos 14.56, 10.11 y 7.46 segundos respectivamente), no es
 tan notable como en los otros dos casos. Esto puede tener varias explicaciones: por un
@@ -322,7 +322,7 @@ En cuanto a trabajos futuros, muchas son las ideas que se pueden desarrollar uti
 herramienta (o a partir de la misma). La idea más directa de todas es la realización de nuevos
 experimentos, no tanto sobre la velocidad para alcanzar la solución a un problema dado como
 para investigar sobre el comportamiento de los usuarios, es decir, una vez lanzado un experimento
-tratar de conocer si los usuarios se sienten atraidos por la idea de participar en un
+tratar de conocer si los usuarios se sienten atraídos por la idea de participar en un
 experimento -difundiendo un enlace al mismo a través de redes sociales- y, una vez que han iniciado
 el experimento, cuánto tiempo participan. Dentro de esta línea, la idea de incluir técnicas 
 relacionadas con ``ludificación'' -para atraer a los usuarios y hacer que estos se queden más tiempo
