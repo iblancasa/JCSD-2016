@@ -85,40 +85,59 @@ realización de los experimentos; entre ellos está el uso de un único supercomput
 todo el procesamiento, la creación de un clúster de máquinas en un centro
 de procesamiento (o \textit{cloud}) o el uso de un grid o de recursos
 en la nube. Sin embargo, por cuestiones presupuestarias, algunas veces
-la única opción viable es recurrir a la computación voluntaria. % Y la
+la única opción viable es recurrir a la computación voluntaria.
+Este es un modelo de computación distribuida basado en la colaboración
+independiente de usuarios utilizando sus recursos, generalmente ociosos.
+Esta colaboración se produce entre computadores independientes, interconectados
+a través de una o varias redes, para comunicar y coordinar sus tareas contruyendo
+redes con potencia equivalente (o incluso superior) a la de supercomputadores.
+
+Nuestro objetivo es trabajar con algoritmos evolutivos de manera eficiente,
+ya que son costosos en tiempo de cómputo. Este tipo de algoritmos se basan en
+el modelo evolutivo de Darwin. Se comienza con una población de individuos,
+la cual sometemos a un modelo simulado de selección natural: selección, cruce,
+mutación y reemplazo. Con un buen diseño de este tipo de algoritmos, se consigue
+un equilibro entre exploración y explotación de un espacio de soluciones, por lo que
+en general este tipo de algoritmos dan buenas soluciones a problemas con grandes espacios
+de búsqueda.
+
+% Y la
                                 % computación voluntaria es... - JJ
 
 % Y nos interesa la computación evolutiva porque... - JJ
-En este artículo se desean demostrar las bondades de la computación
-voluntaria en algoritmos evolutivos, % ¿En serio? Simplemente lo que
+% En este artículo se desean demostrar las bondades de la computación
+% voluntaria en algoritmos evolutivos,
+% ¿En serio? Simplemente lo que
                                 % tratas es de presentar un marco para
                                 % trabajar con ella en computación
                                 % evolutiva - JJ
-así como las mejoras de tiempo producidas al utilizar este tipo de computación. Por otra parte, se
-introducirá a \texttt{NodIO}, un framework de desarrollo de experimentos
-de computación evolutiva en nube, que frente a los \textit{frameworks}
-actuales, % en el título he usado marco, quizás en un congreso español
-          % sea más correcto que framework. - JJ
+
+En este artículo se mostrará un marco para trabajar con computación
+voluntaria en algoritmos evolutivos, \texttt{NodIO}, así como las mejoras de tiempo producidas
+al utilizar este modelo. \texttt{NodIO} es un marco de desarrollo de experimentos
+de computación evolutiva en nube, que frente a los marcos actuales,
+% en el título he usado marco, quizás en un congreso español
+% sea más correcto que framework. - JJ
 no precisa de instalación de ningún software por parte del usuario voluntario, salvo un navegador
 web.
 
 %Estás definiendo la computación evolutiva después de
 %introducirla. Primero define, luego usa. Y no me gustan los guiones,
 %rara vez se usan en un paper - JJ
-Los algoritmos genéticos hacen evolucionar una población de individuos -que 
-pueden encontrarse codificados de muchas formas- sometiéndolos a 
-modifiaciones aleatorias, de forma similar a como ocurre en la evolución biológica
-(existiendo operaciones de selección, cruce y mutación entre otras).
+%Los algoritmos genéticos hacen evolucionar una población de individuos -que 
+%pueden encontrarse codificados de muchas formas- sometiéndolos a 
+%modifiaciones aleatorias, de forma similar a como ocurre en la evolución biológica
+%(existiendo operaciones de selección, cruce y mutación entre otras).
 
 % ¿Ahora? ¿En serio? Una intro es un argumento que tienes que exponer,
 % no una serie de slides de powerpoint sin relación o ir definiendo
 % las cosas según te acuerdas - JJ
-La computación voluntaria es un método de cómputo mediante el cual se
-permite a distintos usuarios colaborar en un proyecto científico,
-en muchas ocasiones, aprovechando el tiempo ocioso de sus máquinas. Esta colaboración
-se produce entre computadores independientes, interconectados a través de una o varias redes
-para comunicar información y coordinar sus tareas construyendo redes con potencias
-equivalentes a la de los supercomputadores o, incluso, superiores.
+%La computación voluntaria es un método de cómputo mediante el cual se
+%permite a distintos usuarios colaborar en un proyecto científico,
+%en muchas ocasiones, aprovechando el tiempo ocioso de sus máquinas. Esta colaboración
+%se produce entre computadores independientes, interconectados a través de una o varias redes
+%para comunicar información y coordinar sus tareas construyendo redes con potencias
+%equivalentes a la de los supercomputadores o, incluso, superiores.
 
 En estos sistemas se desean características como %según dijo... JJ
  tolerancia a fallos -en caso que una o varias de las
