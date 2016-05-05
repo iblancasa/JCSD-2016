@@ -34,7 +34,7 @@
 \mainmatter  % start of an individual contribution
 
 % first the title is needed
-\title{NodIO: Marco de aplicaciones para computación evolutiva voluntaria}
+\title{NodIO: Marco de desarrollo aplicaciones para computación evolutiva voluntaria}
 
 % a short form should be given in case it is too long for the running head
 %\titlerunning{Lecture Notes in Computer Science: Authors' Instructions}
@@ -46,8 +46,8 @@
 % the affiliations are given next; don't give your e-mail address
 % unless you accept that it will be published
 
-\institute{Departamento de Arquitectura y Tecnolog\'ia de Computadores,
-Universidad de Granada, Espa\~na}
+\institute{Departamento de Arquitectura y Tecnología de Computadores,
+Universidad de Granada, España}
 
 \maketitle
 
@@ -56,18 +56,20 @@ La computación voluntaria es un tipo de computación distribuida que permite
 realizar experimentos utilizando la potencia de cálculo proporcionada
 por las máquinas de usuarios que deciden colaborar libremente en la investigación.
 \texttt{NodIO} \cite{nodio} es un marco de desarrollo de aplicaciones para la creación de este
-tipo de experimentos. A diferencia de otros frameworks que realizan las mismas
+tipo de experimentos. A diferencia de otros marcos de desarrollo que realizan las mismas
 tareas, \texttt{NodIO} no necesita instalar ninguna aplicación ni biblioteca en
 el lado del cliente, ya que se  
 encuentra escrito en JavaScript, por lo que solo será necesario
 tener un navegador web o un intérprete.
 %%%
 En este trabajo se detallará el funcionamiento de \texttt{NodIO},
-además de mostrar varios experimentos para demostrar los beneficios
+además de mostrar dos experimentos para demostrar los beneficios
 que exponemos: sencillez y rendimiento.
-% ¿Qué estás haciendo en este trabajo? ¿Con qué objetivo? ¿Haces
-% experimentos? ¿Porqué los haces? Tienes que ponerlo también en el
-% resumen. - JJ
+
+Ambos experimentos nos demostrarán cómo, al aumentar
+el número de ``voluntarios'', el tiempo en alcanzar una solución
+desciende.
+
 \end{abstract}
 
 
@@ -103,70 +105,39 @@ un equilibro entre exploración y explotación de un espacio de soluciones, por lo
 en general este tipo de algoritmos dan buenas soluciones a problemas con grandes espacios
 de búsqueda. 
 
-% Y la
-                                % computación voluntaria es... - JJ
+La computación voluntaria es un método de cómputo mediante el cual se
+permite a distintos usuarios colaborar en un proyecto científico,
+en muchas ocasiones, aprovechando el tiempo ocioso de sus máquinas. Esta colaboración
+se produce entre computadores independientes, interconectados a través de una o varias redes
+para comunicar información y coordinar sus tareas construyendo redes con potencias
+equivalentes a la de los supercomputadores o, incluso, superiores.
 
-% Y nos interesa la computación evolutiva porque... - JJ
-% En este artículo se desean demostrar las bondades de la computación
-% voluntaria en algoritmos evolutivos,
-% ¿En serio? Simplemente lo que
-                                % tratas es de presentar un marco para
-                                % trabajar con ella en computación
-                                % evolutiva - JJ
 
 En este artículo se mostrará un marco para trabajar con computación
 voluntaria en algoritmos evolutivos, \texttt{NodIO}, así como las mejoras de tiempo producidas
 al utilizar este modelo. \texttt{NodIO} es un marco de desarrollo de experimentos
 de computación evolutiva en nube, que frente a los marcos actuales,
-% en el título he usado marco, quizás en un congreso español
-% sea más correcto que framework. - JJ
 no precisa de instalación de ningún software por parte del usuario voluntario, salvo un navegador
 web.
 
-%Estás definiendo la computación evolutiva después de
-%introducirla. Primero define, luego usa. Y no me gustan los guiones,
-%rara vez se usan en un paper - JJ
-%Los algoritmos genéticos hacen evolucionar una población de individuos -que 
-%pueden encontrarse codificados de muchas formas- sometiéndolos a 
-%modifiaciones aleatorias, de forma similar a como ocurre en la evolución biológica
-%(existiendo operaciones de selección, cruce y mutación entre otras).
 
-% ¿Ahora? ¿En serio? Una intro es un argumento que tienes que exponer,
-% no una serie de slides de powerpoint sin relación o ir definiendo
-% las cosas según te acuerdas - JJ
-%La computación voluntaria es un método de cómputo mediante el cual se
-%permite a distintos usuarios colaborar en un proyecto científico,
-%en muchas ocasiones, aprovechando el tiempo ocioso de sus máquinas. Esta colaboración
-%se produce entre computadores independientes, interconectados a través de una o varias redes
-%para comunicar información y coordinar sus tareas construyendo redes con potencias
-%equivalentes a la de los supercomputadores o, incluso, superiores.
-
-En estos sistemas se desean características como %según dijo... JJ
-tolerancia a fallos (en caso que una o varias de las
-máquinas deje de hacer un trabajo, es conveniente que ese cómputo sea
-realizado por otro usuario y la pérdida  
-de datos sea mínima), ejecución en múltiples máquinas (para obtener la potencia de cálculo necesaria),
-compatibilidad entre los dispositivos conectados (es necesario que la información
-transmitida por los distintos dispositivos pueda entenderse por otros dispositivos del sistema),
-seguro (evitando que uno o más usuarios con malintencionados traten de realizar algún tipo de actividad 
-nociva para el resto) y, por último, escalabilidad (ya que lo que se busca es la participación 
-del mayor número de usuarios posible, es necesario que el sistema sea escalable).
+Como queda descrito en publicaciones como \cite{durrani2014volunteer}, \cite{nodio} y \cite{sarmenta1998bayaniha},
+en estos sistemas se desean características como tolerancia a fallos (es conveniente que la 
+pérdida de datos sea mínima), ejecución en múltiples 
+máquinas (para obtener la potencia de cálculo necesaria),
+compatibilidad entre los dispositivos conectados (la información intercambianda debe entenderse por 
+todos los dispositivos del sistema),
+seguro (evitando que haya usuarios malintencionados que traten de realizar algún tipo de actividad 
+nociva para el resto) y, por último, escalabilidad.
 
 La capacidad de cómputo del sistema variará en función del número de
-usuarios que decidan colaborar, de la potencia de sus máquinas
-y de la capacidad del servidor para repartir el trabajo
-y recoger los resultados. %estos párrafos parecen traducidos... - JJ
+usuarios que decidan colaborar, la potencia de sus dispositivos
+y de la capacidad del servidor para repartir y recoger resultados.
 
-%La computación voluntaria es importante, entre otras de las cuestiones ya expuestas,
-%porque permite que ciudadanos fuera del ámbito de la investigación, puedan
-%tomar parte de la misma.
-% Esto lo pongo arriba mejor - Antonio
-
-% Y con esto? Quitarlo le resta importancia, ponerlo parece que
-% es la única solución al presupuesto - Antonio
 Además, gracias a que son los usuarios quienes ``prestan" sus máquinas, el sistema
 es más barato que la contratación de cómputo o la compra de material
-dedicado. % Si el servidor está en un PaaS, es gratis. 
+dedicado. Si además tienen la oportunidad de utilizar algún tipo de infraestructura
+gratuíta como pueden ser muchos ``Plataforma como servicio'', el coste es menor aún.
 
 Por su contra, la dificultad para llegar a un número importante de gente y los posibles
 problemas que pueden aparecer en cuanto a la fiabilidad o corrección de los datos
@@ -179,11 +150,6 @@ que están ejecutando no daña sus dispositivos, el cómputo que se está realizando
 servirá para cubrir la necesidad que se ha anunciado y que el sistema está blindado para 
 que ningún usuario malintencionado lleve a cabo ningún tipo de actividad ilícita.
 
-%La computación de algoritmos genéticos puede ser bastante lenta -la velocidad se verá
-%afectada en función de la longitud de los individuos, la cantidad de estos y las operaciones
-%que se hagan sobre ellos-, la computación voluntaria es un complemento a la computación de 
-%escritorio a la hora de obtener más resultados, no teniendo por qué ser algo exclusivo, 
-%ya que la potencia de los procesadores de hoy día es bastante grande.
 
 El resto del trabajo se organiza de la forma siguiente \ldots
 %Esto ya lo sabes, mételo ya - JJ 
@@ -208,12 +174,12 @@ problema: para que los usuarios participen, es necesario que instalen un \textit
 que se encargará de aprovechar el procesador de los voluntarios en aquellos momentos en los que no estén haciendo nada).
 
 Existen algunos otros desarrollos como el que encontramos en \cite{sarmenta1998bayaniha} o \cite{jadif}.
-Estos dos frameworks nos permiten crear nuestros experimentos de computación voluntaria utilizando el lenguaje
+Estos dos marcos de desarrollo nos permiten crear nuestros experimentos de computación voluntaria utilizando el lenguaje
 de programación \texttt{Java}. Al igual que en los casos anteriores, necesitaremos que los voluntarios descarguen e instalen
 un programa (además de las propias dependencias de \texttt{Java}), lo que puede provocar que muchos usuarios no se sientan
 atraídos a colaborar.
 
-En cuanto a \textit{frameworks} orientados a computación voluntaria con algoritmos evolutivos, ya en \cite{cole2010evolutionary}
+En cuanto a \textit{marcos de desarrollo} orientados a computación voluntaria con algoritmos evolutivos, ya en \cite{cole2010evolutionary}
 podemos ver un análisis de algunas plataformas y comparaciones de rendimiento entre ellas. Sin embargo, \texttt{NodIO} añade
 va más allá: permite ejecutar el cómputo desde el navegador al estar escrito el cliente en \texttt{JavaScript}. Esto facilita
 la participación en el experimento ya que cualquier dispositivo que sea capaz de ejecutar un navegador web va a poder 
@@ -246,7 +212,7 @@ destinados a computación voluntaria.
 \texttt{NodIO} \cite{nodio}, como se ha mencionado, es un marco de desarrollo crear experimentos de
 computación voluntaria utilizando algoritmos evolutivos. En este caso, está pensado para ser desplegado en un
 ``Plataforma como Servicio''. Para el desarrollo de
-los algoritmos se basa en un \textit{framework} llamado \texttt{NodEO} \cite{nodeo},
+los algoritmos se basa en un \textit{marco de desarrollo} llamado \texttt{NodEO} \cite{nodeo},
 desarrollado en \texttt{NodeJS}.
 
 Gracias a esta implementación del lado cliente, se pueden lanzar experimentos y que los voluntarios los ejecuten
@@ -348,7 +314,7 @@ sistema operativo \texttt{GNU/Linux} (distribución \texttt{ArchLinux} con \textt
   2.30GHz}. El navegador utilizado ha sido la versión 50 de \texttt{Chromium}.
 
 En el experimento se han ido variando el número de pestañas abiertas y se ha ejecutado el experimento
-varias veces -calculando una media ponderada para representar la gráfica de la figura \ref{tiempo-pestanas}-. 
+varias veces (calculando una media ponderada para representar la gráfica de la figura \ref{tiempo-pestanas}). 
 Como podemos observar, cuando solo tenemos una pestaña abierta, el tiempo se
 dispara (en torno a unos 3 minutos). En el caso de dos pestañas, el tiempo descendió hasta
 un tiempo estimado de 53.22 segundos. En el resto de los casos, aunque sigue habiendo
@@ -370,10 +336,10 @@ También se han ejecutado de forma síncrona en los tres teléfonos.
 
 En la figura \ref{tiempo-dispositivos} podemos ver los resultados.  Si comparamos con
 la figura \ref{tiempo-pestanas}, es sencillo ver que existe simetría, aunque
-en este nuevo caso los tiempos son algo mayores -que podemos achacar a un menor rendimiento
+en este nuevo caso los tiempos son algo mayores (que podemos achacar a un menor rendimiento
 por parte del procesador del dispositivo móvil y a la existencia de una red entre
 el servidor y los dispositivos, cuando antes se ejecutaba todo dentro de la misma
-máquina-.
+máquina).
 
 \begin{table}[hbpt]
 \label{var-table}
@@ -434,13 +400,12 @@ para investigar sobre el comportamiento de los usuarios, es decir, una vez lanza
 tratar de conocer si los usuarios se sienten atraídos por la idea de participar en un
 experimento -difundiendo un enlace al mismo a través de redes sociales- y, una vez que han iniciado
 el experimento, cuánto tiempo participan. Dentro de esta línea, la idea de incluir técnicas 
-relacionadas con ``ludificación'' -para atraer a los usuarios y hacer que estos se queden más tiempo
-ejecutando los distintos experimentos- sería otra cuestión a resolver, junto con la internacionalización
-de la aplicación -actualmente solo se encuentra disponible en inglés, por lo que al extenderlo
-a otros idiomas, como el castellano, se llegaría a más gente-.Conseguir una mayor automatización en la creación
+relacionadas con ``ludificación'' (para atraer a los usuarios y hacer que estos se queden más tiempo
+ejecutando los distintos experimentos) sería otra cuestión a resolver, junto con la internacionalización
+de la aplicación, que, al aumentar el número de idiomas, permitirá llegar a más
+voluntarios. Conseguir una mayor automatización en la creación
 de los experimentos es un camino a tener en cuenta, facilitando que cualquiera pueda implementar
-más sencillamente lo que necesite -proporcionando solo algunas plantillas donde rellenando unas pocas
-líneas se tenga lo necesario para lanzar el experimento-. 
+de forma más secilla nuevos experimentos lo que necesite. 
 
 
 
