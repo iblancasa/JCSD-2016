@@ -41,7 +41,7 @@
 
 % the name(s) of the author(s) follow(s) next
 %
-\author{Israel Blancas \inst{1} \and J. J. Merelo \inst{1}}
+\author{Israel Blancas \inst{1}, J. J. Merelo \inst{1} \and Antonio Álvarez \inst{1}}
 %
 % the affiliations are given next; don't give your e-mail address
 % unless you accept that it will be published
@@ -57,10 +57,14 @@ realizar experimentos utilizando la potencia de cálculo proporcionada
 por las máquinas de usuarios que deciden colaborar libremente en la investigación.
 \texttt{NodIO} \cite{nodio} es un marco de desarrollo de aplicaciones para la creación de este
 tipo de experimentos. A diferencia de otros frameworks que realizan las mismas
-tareas, \texttt{NodIO} no necesita instalar ninguna aplicación ni bibliteca en
+tareas, \texttt{NodIO} no necesita instalar ninguna aplicación ni biblioteca en
 el lado del cliente, ya que se  
 encuentra escrito en JavaScript, por lo que solo será necesario
-tener un navegador web o un intérprete. 
+tener un navegador web o un intérprete.
+%%%
+En este trabajo se detallará el funcionamiento de \texttt{NodIO},
+además de mostrar varios experimentos para demostrar los beneficios
+que exponemos: sencillez y rendimiento.
 % ¿Qué estás haciendo en este trabajo? ¿Con qué objetivo? ¿Haces
 % experimentos? ¿Porqué los haces? Tienes que ponerlo también en el
 % resumen. - JJ
@@ -81,61 +85,85 @@ realización de los experimentos; entre ellos está el uso de un único supercomput
 todo el procesamiento, la creación de un clúster de máquinas en un centro
 de procesamiento (o \textit{cloud}) o el uso de un grid o de recursos
 en la nube. Sin embargo, por cuestiones presupuestarias, algunas veces
-la única opción viable es recurrir a la computación voluntaria. % Y la
+la única opción viable es recurrir a la computación voluntaria.
+Este es un modelo de computación distribuida basado en la colaboración
+independiente de usuarios de cualquier condición académica utilizando sus recursos, generalmente ociosos.
+Esta colaboración se produce entre computadores independientes, interconectados
+a través de una o varias redes, para comunicar y coordinar sus tareas contruyendo
+redes con potencia equivalente (o incluso superior) a la de supercomputadores.
+
+Nuestro objetivo es trabajar con algoritmos evolutivos de manera eficiente,
+ya que son costosos en tiempo de cómputo. Este tipo de algoritmos se basan en
+el modelo evolutivo de Darwin. Se comienza con una población de individuos,
+la cual sometemos a un modelo simulado de selección natural: selección, cruce,
+mutación y reemplazo. El principal problema de eficiencia de estos algoritmos es el elevado
+número de operaciones que hay que realizar para cada individuo de la población. Aunque, por otro lado,
+con un buen diseño de este tipo de algoritmos se consigue
+un equilibro entre exploración y explotación de un espacio de soluciones, por lo que
+en general este tipo de algoritmos dan buenas soluciones a problemas con grandes espacios
+de búsqueda. 
+
+% Y la
                                 % computación voluntaria es... - JJ
 
 % Y nos interesa la computación evolutiva porque... - JJ
-En este artículo se desean demostrar las bondades de la computación
-voluntaria en algoritmos evolutivos, % ¿En serio? Simplemente lo que
+% En este artículo se desean demostrar las bondades de la computación
+% voluntaria en algoritmos evolutivos,
+% ¿En serio? Simplemente lo que
                                 % tratas es de presentar un marco para
                                 % trabajar con ella en computación
                                 % evolutiva - JJ
-así como las mejoras de tiempo producidas al utilizar este tipo de computación. Por otra parte, se
-introducirá a \texttt{NodIO}, un framework de desarrollo de experimentos
-de computación evolutiva en nube, que frente a los \textit{frameworks}
-actuales, % en el título he usado marco, quizás en un congreso español
-          % sea más correcto que framework. - JJ
+
+En este artículo se mostrará un marco para trabajar con computación
+voluntaria en algoritmos evolutivos, \texttt{NodIO}, así como las mejoras de tiempo producidas
+al utilizar este modelo. \texttt{NodIO} es un marco de desarrollo de experimentos
+de computación evolutiva en nube, que frente a los marcos actuales,
+% en el título he usado marco, quizás en un congreso español
+% sea más correcto que framework. - JJ
 no precisa de instalación de ningún software por parte del usuario voluntario, salvo un navegador
 web.
 
 %Estás definiendo la computación evolutiva después de
 %introducirla. Primero define, luego usa. Y no me gustan los guiones,
 %rara vez se usan en un paper - JJ
-Los algoritmos genéticos hacen evolucionar una población de individuos -que 
-pueden encontrarse codificados de muchas formas- sometiéndolos a 
-modifiaciones aleatorias, de forma similar a como ocurre en la evolución biológica
-(existiendo operaciones de selección, cruce y mutación entre otras).
+%Los algoritmos genéticos hacen evolucionar una población de individuos -que 
+%pueden encontrarse codificados de muchas formas- sometiéndolos a 
+%modifiaciones aleatorias, de forma similar a como ocurre en la evolución biológica
+%(existiendo operaciones de selección, cruce y mutación entre otras).
 
 % ¿Ahora? ¿En serio? Una intro es un argumento que tienes que exponer,
 % no una serie de slides de powerpoint sin relación o ir definiendo
 % las cosas según te acuerdas - JJ
-La computación voluntaria es un método de cómputo mediante el cual se
-permite a distintos usuarios colaborar en un proyecto científico,
-en muchas ocasiones, aprovechando el tiempo ocioso de sus máquinas. Esta colaboración
-se produce entre computadores independientes, interconectados a través de una o varias redes
-para comunicar información y coordinar sus tareas construyendo redes con potencias
-equivalentes a la de los supercomputadores o, incluso, superiores.
+%La computación voluntaria es un método de cómputo mediante el cual se
+%permite a distintos usuarios colaborar en un proyecto científico,
+%en muchas ocasiones, aprovechando el tiempo ocioso de sus máquinas. Esta colaboración
+%se produce entre computadores independientes, interconectados a través de una o varias redes
+%para comunicar información y coordinar sus tareas construyendo redes con potencias
+%equivalentes a la de los supercomputadores o, incluso, superiores.
 
 En estos sistemas se desean características como %según dijo... JJ
- tolerancia a fallos -en caso que una o varias de las
+tolerancia a fallos (en caso que una o varias de las
 máquinas deje de hacer un trabajo, es conveniente que ese cómputo sea
 realizado por otro usuario y la pérdida  
-de datos sea mínima-; ejecución en múltiples máquinas -para obtener la potencia de cálculo necesaria-;
-compatibilidad entre los dispositivos conectados -es necesario que la información
-transmitida por los distintos dispositivos pueda entenderse por otros dispositivos del sistema-;
-seguro -evitando que uno o más usuarios con malintencionados traten de realizar algún tipo de actividad 
-nociva para el resto-; y, por último, escalabilidad -ya que lo que se busca es la participación 
-del mayor número de usuarios posible, es necesario que el sistema sea escalable-.
+de datos sea mínima), ejecución en múltiples máquinas (para obtener la potencia de cálculo necesaria),
+compatibilidad entre los dispositivos conectados (es necesario que la información
+transmitida por los distintos dispositivos pueda entenderse por otros dispositivos del sistema),
+seguro (evitando que uno o más usuarios con malintencionados traten de realizar algún tipo de actividad 
+nociva para el resto) y, por último, escalabilidad (ya que lo que se busca es la participación 
+del mayor número de usuarios posible, es necesario que el sistema sea escalable).
 
-La potencia computacional total del sistema variará en función del número de
-usuarios que decidan colaborar, así como de la propia potencia de sus máquinas
-y la capacidad del nodo ``coordinador" sistema para repartir el trabajo
+La capacidad de cómputo del sistema variará en función del número de
+usuarios que decidan colaborar, de la potencia de sus máquinas
+y de la capacidad del servidor para repartir el trabajo
 y recoger los resultados. %estos párrafos parecen traducidos... - JJ
 
-La computación voluntaria es importante, entre otras de las cuestiones ya expuestas,
-porque permite que ciudadanos fuera del ámbito de la investigación, puedan
-tomar parte de la misma.
+%La computación voluntaria es importante, entre otras de las cuestiones ya expuestas,
+%porque permite que ciudadanos fuera del ámbito de la investigación, puedan
+%tomar parte de la misma.
+% Esto lo pongo arriba mejor - Antonio
 
+% Y con esto? Quitarlo le resta importancia, ponerlo parece que
+% es la única solución al presupuesto - Antonio
 Además, gracias a que son los usuarios quienes ``prestan" sus máquinas, el sistema
 es más barato que la contratación de cómputo o la compra de material
 dedicado. % Si el servidor está en un PaaS, es gratis. 
@@ -151,11 +179,11 @@ que están ejecutando no daña sus dispositivos, el cómputo que se está realizando
 servirá para cubrir la necesidad que se ha anunciado y que el sistema está blindado para 
 que ningún usuario malintencionado lleve a cabo ningún tipo de actividad ilícita.
 
-La computación de algoritmos genéticos puede ser bastante lenta -la velocidad se verá
-afectada en función de la longitud de los individuos, la cantidad de estos y las operaciones
-que se hagan sobre ellos-, la computación voluntaria es un complemento a la computación de 
-escritorio a la hora de obtener más resultados, no teniendo por qué ser algo exclusivo, 
-ya que la potencia de los procesadores de hoy día es bastante grande.
+%La computación de algoritmos genéticos puede ser bastante lenta -la velocidad se verá
+%afectada en función de la longitud de los individuos, la cantidad de estos y las operaciones
+%que se hagan sobre ellos-, la computación voluntaria es un complemento a la computación de 
+%escritorio a la hora de obtener más resultados, no teniendo por qué ser algo exclusivo, 
+%ya que la potencia de los procesadores de hoy día es bastante grande.
 
 El resto del trabajo se organiza de la forma siguiente \ldots
 %Esto ya lo sabes, mételo ya - JJ 
