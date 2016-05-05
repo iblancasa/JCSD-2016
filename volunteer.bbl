@@ -7,6 +7,11 @@ Alexandrov, A.D., Ibel, M., Schauser, K.E., Scheiman, C.J.: Superweb: research
   issues in java-based global computing. Concurrency - Practice and Experience
   9(6),  535--553 (1997)
 
+\bibitem{maeb:2007}
+Almeida-Rodríguez, F., Melián-Batista, B., Moreno-Pérez, J.A., Moreno-Vega,
+  J.M. (eds.): V Congreso Espa\~nol sobre Metaheurísticas, Algoritmos
+  Evolutivos y Bioinspirados (2007)
+
 \bibitem{seti}
 Anderson, D.P., Cobb, J., Korpela, E., Lebofsky, M., Werthimer, D.: Seti@ home:
   an experiment in public-resource computing. Communications of the ACM
@@ -20,6 +25,24 @@ Anderson, D.P., Fedak, G.: The computational and storage potential of volunteer
 \bibitem{araujo2009algoritmos}
 Araujo, L., Cervig{\'o}n, C.: Algoritmos evolutivos: un enfoque pr{\'a}ctico.
   Alfaomega (2009)
+
+\bibitem{maeb03:maribel}
+Arenas, M., Castillo, P., Romero, G., Merelo-Guerv\'os, J.J.: Distribuci\'on de
+  informaci\'on en algoritmos evolutivos {P2P}. In: MAEB03, Segundo Congreso
+  Espa\~nol sobre Metaheurísticas, Algoritmos Evolutivos y Bioinspirados. pp.
+  85--92
+
+\bibitem{LNCS2439:ID197:pp665}
+Arenas, M., Collet, P., Eiben, A., Jelasity, M., Merelo, J., Paechter, B.,
+  Preu\ss, M., Schoenauer, M.: A framework for distributed evolutionary
+  algorithms. In: Guerv\'os et~al.  \cite{ppsn2002}, keywords:
+  Implementation::Parallel EAs, Related::Simulated Adaptive Behavior,
+  Technique::Advanced techniques - miscellaneous, Technique::Evolutionary
+  computing - general, Technique::Evolutionary computing - miscellaneous,
+  \url{CiteSeer context}{http://citeseer.nj.nec.com/context/2189070/0},
+  available from
+  \url{http://link.springer.de/link/service/series/0558/papers/2439/243900665.pdf}{http://link.springer.de/link/service/series/0558/papers/2439/243900665.pdf},
+  \url{Metapress}{http://www.springerlink.com/link.asp?id=h4n29kbl69jvab4c}
 
 \bibitem{Baldeschwieler:1996:TIG:504450.504482}
 Baldeschwieler, J.E., Blumofe, R.D., Brewer, E.A.: Atlas: An infrastructure for
@@ -52,6 +75,12 @@ Cole, N., Desell, T., Gonz{\'a}lez, D.L., de~Vega, F.F., Magdon-Ismail, M.,
 Durrani, M.N., Shamsi, J.A.: Volunteer computing: requirements, challenges, and
   solutions. Journal of Network and Computer Applications  39,  369--380 (2014)
 
+\bibitem{ppsn2002}
+Guerv\'os, J.J.M., Adamidis, P., Beyer, H.G., nas, J.L.F.V., Schwefel, H.P.
+  (eds.): Parallel Problem Solving from Nature - PPSN VII, 7th International
+  Conference, Granada, Spain, September 7-11, 2002. Proceedings. No. 2439 in
+  Lecture Notes in Computer Science,LNCS, Springer-Verlag (September 2002)
+
 \bibitem{ibmwcg}
 IBM: {IBM World Community Grid}. \url{http://www.worldcommunitygrid.org/}
 
@@ -66,6 +95,17 @@ Merelo, J.J., Castillo, P., Mora, A., Esparcia-Alc{\'a}zar, A., Rivas-Santos,
   V.: Nodeo, a multi-paradigm distributed evolutionary algorithm platform in
   javascript. In: Proceedings of the 2014 conference companion on Genetic and
   evolutionary computation companion. pp. 1155--1162. ACM (2014)
+
+\bibitem{hispalinux2002}
+Merelo, J.J.: Algoritmos evolutivos en {P}erl. Ponencia presentada en el V
+  Congreso Hispalinux, disponible en
+  \url{http://congreso.hispalinux.es/ponencias/merelo/ae-hispalinux2002.html}{http://congreso.hispalinux.es/ponencias/merelo/ae-hispalinux2002.html}
+  (Noviembre 2002)
+
+\bibitem{maeb2007:dcor}
+Merelo, J.J., García, A.M., Lupi\'on, J.: Escalado de computaci\'on
+  distribuida sobre raíles. In: Almeida-Rodríguez et~al.  \cite{maeb:2007},
+  pp. 143--150
 
 \bibitem{merelo2015modeling}
 Merelo-Guerv{\'o}s, J.J., Garc{\'\i}a-S{\'a}nchez, P.: Modeling browser-based
