@@ -162,7 +162,27 @@ ejecutarlo. Deriva de aquí otra ventaja: al solo necesitarse un navegador web, n
 se preocupe de instalar ningún software adicional en su máquina.
 
 
-\section{NodIO}
+\section{NodIO, un marco para algoritmos evolutivos distribuidos}
+
+Los algoritmos evolutivos \cite{hispalinux2002,araujo2009algoritmos}
+son métodos bioinspirados de búsqueda y optimización que trabajan
+sobre una población de posibles soluciones, haciéndolas evolucionar
+según un método basado en la selección natural: mutación o cambio
+aleatorio, {\em crossover} o generación de nuevas soluciones
+combinando existentes, y selección aleatoria de las mejores soluciones
+de acuerdo con una función de {\em fitness} o adecuación
+establecida. A lo largo de una serie de generaciones, un algoritmo
+genético va creando, en media, mejores soluciones hasta que se alcanza
+el nivel deseado de {\em fitness} o la solución, si existe. 
+
+La paralelización de un algoritmo evolutivo es una operación
+relativamente simple \cite{maeb03:maribel}: simplemente distribuyendo
+la población entre diferentes nodos computacionales que intercambien,
+cada cierto intervalo de tiempo, individuos, se puede conseguir un
+sistema distribuido con un buen escalado y unas prestaciones
+aceptables. Por eso se han desarrollado e implementado diferentes
+sitemas de tal tipo, incluso basados en web \cite{LNCS2439:ID197:pp665,maeb2007:dcor} y
+destinados a computación voluntaria. 
 
 NodIO \cite{nodio}, como se ha mencionado, es un marco de desarrollo crear experimentos de
 computación voluntaria utilizando algoritmos evolutivos. En este caso, está pensado para ser desplegado en un
