@@ -58,7 +58,7 @@ por las máquinas de usuarios que deciden colaborar libremente en la investigació
 \texttt{NodIO} \cite{nodio} es un marco de desarrollo de aplicaciones para la creación de este
 tipo de experimentos. A diferencia de otros marcos de desarrollo que realizan las mismas
 tareas, \texttt{NodIO} no necesita instalar ninguna aplicación ni biblioteca en
-el lado del cliente, ya que se  
+el lado del cliente, ya que se
 encuentra escrito en JavaScript, por lo que solo será necesario
 tener un navegador web o un intérprete.
 %%%
@@ -81,7 +81,7 @@ desciende.
 \section{Introducción}
 
 Diversos son los métodos utilizados para el procesamiento de grandes
-conjuntos de resultados obtenidos 
+conjuntos de resultados obtenidos
 a través de la elaboración de experimentos o, en su defecto, la propia
 realización de los experimentos; entre ellos está el uso de un único supercomputador para
 todo el procesamiento, la creación de un clúster de máquinas en un centro
@@ -103,7 +103,7 @@ número de operaciones que hay que realizar para cada individuo de la población. 
 con un buen diseño de este tipo de algoritmos se consigue
 un equilibro entre exploración y explotación de un espacio de soluciones, por lo que
 en general este tipo de algoritmos dan buenas soluciones a problemas con grandes espacios
-de búsqueda. 
+de búsqueda.
 
 La computación voluntaria es un método de cómputo mediante el cual se
 permite a distintos usuarios colaborar en un proyecto científico,
@@ -122,12 +122,12 @@ web.
 
 
 Como queda descrito en publicaciones como \cite{durrani2014volunteer}, \cite{nodio} y \cite{sarmenta1998bayaniha},
-en estos sistemas se desean características como tolerancia a fallos (es conveniente que la 
-pérdida de datos sea mínima), ejecución en múltiples 
+en estos sistemas se desean características como tolerancia a fallos (es conveniente que la
+pérdida de datos sea mínima), ejecución en múltiples
 máquinas (para obtener la potencia de cálculo necesaria),
-compatibilidad entre los dispositivos conectados (la información intercambianda debe entenderse por 
+compatibilidad entre los dispositivos conectados (la información intercambianda debe entenderse por
 todos los dispositivos del sistema),
-seguro (evitando que haya usuarios malintencionados que traten de realizar algún tipo de actividad 
+seguro (evitando que haya usuarios malintencionados que traten de realizar algún tipo de actividad
 nociva para el resto) y, por último, escalabilidad.
 
 La capacidad de cómputo del sistema variará en función del número de
@@ -147,41 +147,41 @@ del \textit{software}), hacen que el método no sea ideal.
 
 En estos sistemas, los usuarios depositan su confianza en el proyecto, suponiendo que el \textit{software}
 que están ejecutando no daña sus dispositivos, el cómputo que se está realizando
-servirá para cubrir la necesidad que se ha anunciado y que el sistema está blindado para 
+servirá para cubrir la necesidad que se ha anunciado y que el sistema está blindado para
 que ningún usuario malintencionado lleve a cabo ningún tipo de actividad ilícita.
 
 
-El resto del trabajo se organiza de la forma siguiente: la Sección \ref{sec:arte} 
+El resto del trabajo se organiza de la forma siguiente: la Sección \ref{sec:arte}
 dará al lector encontrará algunos ejemplos de sistemas de computación voluntaria,
 además de algunos marcos de desarrollo de aplicaciones de este estilo. La siguiente
 Sección, la \ref{sec:nodio}, detalla el funcionamiento y arquitectura que compone
 a \texttt{NodIO}, comentando el algoritmo que se sigue y el intercambio de mensajes
-entre clientes y servidor. En la Sección \ref{sec:experimentos} se mencionan los experimentos 
-realizados en anteriores publicaciones y la información que aportaron. 
+entre clientes y servidor. En la Sección \ref{sec:experimentos} se mencionan los experimentos
+realizados en anteriores publicaciones y la información que aportaron.
 Además, se detallará cómo se han realizado otros dos nuevos,
 que harán claro para el lector las ventajas de la computación voluntaria (en especial las
-del marco \texttt{NodIO}). Finalmente,en la Sección \ref{sec:conclusiones} se recojen 
+del marco \texttt{NodIO}). Finalmente,en la Sección \ref{sec:conclusiones} se recojen
 las conclusiones extraídas tras los experimentos y se proponen algunos trabajos futuros para,
 principalmente, fomentar la participación de nuevos voluntarios.
 
 
 \section{Estado del arte}
 \label{sec:arte}
-Muchos son los proyectos que utilizan computación voluntaria 
+Muchos son los proyectos que utilizan computación voluntaria
 para realizar sus cálculos. El primero de ellos fue ``Great Internet Mersenne Primer Search'' \cite{gimps},
 en el año 1996, un sistema para calcular primos de Mersenne. Aunque el código de fuente es de dominio
 público, no se considera \textit{software} libre ya que los usuarios deben aceptar unas condiciones sobre la propiedad
 intelectual de los resultados obtenidos, por lo que más tarde nacieron algunas versiones que lo son totalmente.
 
-\texttt{IBM} cuenta con un programa de computación voluntaria con el que trata de alcanzar soluciones 
+\texttt{IBM} cuenta con un programa de computación voluntaria con el que trata de alcanzar soluciones
 a enfermedades como el cáncer \cite{ibmwcg} y que cuenta con miles de voluntarios.
 
-Especialmente conocido es el proyecto \texttt{SETI@home}, descrito en \cite{seti}, el cual funciona en la 
+Especialmente conocido es el proyecto \texttt{SETI@home}, descrito en \cite{seti}, el cual funciona en la
 plataforma informática  \textit{``Berkeley Open Infrastructure for Network Computing''} \cite{ries2012berkeley}. Este
 sistema analiza señales de radio buscando vida extraterrestre. Dentro de la misma plataforma, podemos encontrar
-otros muchos proyectos, como \textit{``Climate Prediction''} \cite{climate} mediante el cual se trata 
-de predecir el clima. Esta plataforma es libre y permite crear proyectos propios aunque tiene un gran 
-problema: para que los usuarios participen, es necesario que instalen un \textit{software} 
+otros muchos proyectos, como \textit{``Climate Prediction''} \cite{climate} mediante el cual se trata
+de predecir el clima. Esta plataforma es libre y permite crear proyectos propios aunque tiene un gran
+problema: para que los usuarios participen, es necesario que instalen un \textit{software}
 que se encargará de aprovechar el procesador de los voluntarios en aquellos momentos en los que no estén haciendo nada).
 
 Existen algunos otros desarrollos como el que encontramos en \cite{sarmenta1998bayaniha} o \cite{jadif}.
@@ -193,7 +193,7 @@ atraídos a colaborar.
 En cuanto a marcos de desarrollo orientados a computación voluntaria con algoritmos evolutivos, ya en \cite{cole2010evolutionary}
 podemos ver un análisis de algunas plataformas y comparaciones de rendimiento entre ellas. Sin embargo, \texttt{NodIO} añade
 va más allá: permite ejecutar el cómputo desde el navegador al estar escrito el cliente en \texttt{JavaScript}. Esto facilita
-la participación en el experimento ya que cualquier dispositivo que sea capaz de ejecutar un navegador web va a poder 
+la participación en el experimento ya que cualquier dispositivo que sea capaz de ejecutar un navegador web va a poder
 ejecutarlo. Deriva de aquí otra ventaja: al solo necesitarse un navegador web, no es necesario que el usuario
 se preocupe de instalar ningún software adicional en su máquina.
 
@@ -209,7 +209,7 @@ combinando existentes, y selección aleatoria de las mejores soluciones
 de acuerdo con una función de {\em fitness} o adecuación
 establecida. A lo largo de una serie de generaciones, un algoritmo
 genético va creando, en media, mejores soluciones hasta que se alcanza
-el nivel deseado de {\em fitness} o la solución, si existe. 
+el nivel deseado de {\em fitness} o la solución, si existe.
 
 La paralelización de un algoritmo evolutivo es una operación
 relativamente simple \cite{maeb03:maribel}: simplemente distribuyendo
@@ -218,7 +218,7 @@ cada cierto intervalo de tiempo, individuos, se puede conseguir un
 sistema distribuido con un buen escalado y unas prestaciones
 aceptables. Por eso se han desarrollado e implementado diferentes
 sitemas de tal tipo, incluso basados en web \cite{LNCS2439:ID197:pp665,maeb2007:dcor} y
-destinados a computación voluntaria. 
+destinados a computación voluntaria.
 
 \texttt{NodIO} \cite{nodio}, como se ha mencionado, es un marco de desarrollo crear experimentos de
 computación voluntaria utilizando algoritmos evolutivos. En este caso, está pensado para ser desplegado en un
@@ -230,10 +230,10 @@ Gracias a esta implementación del lado cliente, se pueden lanzar experimentos y 
 a través de un navegador (o cualquier sistema que ejecute el lenguaje \texttt{JavaScript}
 y que disponga de conexión a Internet).
 
-\texttt{NodIO} funciona según un paradigma cliente-servidor. El servidor realiza la coordinación de los clientes, 
+\texttt{NodIO} funciona según un paradigma cliente-servidor. El servidor realiza la coordinación de los clientes,
 almacena los distintos cromosomas y el estado de los experimentos y reinicia el experimento
-cuando se ha encontrado la solución. El acceso y envío de los distintos cromosomas se hace a través de 
-una interfaz \texttt{API/REST}. Las peticiones -que siguen el ciclo \texttt{``CRUD"}- utilizan el formato \texttt{JSON}. El cliente es 
+cuando se ha encontrado la solución. El acceso y envío de los distintos cromosomas se hace a través de
+una interfaz \texttt{API/REST}. Las peticiones -que siguen el ciclo \texttt{``CRUD"}- utilizan el formato \texttt{JSON}. El cliente es
 quien procede con el cómputo y, para obtener y enviar datos, hace peticiones asíncronas al servidor utilizando
 la antes mencionada \texttt{API/REST}. En aquellos navegadores en los que esté permitido, se ejecuta utilizando \texttt{``Web Workers"}
 (en caso contrario, se ejecuta una versión preparada para ello).
@@ -241,21 +241,21 @@ la antes mencionada \texttt{API/REST}. En aquellos navegadores en los que esté p
 Teniendo clara esta separación, es hora de ver el papel que juegan cada uno de los elementos
 dentro del algoritmo \ref{algoritmo}.
 
-Para que al lector le sea más sencillo comprender el algoritmo y el paso de mensajes que 
+Para que al lector le sea más sencillo comprender el algoritmo y el paso de mensajes que
 se produce entre cliente y servidor, puede ver la figura \ref{visual}.
 
 Para la creación de un nuevo experimento necesitaremos modificar, al
-menos, dos ficheros: ``\texttt{is\_solution.js}'', 
+menos, dos ficheros: ``\texttt{is\_solution.js}'',
 que se ejecuta en el servidor y decide si el cromosoma enviado por el
-cliente es una solución aceptable, y 
+cliente es una solución aceptable, y
 ``\texttt{trap.standalone.js}'', que se ejecuta en el cliente y es la que
 incluye la función de \textit{fitness} a optimizar y el resto del algoritmo
-evolutivo. Dependiendo de  
+evolutivo. Dependiendo de
 las necesidades que tenga el experimento deseado, especialmente de
-otros operadores genéticos o facilidades en el servidor habrá que revisar 
+otros operadores genéticos o facilidades en el servidor habrá que revisar
 otros archivos para ajustar aquellos parámetros que se deseen; como
-\texttt{NodIO} cuenta con una licencia libre, 
-esto no es problema. 
+\texttt{NodIO} cuenta con una licencia libre,
+esto no es problema.
 
 \begin{algorithm}[H]
   \caption{Algoritmo utilizado en NodIO para la realización de experimentos}
@@ -305,27 +305,27 @@ esto no es problema.
 Algunos experimentos ya fueron hechos en \cite{nodio} para mostrar la velocidad de ejecución de los distintos
 cómputos en \textit {JavaScript} frente a otros lenguajes. En este trabajo se ha procedido a realizar algunos experimentos
 para mostrar, a pequeña escala, el beneficio que nos aporta la
-computación voluntaria en cuanto a rendimiento. Mientras anteriormente se comparaba el mismo algoritmo 
-escrito en distintos lenguajes siendo ejecutados por una sola máquina, ahora se procede a comprobar cómo 
+computación voluntaria en cuanto a rendimiento. Mientras anteriormente se comparaba el mismo algoritmo
+escrito en distintos lenguajes siendo ejecutados por una sola máquina, ahora se procede a comprobar cómo
 influye en la rapidez para alcanzar una
 solución ejecutar los algoritmos escritos en \texttt{Javascript} en más de una máquina.
 
 En un primer experimento, se ha comprobado el tiempo de ejecución en
-función del número de pestañas 
+función del número de pestañas
 que están ejecutando el cliente. La máquina que hace de servidor hace
-también las veces de cliente, 
+también las veces de cliente,
 comenzando la ejecución de los clientes de forma síncrona. Como problema a resolver,
-se ha utilizado el de resolver la función ``\texttt{trap}'', con los valores descritos en la 
+se ha utilizado el de resolver la función ``\texttt{trap}'', con los valores descritos en la
 tabla \ref{var-table}.
 
 Se han escogido estos valores
 para conseguir un experimento que sea relativamente sencillo, de forma que se pudiera medir
-fácilmente el tiempo que tarda en resolverlo un solo voluntario. Estas pruebas se han hecho en un 
-sistema operativo \texttt{GNU/Linux} (distribución \texttt{ArchLinux} con \texttt{kernel} 4.5.1) con un procesador \texttt{i5-2410M CPU @ 
+fácilmente el tiempo que tarda en resolverlo un solo voluntario. Estas pruebas se han hecho en un
+sistema operativo \texttt{GNU/Linux} (distribución \texttt{ArchLinux} con \texttt{kernel} 4.5.1) con un procesador \texttt{i5-2410M CPU @
   2.30GHz}. El navegador utilizado ha sido la versión 50 de \texttt{Chromium}, un navegador libre que usa el mismo motor que Chrome de Google.
 
 En el experimento se han ido variando el número de pestañas abiertas y se ha ejecutado el experimento
-varias veces (calculando una media ponderada para representar la gráfica de la figura \ref{tiempo-pestanas}). 
+varias veces (calculando una media ponderada para representar la gráfica de la figura \ref{tiempo-pestanas}).
 Como podemos observar, cuando solo tenemos una pestaña abierta, el tiempo se
 dispara (en torno a unos 3 minutos). En el caso de dos pestañas, el tiempo descendió hasta
 un tiempo estimado de 53.22 segundos. En el resto de los casos, aunque sigue habiendo
@@ -338,11 +338,11 @@ de ejecución por la propia naturaleza del problema.
 
 
 Para el segundo experimento, se ha medido el tiempo que tarda en
-alcanzarse una solución 
+alcanzarse una solución
 utilizando como clientes hasta tres dispositivos con la misma
-configuración hardware -teléfonos 
+configuración hardware -teléfonos
 móviles \texttt{LG Bello II} con procesador \texttt{quad-core Cortex-A7 1.3GHz} con
-\texttt{Android} versión 5.0.2 y navegador \texttt{Chrome}-. 
+\texttt{Android} versión 5.0.2 y navegador \texttt{Chrome}-.
 También se han ejecutado de forma síncrona en los tres teléfonos.
 
 En la figura \ref{tiempo-dispositivos} podemos ver los resultados.  Si comparamos con
@@ -389,39 +389,43 @@ solución utilizando varios dispositivos con la misma configuración hardware y so
 \section{Conclusiones y trabajo futuro}
 \label{sec:conclusiones}
 Mediante los experimentos que se realizaron en \cite{nodio}, el lector
-ha podido comprobar que  
+ha podido comprobar que
 \texttt{JavaScript} es un lenguaje suficientemente rápido como para realizar
 este tipo de experimentos, y en todo caso es la única opción para que
 los voluntarios participen en experimentos distribuidos usando el
-navegador. 
+navegador.
 En este artículo, a través de los experimentos realizados en la sección previa, podemos comprobar
 a muy pequeña escala, los beneficios de la computación voluntaria en lo que a mejora de prestaciones
 se refiere. Hay que recordar que este tipo de sistemas se encuentran diseñados para
 ser utilizados por una gran cantidad de clientes y que esto es solo un experimento en un
 entorno controlado. El primer experimento, aunque la utilización de la misma máquina
-como servidor y cliente hace que no se pueda mostrar toda la potencia que tiene el sistema, nos 
+como servidor y cliente hace que no se pueda mostrar toda la potencia que tiene el sistema, nos
 permite ya ver una gran mejora. En el caso del segundo, vemos como, aunque utilicemos dispositivos
 que no tienen tanta potencia de procesamiento como un computador convencional, también tienen un
-gran poder de cómputo, reduciendo notablemente el tiempo en alcanzar una solución conforme 
+gran poder de cómputo, reduciendo notablemente el tiempo en alcanzar una solución conforme
 aumenta el número de dispositivos.
 
-En cuanto a trabajos futuros, muchas son las ideas que se pueden desarrollar utilizando esta 
+En cuanto a trabajos futuros, muchas son las ideas que se pueden desarrollar utilizando esta
 herramienta (o a partir de la misma). La idea más directa de todas es la realización de nuevos
 experimentos, no tanto sobre la velocidad para alcanzar la solución a un problema dado como
 para investigar sobre el comportamiento de los usuarios, es decir, una vez lanzado un experimento
 tratar de conocer si los usuarios se sienten atraídos por la idea de participar en un
 experimento -difundiendo un enlace al mismo a través de redes sociales- y, una vez que han iniciado
-el experimento, cuánto tiempo participan. Dentro de esta línea, la idea de incluir técnicas 
+el experimento, cuánto tiempo participan. Dentro de esta línea, la idea de incluir técnicas
 relacionadas con ``ludificación'' (para atraer a los usuarios y hacer que estos se queden más tiempo
 ejecutando los distintos experimentos) sería otra cuestión a resolver, junto con la internacionalización
 de la aplicación, que, al aumentar el número de idiomas, permitirá llegar a más
 voluntarios. Conseguir una mayor automatización en la creación
 de los experimentos es un camino a tener en cuenta, facilitando que cualquiera pueda implementar
-de forma más secilla nuevos experimentos lo que necesite. 
+de forma más secilla nuevos experimentos lo que necesite.
 
 \section{Reconocimientos}
 
-Reconocemos el apoyo del proyecto del Ministero español de Economía y Competitividad TIN2014-56494-C4-3-P y % Becas de Antonio y de Israel. 
+Reconocemos el apoyo del proyecto del Ministero español de Economía y Competitividad TIN2014-56494-C4-3-P,
+el Ministerio español de Educación, Cultura y Deporte por la ``Beca de Colaboración" concedida en el año 2015
+y de la Universidad de Granada por la ``Beca de Iniciación a la Investigación" del Plan Propio concedida en
+el 2015.
+
 
 \bibliographystyle{splncs}
 \bibliography{volunteer}
