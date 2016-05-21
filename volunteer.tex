@@ -16,13 +16,14 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\documentclass[runningheads,a4paper]{llncs}
+\documentclass[a4paper]{llncs}
 
+\usepackage[spanish,activeacute]{babel}
 \usepackage[latin1]{inputenc}
 \usepackage{amssymb}
 \setcounter{tocdepth}{3}
 \usepackage{graphicx}
-\usepackage{algorithm}% http://ctan.org/pkg/algorithms
+\usepackage[Algoritmo]{algorithm}% http://ctan.org/pkg/algorithms
 \usepackage{algpseudocode}% http://ctan.org/pkg/algorithmicx
 \usepackage{amsmath}
 \usepackage{url}
@@ -34,14 +35,14 @@
 \mainmatter  % start of an individual contribution
 
 % first the title is needed
-\title{NodIO: marco de desarrollo aplicaciones para computación evolutiva voluntaria}
+\title{NodIO: Marco de desarrollo de aplicaciones para computación evolutiva voluntaria}
 
 % a short form should be given in case it is too long for the running head
-\titlerunning{NodIO: marco de desarrollo orientado a computación evolutiva }
+\titlerunning{NodIO: Marco de desarrollo orientado a computación evolutiva }
 
 % the name(s) of the author(s) follow(s) next
 %
-\author{Israel Blancas \inst{1}, J. J. Merelo \inst{1} \and Antonio Álvarez \inst{1}}
+\author{Israel Blancas, J. J. Merelo \and Antonio Álvarez}
 %
 % the affiliations are given next; don't give your e-mail address
 % unless you accept that it will be published
@@ -75,7 +76,7 @@ desciende.
 
 \begin{keywords}
   Computación voluntaria,  algoritmos evolutivos, computación distribuida,
-  computación en internet, computación nube, evaluación de rendimiento
+  computación en la nube, evaluación de rendimiento
 \end{keywords}
 
 \section{Introducción}
@@ -137,7 +138,7 @@ y de la capacidad del servidor para repartir y recoger resultados.
 Además, gracias a que son los usuarios quienes ``prestan" sus máquinas, el sistema
 es más barato que la contratación de cómputo o la compra de material
 dedicado. Si además tienen la oportunidad de utilizar algún tipo de infraestructura
-gratuíta como pueden ser muchos ``Plataforma como servicio'', el coste es menor aún.
+gratuita como pueden ser muchos ``Plataforma como servicio'', el coste es menor aún.
 
 Por su contra, la dificultad para llegar a un número importante de gente y los posibles
 problemas que pueden aparecer en cuanto a la fiabilidad o corrección de los datos
@@ -233,9 +234,9 @@ y que disponga de conexión a Internet).
 \texttt{NodIO} funciona según un paradigma cliente-servidor. El servidor realiza la coordinación de los clientes,
 almacena los distintos cromosomas y el estado de los experimentos y reinicia el experimento
 cuando se ha encontrado la solución. El acceso y envío de los distintos cromosomas se hace a través de
-una interfaz \texttt{API/REST}. Las peticiones -que siguen el ciclo \texttt{``CRUD"}- utilizan el formato \texttt{JSON}. El cliente es
+una interfaz \texttt{API/REST}. Las peticiones -que siguen el ciclo ``\texttt{CRUD}''- utilizan el formato \texttt{JSON}. El cliente es
 quien procede con el cómputo y, para obtener y enviar datos, hace peticiones asíncronas al servidor utilizando
-la antes mencionada \texttt{API/REST}. En aquellos navegadores en los que esté permitido, se ejecuta utilizando \texttt{``Web Workers"}
+la antes mencionada \texttt{API/REST}. En aquellos navegadores en los que esté permitido, se ejecuta utilizando ``\texttt{Web Workers}''
 (en caso contrario, se ejecuta una versión preparada para ello).
 
 Teniendo clara esta separación, es hora de ver el papel que juegan cada uno de los elementos
@@ -422,8 +423,8 @@ de forma más secilla nuevos experimentos lo que necesite.
 \section{Reconocimientos}
 
 Reconocemos el apoyo del proyecto del Ministero español de Economía y Competitividad TIN2014-56494-C4-3-P,
-el Ministerio español de Educación, Cultura y Deporte por la ``Beca de Colaboración" concedida en el año 2015
-y de la Universidad de Granada por la ``Beca de Iniciación a la Investigación" del Plan Propio concedida en
+el Ministerio español de Educación, Cultura y Deporte por la ``Beca de Colaboración'' concedida en el año 2015
+y de la Universidad de Granada por la ``Beca de Iniciación a la Investigación"  del Plan Propio concedida en
 el 2015.
 
 
