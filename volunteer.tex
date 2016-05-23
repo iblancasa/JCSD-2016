@@ -69,7 +69,7 @@ tener un navegador web o un intérprete.
 En este trabajo se detallará el funcionamiento de \texttt{NodIO},
 además de mostrar dos experimentos para demostrar los beneficios
 que exponemos: sencillez y rendimiento.
-
+%No suele haber párrafos en el abstract
 Ambos experimentos nos demostrarán cómo, al aumentar
 el número de ``voluntarios'', el tiempo en alcanzar una solución
 desciende.
@@ -85,13 +85,14 @@ desciende.
 \section{Introducción}
 
 Diversos son los métodos utilizados para el procesamiento de grandes
-conjuntos de resultados obtenidos
+conjuntos de datos obtenidos
 a través de la elaboración de experimentos o, en su defecto, la propia
 realización de los experimentos; entre ellos está el uso de un único supercomputador para
-todo el procesamiento, la creación de un clúster de máquinas en un centro
+todo el procesamiento o de un clúster de máquinas en un centro
 de procesamiento (o \textit{cloud}) o el uso de un grid o de recursos
 en la nube. Sin embargo, por cuestiones presupuestarias, algunas veces
-la única opción viable es recurrir a la computación voluntaria.
+la única opción viable es recurrir a medios de coste bajo o nulo,
+tales como la computación voluntaria.
 Este es un modelo de computación distribuida basado en la colaboración
 independiente de usuarios de cualquier condición académica utilizando sus recursos, generalmente ociosos.
 Esta colaboración se produce entre computadores independientes, interconectados
@@ -241,12 +242,9 @@ una interfaz \texttt{API/REST}. Las peticiones -que siguen el ciclo ``\texttt{CR
 quien procede con el cómputo y, para obtener y enviar datos, hace peticiones asíncronas al servidor utilizando
 la antes mencionada \texttt{API/REST}. En aquellos navegadores en los que esté permitido, se ejecuta utilizando ``\texttt{Web Workers}''
 (en caso contrario, se ejecuta una versión preparada para ello).
-
 Teniendo clara esta separación, es hora de ver el papel que juegan cada uno de los elementos
-dentro del algoritmo \ref{algoritmo}.
-
-Para que al lector le sea más sencillo comprender el algoritmo y el paso de mensajes que
-se produce entre cliente y servidor, puede ver la figura \ref{visual}.
+dentro del algoritmo \ref{algoritmo}. La operación del algoritmo se
+muestra en la figura \ref{visual}.
 
 Para la creación de un nuevo experimento necesitaremos modificar, al
 menos, dos ficheros: ``\texttt{is\_solution.js}'',
@@ -314,48 +312,6 @@ escrito en distintos lenguajes siendo ejecutados por una sola máquina, ahora se 
 influye en la rapidez para alcanzar una
 solución ejecutar los algoritmos escritos en \texttt{Javascript} en más de una máquina.
 
-En un primer experimento, se ha comprobado el tiempo de ejecución en
-función del número de pestañas
-que están ejecutando el cliente. La máquina que hace de servidor hace
-también las veces de cliente,
-comenzando la ejecución de los clientes de forma síncrona. Como problema a resolver,
-se ha utilizado el de resolver la función ``\texttt{trap}'', con los valores descritos en la
-tabla \ref{var-table}.
-
-Se han escogido estos valores
-para conseguir un experimento que sea relativamente sencillo, de forma que se pudiera medir
-fácilmente el tiempo que tarda en resolverlo un solo voluntario. Estas pruebas se han hecho en un
-sistema operativo \texttt{GNU/Linux} (distribución \texttt{ArchLinux} con \texttt{kernel} 4.5.1) con un procesador \texttt{i5-2410M CPU @
-  2.30GHz}. El navegador utilizado ha sido la versión 50 de \texttt{Chromium}, un navegador libre que usa el mismo motor que Chrome de Google.
-
-En el experimento se han ido variando el número de pestañas abiertas y se ha ejecutado el experimento
-varias veces (calculando una media ponderada para representar la gráfica de la figura \ref{tiempo-pestanas}).
-Como podemos observar, cuando solo tenemos una pestaña abierta, el tiempo se
-dispara (en torno a unos 3 minutos). En el caso de dos pestañas, el tiempo descendió hasta
-un tiempo estimado de 53.22 segundos. En el resto de los casos, aunque sigue habiendo
-diferencias de tiempo (unos 14.56, 10.11 y 7.46 segundos respectivamente), no es
-tan notable como en los otros dos casos. Esto puede tener varias explicaciones: por un
-lado al aumentar el número de pestañas, el poder computacional desciende (el
-sistema operativo se ve con una carga de trabajo con la que tiene que lidiar).
-Por otro, llegará un momento en el que no se podrá reducir más el tiempo
-de ejecución por la propia naturaleza del problema.
-
-
-Para el segundo experimento, se ha medido el tiempo que tarda en
-alcanzarse una solución
-utilizando como clientes hasta tres dispositivos con la misma
-configuración hardware -teléfonos
-móviles \texttt{LG Bello II} con procesador \texttt{quad-core Cortex-A7 1.3GHz} con
-\texttt{Android} versión 5.0.2 y navegador \texttt{Chrome}-.
-También se han ejecutado de forma síncrona en los tres teléfonos.
-
-En la figura \ref{tiempo-dispositivos} podemos ver los resultados.  Si comparamos con
-la figura \ref{tiempo-pestanas}, es sencillo ver que existe simetría, aunque
-en este nuevo caso los tiempos son algo mayores (que podemos achacar a un menor rendimiento
-por parte del procesador del dispositivo móvil y a la existencia de una red entre
-el servidor y los dispositivos, cuando antes se ejecutaba todo dentro de la misma
-máquina).
-
 \begin{table}[hbpt]
 \label{var-table}
 \begin{tabular}{|l|l|}
@@ -371,7 +327,21 @@ Tamaño de la población & 128            \\ \hline
 \centering
 \caption{Valores de las variables utilizados para el experimento}
 \end{table}
+%
+En un primer experimento, se ha comprobado el tiempo de ejecución en
+función del número de pestañas
+que están ejecutando el cliente. La máquina que hace de servidor hace
+también las veces de cliente,
+comenzando la ejecución de los clientes de forma síncrona. Como problema a resolver,
+se ha utilizado el de resolver la función ``\texttt{trap}'', con los valores descritos en la
+tabla \ref{var-table}.
 
+Se han escogido estos valores
+para conseguir un experimento que sea relativamente sencillo, de forma que se pudiera medir
+fácilmente el tiempo que tarda en resolverlo un solo voluntario. Estas pruebas se han hecho en un
+sistema operativo \texttt{GNU/Linux} (distribución \texttt{ArchLinux} con \texttt{kernel} 4.5.1) con un procesador \texttt{i5-2410M CPU @
+  2.30GHz}. El navegador utilizado ha sido la versión 50 de \texttt{Chromium}, un navegador libre que usa el mismo motor que Chrome de Google.
+%
 \begin{figure}[htbp]
 \includegraphics[scale=0.65]{img/tiempo-pestanas}
 \centering
@@ -379,7 +349,28 @@ Tamaño de la población & 128            \\ \hline
 solución en un mismo ordenador en función del número de pestañas abierto}
 \label{tiempo-pestanas}
 \end{figure}
+%
+En el experimento se han ido variando el número de pestañas abiertas y se ha ejecutado el experimento
+varias veces (calculando una media ponderada para representar la
+gráfica de la figura \ref{tiempo-pestanas}). 
+Como podemos observar, cuando solo tenemos una pestaña abierta, el tiempo se
+dispara (en torno a unos 3 minutos). En el caso de dos pestañas, el tiempo descendió hasta
+un tiempo estimado de 53.22 segundos. En el resto de los casos, aunque sigue habiendo
+diferencias de tiempo (unos 14.56, 10.11 y 7.46 segundos respectivamente), no es
+tan notable como en los otros dos casos. Esto puede tener varias explicaciones: por un
+lado al aumentar el número de pestañas, el poder computacional desciende (el
+sistema operativo se ve con una carga de trabajo con la que tiene que lidiar).
+Por otro, llegará un momento en el que no se podrá reducir más el tiempo
+de ejecución por la propia naturaleza del problema.
 
+Para el segundo experimento, se ha medido el tiempo que tarda en
+alcanzarse una solución
+utilizando como clientes hasta tres dispositivos con la misma
+configuración hardware -teléfonos
+móviles \texttt{LG Bello II} con procesador \texttt{quad-core Cortex-A7 1.3GHz} con
+\texttt{Android} versión 5.0.2 y navegador \texttt{Chrome}-.
+También se han ejecutado de forma síncrona en los tres teléfonos.
+%
 \begin{figure}[htbp]
 \includegraphics[scale=0.65]{img/tiempo-dispositivos}
 \centering
@@ -388,7 +379,14 @@ solución utilizando varios dispositivos con la misma configuración hardware y so
 \label{tiempo-dispositivos}
 \end{figure}
 
-
+En la figura \ref{tiempo-dispositivos} podemos ver los resultados.  Si comparamos con
+la figura \ref{tiempo-pestanas}, es sencillo ver que existe bastante parecido, aunque
+en este nuevo caso los tiempos son algo mayores, lo que puede achacar a un menor rendimiento
+por parte del procesador del dispositivo móvil y a la existencia de una red entre
+el servidor y los dispositivos, cuando antes se ejecutaba todo dentro de la misma
+máquina. En todo caso, se consigue una mejora en los tiempos, lo que
+indica que el sistema de computación voluntaria escala con el número
+de usuarios independientemente de su rendimiento. 
 
 \section{Conclusiones y trabajo futuro}
 \label{sec:conclusiones}
