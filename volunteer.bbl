@@ -95,20 +95,6 @@ Juan-Julián Merelo, Pedro Castillo, Antonio Mora, Anna Esparcia-Alcázar, and
 \newblock In {\em Proceedings of the 2014 conference companion on Genetic and
   evolutionary computation companion}, pages 1155--1162. ACM, 2014.
 
-\bibitem{ppsn2002}
-J.-J. Merelo-Guervós, P.~Adamidis, H.-G. Beyer, J.-L. Fernández-Villaca\ nas,
-  and H.-P. Schwefel, editors.
-\newblock {\em Parallel Problem Solving from Nature - PPSN VII, 7th
-  International Conference, Granada, Spain, September 7-11, 2002. Proceedings},
-  number 2439 in Lecture Notes in Computer Science,LNCS. Springer-Verlag,
-  September 2002.
-
-\bibitem{maeb:2007}
-Francisco Almeida-Rodríguez, Belén Melián-Batista, José~A. Moreno-Pérez, and
-  J.~Marcos Moreno-Vega, editors.
-\newblock {\em V Congreso Español sobre Metaheurísticas, Algoritmos Evolutivos
-  y Bioinspirados}, 2007.
-
 \bibitem{merelo2015modeling}
 Juan~Julián Merelo-Guervós and Pablo García-Sánchez.
 \newblock Modeling browser-based distributed evolutionary computation systems.
@@ -164,5 +150,19 @@ J.~Eric Baldeschwieler, Robert~D. Blumofe, and Eric~A. Brewer.
 \newblock In {\em Proceedings of the 7th Workshop on ACM SIGOPS European
   Workshop: Systems Support for Worldwide Applications}, EW 7, pages 165--172,
   New York, NY, USA, 1996. ACM.
+
+\bibitem{ppsn2002}
+J.-J. Merelo-Guervós, P.~Adamidis, H.-G. Beyer, J.-L. Fernández-Villaca\ nas,
+  and H.-P. Schwefel, editors.
+\newblock {\em Parallel Problem Solving from Nature - PPSN VII, 7th
+  International Conference, Granada, Spain, September 7-11, 2002. Proceedings},
+  number 2439 in Lecture Notes in Computer Science,LNCS. Springer-Verlag,
+  September 2002.
+
+\bibitem{maeb:2007}
+Francisco Almeida-Rodríguez, Belén Melián-Batista, José~A. Moreno-Pérez, and
+  J.~Marcos Moreno-Vega, editors.
+\newblock {\em V Congreso Español sobre Metaheurísticas, Algoritmos Evolutivos
+  y Bioinspirados}, 2007.
 
 \end{thebibliography}
