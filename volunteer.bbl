@@ -1,141 +1,168 @@
 \begin{thebibliography}{10}
-\providecommand{\url}[1]{\texttt{#1}}
-\providecommand{\urlprefix}{URL }
-
-\bibitem{alexandrov1997superweb}
-Alexandrov, A.D., Ibel, M., Schauser, K.E., Scheiman, C.J.: Superweb: research
-  issues in java-based global computing. Concurrency - Practice and Experience
-  9(6),  535--553 (1997)
-
-\bibitem{maeb:2007}
-Almeida-Rodr\'iguez, F., Meli\'an-Batista, B., Moreno-P\'erez, J.A.,
-  Moreno-Vega, J.M. (eds.): V Congreso Espa\~nol sobre Metaheur\'isticas,
-  Algoritmos Evolutivos y Bioinspirados (2007)
-
-\bibitem{seti}
-Anderson, D.P., Cobb, J., Korpela, E., Lebofsky, M., Werthimer, D.: Seti@ home:
-  an experiment in public-resource computing. Communications of the ACM
-  45(11),  56--61 (2002)
-
-\bibitem{anderson2006computational}
-Anderson, D.P., Fedak, G.: The computational and storage potential of volunteer
-  computing. In: Cluster Computing and the Grid, 2006. CCGRID 06. Sixth IEEE
-  International Symposium on. vol.~1, pp. 73--80. IEEE (2006)
-
-\bibitem{araujo2009algoritmos}
-Araujo, L., Cervig{\'o}n, C.: Algoritmos evolutivos: un enfoque pr{\'a}ctico.
-  Alfaomega (2009)
-
-\bibitem{maeb03:maribel}
-Arenas, M., Castillo, P., Romero, G., Merelo-Guerv\'os, J.J.: Distribuci\'on de
-  informaci\'on en algoritmos evolutivos {P2P}. In: MAEB03, Segundo Congreso
-  Espa\~nol sobre Metaheur\'isticas, Algoritmos Evolutivos y Bioinspirados. pp.
-  85--92 (2003)
-
-\bibitem{LNCS2439:ID197:pp665}
-Arenas, M., Collet, P., Eiben, A., Jelasity, M., Merelo, J., Paechter, B.,
-  Preu\ss, M., Schoenauer, M.: A framework for distributed evolutionary
-  algorithms. In: Merelo-Guerv\'os et~al.  \cite{ppsn2002}
-
-\bibitem{Baldeschwieler:1996:TIG:504450.504482}
-Baldeschwieler, J.E., Blumofe, R.D., Brewer, E.A.: Atlas: An infrastructure for
-  global computing. In: Proceedings of the 7th Workshop on ACM SIGOPS European
-  Workshop: Systems Support for Worldwide Applications. pp. 165--172. EW 7,
-  ACM, New York, NY, USA (1996), \url{http://doi.acm.org/10.1145/504450.504482}
-
-\bibitem{baratloo1996charlotte}
-Baratloo, A., Karaul, M., Kedem, Z., Wyckoff, P.: Charlotte: Metacomputing on
-  the web. In: Proceedings of the 9th Conference on Parallel and Distributed
-  Computing Systems. Citeseer (1996)
-
-\bibitem{baratloo1999charlotte}
-Baratloo, A., Karaul, M., Kedem, Z.M., Wijckoff, P.: Charlotte: Metacomputing
-  on the web. Future Generation Computer Systems  15(5),  559--570 (1999)
-
-\bibitem{chandy1996world}
-Chandy, E.M., Rifkin, A., Sivilotti, P.A., Mandelson, J., Richardson, M.,
-  Tanaka, W., Weisman, L.: A world-wide distributed system using {J}ava and the
-  {I}nternet. In: High Performance Distributed Computing, 1996., Proceedings of
-  5th IEEE International Symposium on. pp. 11--18. IEEE (1996)
-
-\bibitem{cole2010evolutionary}
-Cole, N., Desell, T., Gonz{\'a}lez, D.L., de~Vega, F.F., Magdon-Ismail, M.,
-  Newberg, H., Szymanski, B., Varela, C.: Evolutionary algorithms on volunteer
-  computing platforms: The {MilkyWay}@home project. In: Parallel and
-  distributed computational intelligence, pp. 63--90. Springer (2010)
-
-\bibitem{durrani2014volunteer}
-Durrani, M.N., Shamsi, J.A.: Volunteer computing: requirements, challenges, and
-  solutions. Journal of Network and Computer Applications  39,  369--380 (2014)
-
-\bibitem{ibmwcg}
-IBM: {IBM World Community Grid}. \url{http://www.worldcommunitygrid.org/}
 
 \bibitem{nodio}
-Merelo, J.J., Garc{\'\i}a-Valdez, M., Castillo, P.A., Garc{\'\i}a-S{\'a}nchez,
-  P., Cuevas, P., Rico, N.: Nodio, a javascript framework for volunteer-based
-  evolutionary algorithms: first results. arXiv preprint arXiv:1601.01607
-  (2016)
+Juan-J Merelo, Mario García-Valdez, Pedro~A Castillo, Pablo García-Sánchez,
+  P~Cuevas, and Nuria Rico.
+\newblock Nodio, a javascript framework for volunteer-based evolutionary
+  algorithms: first results.
+\newblock {\em arXiv preprint arXiv:1601.01607}, 2016.
 
-\bibitem{hispalinux2002}
-Merelo, J.J.: Algoritmos evolutivos en {P}erl. Ponencia presentada en el V
-  Congreso Hispalinux, disponible en
-  \url{http://congreso.hispalinux.es/ponencias/merelo/ae-hispalinux2002.html}
-  (Noviembre 2002)
-
-\bibitem{nodeo}
-Merelo, J.J., Castillo, P., Mora, A., Esparcia-Alc{\'a}zar, A., Rivas-Santos,
-  V.: Nodeo, a multi-paradigm distributed evolutionary algorithm platform in
-  {JavasSript}. In: Proceedings of the 2014 conference companion on Genetic and
-  evolutionary computation companion. pp. 1155--1162. ACM (2014)
-
-\bibitem{maeb2007:dcor}
-Merelo, J.J., Garc\'ia, A.M., Lupi\'on, J.: Escalado de computaci\'on
-  distribuida sobre ra\'iles. In: Almeida-Rodr\'iguez et~al.  \cite{maeb:2007},
-  pp. 143--150
-
-\bibitem{ppsn2002}
-Merelo-Guerv\'os, J.J., Adamidis, P., Beyer, H.G., nas, J.L.F.V., Schwefel,
-  H.P. (eds.): Parallel Problem Solving from Nature - PPSN VII, 7th
-  International Conference, Granada, Spain, September 7-11, 2002. Proceedings.
-  No. 2439 in Lecture Notes in Computer Science,LNCS, Springer-Verlag
-  (September 2002)
-
-\bibitem{merelo2015modeling}
-Merelo-Guerv{\'o}s, J.J., Garc{\'\i}a-S{\'a}nchez, P.: Modeling browser-based
-  distributed evolutionary computation systems. arXiv preprint arXiv:1503.06424
-   (2015)
-
-\bibitem{ries2012berkeley}
-Ries, C.B.: Berkeley open infrastructure for network computing. In: BOINC, pp.
-  27--33. Springer (2012)
-
-\bibitem{sanz2010ibercivis}
-Sanz, F.S.: Ibercivis: la ciencia en casa: la computaci{\'o}n voluntaria.
-  Alkaid: revista multitem{\'a}tica  1(9),  12--17 (2010)
+\bibitem{durrani2014volunteer}
+Muhammad~Nouman Durrani and Jawwad~A Shamsi.
+\newblock Volunteer computing: requirements, challenges, and solutions.
+\newblock {\em Journal of Network and Computer Applications}, 39:369--380,
+  2014.
 
 \bibitem{sarmenta1998bayaniha}
-Sarmenta, L.F.: Bayanihan: Web-based volunteer computing using java. In:
-  Worldwide Computing and Its Applications-WWCA'98, pp. 444--461. Springer
-  (1998)
-
-\bibitem{sarmenta2001volunteer}
-Sarmenta, L.F.: Volunteer computing. Ph.D. thesis, Massachusetts Institute of
-  Technology (2001)
-
-\bibitem{sarmenta2002sabotage}
-Sarmenta, L.F.: Sabotage-tolerance mechanisms for volunteer computing systems.
-  Future Generation Computer Systems  18(4),  561--572 (2002)
-
-\bibitem{climate}
-Stainforth, D., Allen, M., Collins, M., Murphy, J.: Distributed computing for
-  public-interest climate modeling research. Computing in Science \&
-  Engineering  4(3),  82--89 (2002)
-
-\bibitem{jadif}
-Team, J.: {Jadif}. \url{http://jadif.sourceforge.net/}
+Luis~FG Sarmenta.
+\newblock Bayanihan: Web-based volunteer computing using java.
+\newblock In {\em Worldwide Computing and Its Applications-WWCA'98}, pages
+  444--461. Springer, 1998.
 
 \bibitem{gimps}
-Woltman, G., et~al.: Gimps. The Great Internet Mersenne Prime Search  (2008)
+G~Woltman et~al.
+\newblock Gimps.
+\newblock {\em The Great Internet Mersenne Prime Search}, 2008.
+
+\bibitem{ibmwcg}
+IBM.
+\newblock {IBM World Community Grid}.
+\newblock \url{http://www.worldcommunitygrid.org/}.
+
+\bibitem{seti}
+David~P Anderson, Jeff Cobb, Eric Korpela, Matt Lebofsky, and Dan Werthimer.
+\newblock Seti@ home: an experiment in public-resource computing.
+\newblock {\em Communications of the ACM}, 45(11):56--61, 2002.
+
+\bibitem{ries2012berkeley}
+Christian~Benjamin Ries.
+\newblock Berkeley open infrastructure for network computing.
+\newblock In {\em BOINC}, pages 27--33. Springer, 2012.
+
+\bibitem{climate}
+Dave Stainforth, M~Allen, Michael Collins, and John Murphy.
+\newblock Distributed computing for public-interest climate modeling research.
+\newblock {\em Computing in Science \& Engineering}, 4(3):82--89, 2002.
+
+\bibitem{jadif}
+Jadif Team.
+\newblock {Jadif}.
+\newblock \url{http://jadif.sourceforge.net/}.
+
+\bibitem{cole2010evolutionary}
+Nate Cole, Travis Desell, Daniel~Lombrana González, Francisco~Fernández
+  de~Vega, Malik Magdon-Ismail, Heidi Newberg, Boleslaw Szymanski, and Carlos
+  Varela.
+\newblock Evolutionary algorithms on volunteer computing platforms: The
+  {MilkyWay}@home project.
+\newblock In {\em Parallel and distributed computational intelligence}, pages
+  63--90. Springer, 2010.
+
+\bibitem{hispalinux2002}
+Juan~Julián Merelo.
+\newblock Algoritmos evolutivos en {P}erl.
+\newblock Ponencia presentada en el V Congreso Hispalinux, disponible en
+  \url{http://congreso.hispalinux.es/ponencias/merelo/ae-hispalinux2002.html},
+  Noviembre 2002.
+
+\bibitem{araujo2009algoritmos}
+Lourdes Araujo and Carlos Cervigón.
+\newblock {\em Algoritmos evolutivos: un enfoque práctico}.
+\newblock Alfaomega, 2009.
+
+\bibitem{maeb03:maribel}
+M.G. Arenas, P.A. Castillo, G.~Romero, and Juan~Julián Merelo-Guervós.
+\newblock Distribución de información en algoritmos evolutivos {P2P}.
+\newblock In {\em MAEB03, Segundo Congreso Espa\~nol sobre Metaheurísticas,
+  Algoritmos Evolutivos y Bioinspirados}, pages 85--92, 2003.
+
+\bibitem{LNCS2439:ID197:pp665}
+M.G. Arenas, Pierre Collet, A.E. Eiben, M'ark Jelasity, J.J. Merelo, Ben
+  Paechter, Mike Preu\ss, and Marc Schoenauer.
+\newblock A framework for distributed evolutionary algorithms.
+\newblock In Merelo-Guervós et~al. \cite{ppsn2002}.
+
+\bibitem{maeb2007:dcor}
+Juan~Julián Merelo, Antonio~Mora García, and Juan Lupión.
+\newblock Escalado de computación distribuida sobre raíles.
+\newblock In Almeida-Rodríguez et~al. \cite{maeb:2007}, pages 143--150.
+
+\bibitem{nodeo}
+Juan-Julián Merelo, Pedro Castillo, Antonio Mora, Anna Esparcia-Alcázar, and
+  Víctor Rivas-Santos.
+\newblock Nodeo, a multi-paradigm distributed evolutionary algorithm platform
+  in {JavasSript}.
+\newblock In {\em Proceedings of the 2014 conference companion on Genetic and
+  evolutionary computation companion}, pages 1155--1162. ACM, 2014.
+
+\bibitem{ppsn2002}
+J.-J. Merelo-Guervós, P.~Adamidis, H.-G. Beyer, J.-L. Fernández-Villaca\ nas,
+  and H.-P. Schwefel, editors.
+\newblock {\em Parallel Problem Solving from Nature - PPSN VII, 7th
+  International Conference, Granada, Spain, September 7-11, 2002. Proceedings},
+  number 2439 in Lecture Notes in Computer Science,LNCS. Springer-Verlag,
+  September 2002.
+
+\bibitem{maeb:2007}
+Francisco Almeida-Rodríguez, Belén Melián-Batista, José~A. Moreno-Pérez, and
+  J.~Marcos Moreno-Vega, editors.
+\newblock {\em V Congreso Español sobre Metaheurísticas, Algoritmos Evolutivos
+  y Bioinspirados}, 2007.
+
+\bibitem{merelo2015modeling}
+Juan~Julián Merelo-Guervós and Pablo García-Sánchez.
+\newblock Modeling browser-based distributed evolutionary computation systems.
+\newblock {\em arXiv preprint arXiv:1503.06424}, 2015.
+
+\bibitem{baratloo1999charlotte}
+Arash Baratloo, Mehmet Karaul, Zvi~M Kedem, and Peter Wijckoff.
+\newblock Charlotte: Metacomputing on the web.
+\newblock {\em Future Generation Computer Systems}, 15(5):559--570, 1999.
+
+\bibitem{alexandrov1997superweb}
+Albert~D Alexandrov, Maximilian Ibel, Klaus~E Schauser, and Chris~J Scheiman.
+\newblock Superweb: research issues in java-based global computing.
+\newblock {\em Concurrency - Practice and Experience}, 9(6):535--553, 1997.
+
+\bibitem{anderson2006computational}
+David~P Anderson and Gilles Fedak.
+\newblock The computational and storage potential of volunteer computing.
+\newblock In {\em Cluster Computing and the Grid, 2006. CCGRID 06. Sixth IEEE
+  International Symposium on}, volume~1, pages 73--80. IEEE, 2006.
+
+\bibitem{sarmenta2002sabotage}
+Luis~FG Sarmenta.
+\newblock Sabotage-tolerance mechanisms for volunteer computing systems.
+\newblock {\em Future Generation Computer Systems}, 18(4):561--572, 2002.
+
+\bibitem{sarmenta2001volunteer}
+Luis~FG Sarmenta.
+\newblock {\em Volunteer computing}.
+\newblock PhD thesis, Massachusetts Institute of Technology, 2001.
+
+\bibitem{sanz2010ibercivis}
+Fermín~Serrano Sanz.
+\newblock Ibercivis: la ciencia en casa: la computación voluntaria.
+\newblock {\em Alkaid: revista multitemática}, 1(9):12--17, 2010.
+
+\bibitem{baratloo1996charlotte}
+Arash Baratloo, Mehmet Karaul, Zvi Kedem, and Peter Wyckoff.
+\newblock Charlotte: Metacomputing on the web.
+\newblock In {\em Proceedings of the 9th Conference on Parallel and Distributed
+  Computing Systems}. Citeseer, 1996.
+
+\bibitem{chandy1996world}
+E~Mani Chandy, Adam Rifkin, Paolo~AG Sivilotti, Jacob Mandelson, Matthew
+  Richardson, Wesley Tanaka, and Luke Weisman.
+\newblock A world-wide distributed system using {J}ava and the {I}nternet.
+\newblock In {\em High Performance Distributed Computing, 1996., Proceedings of
+  5th IEEE International Symposium on}, pages 11--18. IEEE, 1996.
+
+\bibitem{Baldeschwieler:1996:TIG:504450.504482}
+J.~Eric Baldeschwieler, Robert~D. Blumofe, and Eric~A. Brewer.
+\newblock Atlas: An infrastructure for global computing.
+\newblock In {\em Proceedings of the 7th Workshop on ACM SIGOPS European
+  Workshop: Systems Support for Worldwide Applications}, EW 7, pages 165--172,
+  New York, NY, USA, 1996. ACM.
 
 \end{thebibliography}
