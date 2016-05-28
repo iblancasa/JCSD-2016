@@ -110,7 +110,7 @@
 \def\seename{see}
 \def\solutionname{Solution}
 \def\subclassname{{\it Subject Classifications\/}:}
-\def\tablename{Table}
+\def\tablename{Tabla}
 \def\theoremname{Theorem}}
 \switcht@albion
 % Names of theorem like environments are already defined
