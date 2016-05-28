@@ -111,6 +111,7 @@
 \def\solutionname{Solution}
 \def\subclassname{{\it Subject Classifications\/}:}
 \def\tablename{Tabla}
+\def\refname{Bibliograf\'ia}
 \def\theoremname{Theorem}}
 \switcht@albion
 % Names of theorem like environments are already defined
