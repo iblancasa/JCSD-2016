@@ -78,7 +78,7 @@
 %
 \def\switcht@albion{%
 \def\abstractname{Resumen.}
-\def\ackname{Acknowledgement.}
+\def\ackname{Agradecidimientos.}
 \def\andname{and}
 \def\lastandname{\unskip, and}
 \def\appendixname{Appendix}
@@ -90,7 +90,7 @@
 \def\definitionname{Definition}
 \def\examplename{Example}
 \def\exercisename{Exercise}
-\def\figurename{Fig.}
+\def\figurename{Figura}
 \def\keywordname{{\bf Palabras clave:}}
 \def\indexname{Index}
 \def\lemmaname{Lemma}
