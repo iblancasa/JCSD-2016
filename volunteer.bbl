@@ -80,12 +80,15 @@ M.G. Arenas, P.A. Castillo, G.~Romero, and Juan~Julián Merelo-Guervós.
 M.G. Arenas, Pierre Collet, A.E. Eiben, M'ark Jelasity, J.J. Merelo, Ben
   Paechter, Mike Preu\ss, and Marc Schoenauer.
 \newblock A framework for distributed evolutionary algorithms.
-\newblock In Merelo-Guervós et~al. \cite{ppsn2002}.
+\newblock Number 2439 in Lecture Notes in Computer Science,LNCS.
+  Springer-Verlag, September 2002.
 
 \bibitem{maeb2007:dcor}
 Juan~Julián Merelo, Antonio~Mora García, and Juan Lupión.
 \newblock Escalado de computación distribuida sobre raíles.
-\newblock In Almeida-Rodríguez et~al. \cite{maeb:2007}, pages 143--150.
+\newblock In Francisco Almeida-Rodríguez, Belén Melián-Batista, José~A.
+  Moreno-Pérez, and J.~Marcos Moreno-Vega, editors, {\em Actas MAEB 2007},
+  pages 143--150, 2007.
 
 \bibitem{nodeo}
 Juan-Julián Merelo, Pedro Castillo, Antonio Mora, Anna Esparcia-Alcázar, and
@@ -94,75 +97,5 @@ Juan-Julián Merelo, Pedro Castillo, Antonio Mora, Anna Esparcia-Alcázar, and
   in {JavasSript}.
 \newblock In {\em Proceedings of the 2014 conference companion on Genetic and
   evolutionary computation companion}, pages 1155--1162. ACM, 2014.
-
-\bibitem{merelo2015modeling}
-Juan~Julián Merelo-Guervós and Pablo García-Sánchez.
-\newblock Modeling browser-based distributed evolutionary computation systems.
-\newblock {\em arXiv preprint arXiv:1503.06424}, 2015.
-
-\bibitem{baratloo1999charlotte}
-Arash Baratloo, Mehmet Karaul, Zvi~M Kedem, and Peter Wijckoff.
-\newblock Charlotte: Metacomputing on the web.
-\newblock {\em Future Generation Computer Systems}, 15(5):559--570, 1999.
-
-\bibitem{alexandrov1997superweb}
-Albert~D Alexandrov, Maximilian Ibel, Klaus~E Schauser, and Chris~J Scheiman.
-\newblock Superweb: research issues in java-based global computing.
-\newblock {\em Concurrency - Practice and Experience}, 9(6):535--553, 1997.
-
-\bibitem{anderson2006computational}
-David~P Anderson and Gilles Fedak.
-\newblock The computational and storage potential of volunteer computing.
-\newblock In {\em Cluster Computing and the Grid, 2006. CCGRID 06. Sixth IEEE
-  International Symposium on}, volume~1, pages 73--80. IEEE, 2006.
-
-\bibitem{sarmenta2002sabotage}
-Luis~FG Sarmenta.
-\newblock Sabotage-tolerance mechanisms for volunteer computing systems.
-\newblock {\em Future Generation Computer Systems}, 18(4):561--572, 2002.
-
-\bibitem{sarmenta2001volunteer}
-Luis~FG Sarmenta.
-\newblock {\em Volunteer computing}.
-\newblock PhD thesis, Massachusetts Institute of Technology, 2001.
-
-\bibitem{sanz2010ibercivis}
-Fermín~Serrano Sanz.
-\newblock Ibercivis: la ciencia en casa: la computación voluntaria.
-\newblock {\em Alkaid: revista multitemática}, 1(9):12--17, 2010.
-
-\bibitem{baratloo1996charlotte}
-Arash Baratloo, Mehmet Karaul, Zvi Kedem, and Peter Wyckoff.
-\newblock Charlotte: Metacomputing on the web.
-\newblock In {\em Proceedings of the 9th Conference on Parallel and Distributed
-  Computing Systems}. Citeseer, 1996.
-
-\bibitem{chandy1996world}
-E~Mani Chandy, Adam Rifkin, Paolo~AG Sivilotti, Jacob Mandelson, Matthew
-  Richardson, Wesley Tanaka, and Luke Weisman.
-\newblock A world-wide distributed system using {J}ava and the {I}nternet.
-\newblock In {\em High Performance Distributed Computing, 1996., Proceedings of
-  5th IEEE International Symposium on}, pages 11--18. IEEE, 1996.
-
-\bibitem{Baldeschwieler:1996:TIG:504450.504482}
-J.~Eric Baldeschwieler, Robert~D. Blumofe, and Eric~A. Brewer.
-\newblock Atlas: An infrastructure for global computing.
-\newblock In {\em Proceedings of the 7th Workshop on ACM SIGOPS European
-  Workshop: Systems Support for Worldwide Applications}, EW 7, pages 165--172,
-  New York, NY, USA, 1996. ACM.
-
-\bibitem{ppsn2002}
-J.-J. Merelo-Guervós, P.~Adamidis, H.-G. Beyer, J.-L. Fernández-Villaca\ nas,
-  and H.-P. Schwefel, editors.
-\newblock {\em Parallel Problem Solving from Nature - PPSN VII, 7th
-  International Conference, Granada, Spain, September 7-11, 2002. Proceedings},
-  number 2439 in Lecture Notes in Computer Science,LNCS. Springer-Verlag,
-  September 2002.
-
-\bibitem{maeb:2007}
-Francisco Almeida-Rodríguez, Belén Melián-Batista, José~A. Moreno-Pérez, and
-  J.~Marcos Moreno-Vega, editors.
-\newblock {\em V Congreso Español sobre Metaheurísticas, Algoritmos Evolutivos
-  y Bioinspirados}, 2007.
 
 \end{thebibliography}
