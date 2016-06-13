@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="184mm"
+   viewBox="0 0 744.09449 651.96867"
+   id="svg3672"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   inkscape:export-filename="/home/iblancasa/Proyectos/JCSD-2016/img/algoritmo.svg"
+   inkscape:export-xdpi="432"
+   inkscape:export-ydpi="432"
+   sodipodi:docname="algoritmo.svg">
+  <defs
+     id="defs3674">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath20">
+      <path
+         d="M 0,0 521,0 521,529 0,529 0,0 Z"
+         id="path22"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath30">
+      <path
+         d="m 1030,4532 0,598 1020,0 0,-598 -1020,0 z"
+         id="path32"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath42">
+      <path
+         d="m 3820,4590 0,691 665,0 0,-691 -665,0 z"
+         id="path44"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.7"
+     inkscape:cx="471.23371"
+     inkscape:cy="354.82353"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1680"
+     inkscape:window-height="1021"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata3677">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-400.39361)">
+    <rect
+       transform="translate(0,400.39361)"
+       style="fill:#ffffff;fill-opacity:1"
+       id="rect3512"
+       width="1250"
+       height="844.28571"
+       x="-260.00009"
+       y="-132.31721"
+       ry="2.8571401" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer6"
+     inkscape:label="Capa 2">
+    <g
+       style=""
+       id="g12"
+       transform="matrix(1.402799,0,0,-1.1892512,9.7000247,640.50799)">
+      <g
+         id="g14">
+        <g
+           id="g16">
+          <g
+             id="g18"
+             clip-path="url(#clipPath20)">
+            <g
+               id="g24"
+               transform="scale(0.1,0.1)">
+              <g
+                 id="g26">
+                <g
+                   id="g28"
+                   clip-path="url(#clipPath30)">
+                  <g
+                     id="g34"
+                     transform="matrix(1027.67,0,0,597.314,1026.82,4532.56)">
+                    <image
+                       width="1"
+                       height="1"
+                       preserveAspectRatio="none"
+                       transform="matrix(1,0,0,-1,0,1)"
+                       xlink:href="data:image/png;base64,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"
+                       id="image36" />
+                  </g>
+                </g>
+              </g>
+              <g
+                 id="g38">
+                <g
+                   id="g40"
+                   clip-path="url(#clipPath42)">
+                  <g
+                     id="g46"
+                     transform="matrix(664.079,0,0,693.516,3820.94,4587.12)">
+                    <image
+                       width="1"
+                       height="1"
+                       preserveAspectRatio="none"
+                       transform="matrix(1,0,0,-1,0,1)"
+                       xlink:href="data:image/png;base64,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"
+                       id="image48" />
+                  </g>
+                </g>
+              </g>
+              <path
+                 d="m 1321.64,10.0117 136.25,0 0,4577.77 -136.25,0 0,-4577.77 z"
+                 style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+                 id="path50"
+                 inkscape:connector-curvature="0" />
+              <path
+                 d="m 4114.96,64.5 136.25,0 0,4556.09 -136.25,0 0,-4556.09 z"
+                 style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+                 id="path52"
+                 inkscape:connector-curvature="0" />
+              <path
+                 d="m 1401.02,3758.84 2660.12,0 0,100.621 -2660.12,0 0,-100.621 z"
+                 style="fill:#550000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+                 id="path54"
+                 inkscape:connector-curvature="0" />
+              <path
+                 d="m 4062.46,3859.46 52.03,-48.98 -53.98,-51.84 -52.03,48.99 53.98,51.83 z"
+                 style="fill:#550000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+                 id="path56"
+                 inkscape:connector-curvature="0" />
+              <path
+                 d="m 4060.98,3857.35 1.5195,0 0,2.1094 -1.5195,0 0,-2.1094 z"
+                 style="fill:#550000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+                 id="path58"
+                 inkscape:connector-curvature="0" />
+              <path
+                 d="m 1510.51,3369.57 2638.55,0 0,100.59 -2638.55,0 0,-100.59 z"
+                 style="fill:#550000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+                 id="path60"
+                 inkscape:connector-curvature="0" />
+              <path
+                 d="m 1509.18,3369.58 -51.56,48.98 53.51,51.8 51.6,-48.95 -53.55,-51.83 z"
+                 style="fill:#550000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+                 id="path62"
+                 inkscape:connector-curvature="0" />
+              <path
+                 d="m 1509.18,3369.54 1.4805,0 0,2.1523 -1.4805,0 0,-2.1523 z"
+                 style="fill:#550000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+                 id="path64"
+                 inkscape:connector-curvature="0" />
+              <g
+                 id="g66"
+                 transform="scale(10,10)">
+                <text
+                   transform="matrix(0.924629,0,0,-1,218.509,390.375)"
+                   style="font-variant:normal;font-weight:normal;font-size:14.95409966px;font-family:'DejaVu Sans';-inkscape-font-specification:DejaVuSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+                   id="text68">
+                  <tspan
+                     x="0 11.589428 21.040419 30.177374 34.932777 47.210117 56.406891 65.90274 70.65815 79.510971 84.26638 92.057465 100.28222 106.47301 110.63024 120.1261 125.98811"
+                     y="0"
+                     sodipodi:role="line"
+                     id="tspan70">GET web y scripts</tspan>
+                  <tspan
+                     x="10.0801 23.987307 33.184078 42.679932 47.435337 56.288162 61.043568 68.834656 77.05941 83.250191 87.407433 96.903282 102.76529"
+                     y="37.977001"
+                     sodipodi:role="line"
+                     id="tspan72">Web y scripts</tspan>
+                </text>
+              </g>
+              <path
+                 d="m 1509.53,1902.24 2638.52,0 0,100.621 -2638.52,0 0,-100.621 z"
+                 style="fill:#550000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+                 id="path74"
+                 inkscape:connector-curvature="0" />
+              <path
+                 d="m 1508.2,1902.27 -51.6,48.95 53.56,51.84 51.6,-48.95 -53.56,-51.84 z"
+                 style="fill:#550000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+                 id="path76"
+                 inkscape:connector-curvature="0" />
+              <path
+                 d="m 1508.16,1902.23 1.5195,0 0,2.1484 -1.5195,0 0,-2.1484 z"
+                 style="fill:#550000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+                 id="path78"
+                 inkscape:connector-curvature="0" />
+              <path
+                 d="m 1400.27,2683.65 2660.12,0 0,100.621 -2660.12,0 0,-100.621 z"
+                 style="fill:#550000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+                 id="path80"
+                 inkscape:connector-curvature="0" />
+              <path
+                 d="m 4061.72,2784.23 52.03,-48.95 -53.98,-51.83 -52.04,48.94 53.99,51.84 z"
+                 style="fill:#550000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+                 id="path82"
+                 inkscape:connector-curvature="0" />
+              <path
+                 d="m 4060.23,2782.12 1.5195,0 0,2.1484 -1.5195,0 0,-2.1484 z"
+                 style="fill:#550000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+                 id="path84"
+                 inkscape:connector-curvature="0" />
+              <g
+                 id="g86"
+                 transform="scale(10,10)">
+                <text
+                   transform="matrix(0.932258,0,0,-1,59.8117,304.548)"
+                   style="font-variant:normal;font-weight:normal;font-size:8.00543976px;font-family:'DejaVu Sans';-inkscape-font-specification:DejaVuSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+                   id="text88">
+                  <tspan
+                     x="0 6.204216 11.127562 16.203011 21.126356 24.416592 29.348 32.638237 35.183968 40.267422 45.166748 50.250202 52.475716 57.383053 61.786041 64.011559 68.910881"
+                     y="0"
+                     sodipodi:role="line"
+                     id="tspan90">Generar población</tspan>
+                  <tspan
+                     x="0 5.9880691 8.5337992 13.617253 18.5406 23.616049 28.539394 31.82963 36.760777 41.163769 43.389278 48.288609 53.364059 58.287403"
+                     y="10.0066"
+                     sodipodi:role="line"
+                     id="tspan92">N generaciones</tspan>
+                </text>
+                <text
+                   transform="matrix(0.924465,0,0,-1,207.931,284.348)"
+                   style="font-variant:normal;font-weight:normal;font-size:14.67080021px;font-family:'DejaVu Sans';-inkscape-font-specification:DejaVuSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+                   id="text94">
+                  <tspan
+                     x="0 8.8464928 19.585518 28.549377 33.214691 47.504051 56.526592 60.605076 69.583603 75.613304 80.322853 84.401337 93.702621 103.01858 107.09706 115.78217 119.86066 129.17662 138.47791"
+                     y="0"
+                     sodipodi:role="line"
+                     id="tspan96">PUT mejor individuo</tspan>
+                </text>
+                <text
+                   transform="matrix(0.909029,0,0,-1,428.259,441.363)"
+                   style="font-variant:normal;font-weight:normal;font-size:7.97349024px;font-family:'DejaVu Sans';-inkscape-font-specification:DejaVuSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+                   id="text98">
+                  <tspan
+                     x="0 2.3521795 7.407372 9.6240025 14.009422 16.226051 21.105827 23.641397 28.704563 33.608261 35.82489 38.360462 42.514648 47.418346 50.69545 55.415756 57.632385 62.695553 67.575325"
+                     y="0"
+                     sodipodi:role="line"
+                     id="tspan100">Inicio del servidor</tspan>
+                  <tspan
+                     x="0 2.3521795 7.407372 9.6240025 14.009422 16.226051 21.113802 23.330431 25.547062 29.733145 34.620895 39.006313 41.222942 46.102718 51.157913 53.717384 58.780552 63.684246 65.900879"
+                     y="9.9667997"
+                     sodipodi:role="line"
+                     id="tspan102">Inicialización del</tspan>
+                  <tspan
+                     x="15.237483 20.292675 25.347868 33.114048 38.017742 41.151485 46.031261 48.56683 53.629997 58.533691 61.069263 65.22345 70.127144 74.512566 79.591606 84.495308 89.550499 93.935913 96.15255"
+                     y="19.933599"
+                     sodipodi:role="line"
+                     id="tspan104">número de secuencia</tspan>
+                  <tspan
+                     x="0 2.3521795 7.407372 9.6240025 14.009422 16.226051 21.113802 23.330431 25.547062 30.434811 34.620895 39.006313 41.222942 46.102718 51.157913 53.717384 58.780552 63.684246"
+                     y="29.9004"
+                     sodipodi:role="line"
+                     id="tspan106">Inicialiazción de</tspan>
+                  <tspan
+                     x="15.237483 20.30065 25.180426 30.243591 32.46022 37.347969 41.733391 43.95002 48.829796 53.884991 56.420559 60.805977 65.685753 73.451935 78.515099 83.402847 86.703751 89.829361 92.04599 97.109154"
+                     y="39.867199"
+                     sodipodi:role="line"
+                     id="tspan108">población compartida</tspan>
+                </text>
+                <text
+                   transform="matrix(0.925149,0,0,-1,149.314,230.49)"
+                   style="font-variant:normal;font-weight:normal;font-size:12.2954998px;font-family:'DejaVu Sans';-inkscape-font-specification:DejaVuSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+                   id="text110">
+                  <tspan
+                     x="0 7.8076425 11.225792 15.13576 22.931107 30.455954 34.365921 41.927654 48.333611 52.24358 59.805313 63.223461 67.13343 79.109245 86.670982 90.089127 97.613976 102.66743 106.61407 114.42171 117.83987 125.36472 133.17235 140.7095"
+                     y="0"
+                     sodipodi:role="line"
+                     id="tspan112">Si no es el mejor global</tspan>
+                </text>
+              </g>
+              <path
+                 d="m 1501.37,2241.45 1324.38,0 0,38.3203 -1324.38,0 0,-38.3203 z"
+                 style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+                 id="path114"
+                 inkscape:connector-curvature="0" />
+              <g
+                 id="g116"
+                 transform="scale(10,10)">
+                <text
+                   transform="matrix(0.957555,0,0,-1,210.669,204.13)"
+                   style="font-variant:normal;font-weight:normal;font-size:13.54520035px;font-family:'DejaVu Sans';-inkscape-font-specification:DejaVuSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+                   id="text118">
+                  <tspan
+                     x="0 9.4545498 14.750908 23.040571 36.233597 44.523258 51.580307 59.869968 73.062996 81.366203 85.673576 93.976784 97.742348 106.07265 114.37585 119.68557 127.97523 133.58313 137.34869"
+                     y="0"
+                     sodipodi:role="line"
+                     id="tspan120">Cromosoma aleatorio</tspan>
+                </text>
+              </g>
+              <path
+                 d="m 492.699,1871.58 828.949,0 0,53.5508 -828.949,0 0,-53.5508 z"
+                 style="fill:#550000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+                 id="path122"
+                 inkscape:connector-curvature="0" />
+              <path
+                 d="m 492.539,1908.09 51.1719,0 0,1392.66 -51.1719,0 0,-1392.66 z"
+                 style="fill:#550000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+                 id="path124"
+                 inkscape:connector-curvature="0" />
+              <path
+                 d="m 518.281,3246.1 767.93,0 0,54.6484 -767.93,0 0,-54.6484 z"
+                 style="fill:#550000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+                 id="path126"
+                 inkscape:connector-curvature="0" />
+              <path
+                 d="m 1286.6,3246.1 15,26.6 -15.58,28.17 -15,-26.6 15.58,-28.17 z"
+                 style="fill:#550000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+                 id="path128"
+                 inkscape:connector-curvature="0" />
+              <path
+                 d="m 1286.17,3246.1 0.4297,0 0,1.168 -0.4297,0 0,-1.168 z"
+                 style="fill:#550000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+                 id="path130"
+                 inkscape:connector-curvature="0" />
+              <g
+                 id="g132"
+                 transform="scale(10,10)">
+                <text
+                   transform="matrix(0.925149,0,0,-1,148.763,155.083)"
+                   style="font-variant:normal;font-weight:normal;font-size:12.2954998px;font-family:'DejaVu Sans';-inkscape-font-specification:DejaVuSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+                   id="text134">
+                  <tspan
+                     x="0 7.7707558 14.176711 18.086681 25.648413 29.066563 32.976532 44.952347 52.51408 55.932228 63.457077 68.510529 72.457443 80.265083 83.683235 91.208076 99.015717 106.55286"
+                     y="0"
+                     sodipodi:role="line"
+                     id="tspan136">Es el mejor global</tspan>
+                </text>
+              </g>
+              <path
+                 d="m 1495.86,1487.39 1007.03,0 0,38.3203 -1007.03,0 0,-38.3203 z"
+                 style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+                 id="path138"
+                 inkscape:connector-curvature="0" />
+              <path
+                 d="m 1395.43,1134 2660.12,0 0,100.621 -2660.12,0 0,-100.621 z"
+                 style="fill:#550000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+                 id="path140"
+                 inkscape:connector-curvature="0" />
+              <path
+                 d="m 4056.88,1234.58 51.99,-48.95 -53.95,-51.83 -52.03,48.94 53.99,51.84 z"
+                 style="fill:#550000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+                 id="path142"
+                 inkscape:connector-curvature="0" />
+              <path
+                 d="m 4055.39,1232.47 1.5195,0 0,2.1523 -1.5195,0 0,-2.1523 z"
+                 style="fill:#550000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+                 id="path144"
+                 inkscape:connector-curvature="0" />
+              <g
+                 id="g146"
+                 transform="scale(10,10)">
+                <text
+                   transform="matrix(0.924465,0,0,-1,210.221,128.374)"
+                   style="font-variant:normal;font-weight:normal;font-size:14.67080021px;font-family:'DejaVu Sans';-inkscape-font-specification:DejaVuSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+                   id="text148">
+                  <tspan
+                     x="0 8.8464928 19.585518 28.549377 33.214691 47.504051 56.526592 60.605076 69.583603 75.613304 80.322853 84.401337 93.702621 103.01858 107.09706 115.78217 119.86066 129.17662 138.47791"
+                     y="0"
+                     sodipodi:role="line"
+                     id="tspan150">PUT mejor individuo</tspan>
+                </text>
+                <text
+                   transform="matrix(0.909029,0,0,-1,427.102,93.1012)"
+                   style="font-variant:normal;font-weight:normal;font-size:7.97349024px;font-family:'DejaVu Sans';-inkscape-font-specification:DejaVuSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+                   id="text152">
+                  <tspan
+                     x="0 2.3521795 7.407372 11.792791 14.91826 19.821957 27.588135 32.491833 37.547024 40.67263 45.552406 48.087978 53.151142 58.05484 60.271469"
+                     y="0"
+                     sodipodi:role="line"
+                     id="tspan154">Incremento del</tspan>
+                  <tspan
+                     x="10.14228 15.221213 20.276407 28.042585 32.946281 36.071857 40.951633 43.487202 48.550369 53.454067 55.989635 60.143826 65.047523 69.432938 74.511978 79.41568 84.470871 88.856293 91.072922"
+                     y="9.9671898"
+                     sodipodi:role="line"
+                     id="tspan156">número de secuencia</tspan>
+                  <tspan
+                     x="0 5.1906576 10.094354 14.248542 19.152239 22.277847 24.813416 29.876583 34.780277 37.315849 39.532478 44.420227"
+                     y="19.93438"
+                     sodipodi:role="line"
+                     id="tspan158">Reset de la</tspan>
+                  <tspan
+                     x="10.14228 15.205445 20.085222 25.148388 27.365017 32.252766 36.638187 38.854816 43.734592 48.789783 51.349098 55.734516 60.614292 68.38047 73.443634 78.33139 81.60849 84.75779 86.974419 92.037582"
+                     y="29.901569"
+                     sodipodi:role="line"
+                     id="tspan160">población compartida</tspan>
+                  <tspan
+                     x="0 2.3521795 7.407372 9.6240025 14.009422 16.226051 21.105827 23.641397 28.69659 33.775684 38.679382 43.399689 48.279465"
+                     y="39.868759"
+                     sodipodi:role="line"
+                     id="tspan162">Inicio nuevo</tspan>
+                  <tspan
+                     x="10.14228 14.918565 19.63887 24.702038 29.605734 32.882839 35.099468 42.865646 47.769344 52.824535 55.974209"
+                     y="49.835949"
+                     sodipodi:role="line"
+                     id="tspan164">experimento</tspan>
+                  <tspan
+                     x="-470.62701 -465.43634 -460.53265 -456.37845 -451.47476 -448.34915 -445.81357 -440.7504 -435.84671 -433.31116 -430.18555 -425.30576 -420.24258 -415.35486 -411.20065 -408.64111 -406.42447 -401.53674 -397.38254 -394.84698 -390.12668 -385.23892 -381.96182 -379.74518 -374.85742 -369.79428 -367.57764 -362.67395 -358.51974 -355.96033 -353.74371 -348.86392 -344.47852 -339.59076 -337.37411 -332.47043"
+                     y="3.1414499"
+                     sodipodi:role="line"
+                     id="tspan166">Reset de todas las variables locales</tspan>
+                  <tspan
+                     x="-470.62701 -464.66284 -459.60764 -454.70395 -449.98364 -445.10385 -442.5683 -436.73169 -430.89511 -428.54291"
+                     y="13.10864"
+                     sodipodi:role="line"
+                     id="tspan168">Nuevo UUID</tspan>
+                  <tspan
+                     x="-470.62701 -465.58777 -457.82156 -452.75842 -447.85471 -443.66864 -438.78088 -435.48001 -432.94446 -427.88129 -422.9776 -420.44202 -415.38681 -410.3078 -405.40408 -400.68378 -395.80402 -393.26843 -388.36475 -383.30954 -380.77399 -375.31213 -372.75247 -368.59827 -363.69458 -358.63141 -353.5762 -348.52103 -343.45786 -338.57809"
+                     y="23.07583"
+                     sodipodi:role="line"
+                     id="tspan170">Empezar de nuevo en X segundos</tspan>
+                </text>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,152 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>NodIO - JCSD2016</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/simple.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>NodIO</h1> 
+					<h2>Marco de desarrollo de aplicaciones para computación evolutiva voluntaria</h2>
+					<h5>XXIV Jornadas de Concurrencia y Sistemas Distribuidos (JCSD 2016)</h5>
+				</section>
+
+				<section>
+					<h2>Autores</h2>
+					<ul>
+						<li>Israel Blancas: iblancasa@ugr.es</li>
+						<li>J. J. Merelo: jmerelo@ugr.es</li>
+						<li>Antonio Álvarez: analca3@correo.ugr.es</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>¿Qué es la computación voluntaria?</h2>
+				</section>
+
+				<section>
+					<h2>¿Qué son los algoritmos evolutivos?</h2>
+				</section>
+
+				<section>
+					<h2>¿Qué es NodIO?</h2>
+					<h4 class="fragment">Ventajas frente a otros</h4>
+				</section>
+
+
+				<section>
+					<img style="border:0;" width="80%" src="img/algoritmo.svg"/>
+				</section>
+
+				<section>
+					<h2>Experimentos</h2>
+					<ul>
+						<li>Función "trap"</li>
+						<li>Valores "asequibles"</li>
+						<li>Pocos clientes</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Múltiples pestañas</h3>
+					<img src="img/pestanas.svg">
+				</section>
+
+				<section>
+					<h3>Múltiples dispositivos</h3>
+					<img src="img/dispositivos.svg">
+				</section>
+
+
+				<section>
+					<h3>Conclusiones</h3>
+					<ul>
+						<li>Suficientemente rápido</li>
+						<li>Más fácil de usar para los voluntarios que otros sistemas</li>
+						<li>Independencia de la plataforma</li>
+						<li>Mejora en las prestaciones</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Trabajos futuros</h3>
+					<ul>
+						<li>Nuevos experimentos</li>
+						<li>Añadir ludificación</li>
+						<li>Internacionalización</li>
+						<li>Facilitar la creación de nuevos experimentos</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Bibliografı́a</h2>
+					<ol style="font-size:60%;">
+						<li style="margin-bottom: 2%;">Juan-J Merelo, Mario Garcı́a-Valdez, Pedro A Castillo, Pablo Garcı́a-Sánchez,
+						P Cuevas, and Nuria Rico. Nodio, a javascript framework for volunteer-based
+						evolutionary algorithms: first results. arXiv preprint arXiv:1601.01607, 2016.</li>
+						<li style="margin-bottom: 2%;">Juan-Julián Merelo, Pedro Castillo, Antonio Mora, Anna Esparcia-Alcázar, and
+						Vı́ctor Rivas-Santos. Nodeo, a multi-paradigm distributed evolutionary algorithm
+						platform in JavasSript. In Proceedings of the 2014 conference companion on Ge-
+						netic and evolutionary computation companion, pages 1155–1162. ACM, 2014.
+						</li>
+						<li>
+						 M.G. Arenas, Pierre Collet, A.E. Eiben, M’ark Jelasity, J.J. Merelo, Ben Paechter,
+						Mike Preuß, and Marc Schoenauer. A framework for distributed evolutionary
+						algorithms. Number 2439 in Lecture Notes in Computer Science,LNCS. Springer-
+						Verlag, September 2002.
+						</li>
+						
+				</section>
+
+				<section>
+					<h1>Gracias por su atención</h1>
+				</section>
+
+
+
+
+
+
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				transition: 'none',
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
